@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>References — Ch3 Cross-scale Resilience</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="bar">
+  <a class="home" href="index.html">Ch3 · Cross-scale resilience</a>
+  <a class="l" href="index.html">Home</a>
+  <a class="l" href="strategy.html">Strategy</a>
+  <a class="l" href="levels.html">Levels</a>
+  <a class="l" href="principles.html">Principles</a>
+  <a class="l" href="data.html">Data</a>
+  <a class="l active" href="references.html">References</a>
+  <a class="l" href="roadmap.html">Roadmap</a>
+</nav>
+
+<div class="wrap">
+  <div class="crumb">Home › Key references</div>
+  <h1>How the key references scaffold the chapter</h1>
+  <p class="lead">The seven papers in <code>key.ref/</code> divide cleanly into a conceptual backbone, a measurement engine,
+  mechanism papers, and framing.</p>
+
+  <table>
+    <thead><tr><th>Reference</th><th>What it provides</th><th>Role in this study</th></tr></thead>
+    <tbody>
+      <tr><td><b>Falk et al. 2019</b><br><span class="small"><i>Front. Ecol. Evol.</i><br>Scaling Ecological Resilience</span></td>
+        <td>Decomposes resilience across space, time &amp; <b>levels of organisation</b> into persistence, recovery, reorganization.</td>
+        <td><b>Conceptual backbone &amp; vocabulary</b> — the published precedent for "resilience decomposed across levels"; the frame the chapter operationalises and advances with individual-resolution data.</td></tr>
+      <tr><td><b>Figueiredo et al. 2025</b><br><span class="small"><i>Methods Ecol. Evol.</i><br>estar R package</span></td>
+        <td>11 stability properties; functional (any level) + Jacobian (community matrix).</td>
+        <td><b>The measurement engine</b> — computes resilience identically at each level; its Jacobian metrics operationalise the interspecific-interaction route.</td></tr>
+      <tr><td><b>Giménez-Romero et al. 2025</b><br><span class="small"><i>Ecol. Lett.</i><br>Population structure &amp; community stability</span></td>
+        <td>Stage structure &amp; stage-specific interactions strongly shape community stability.</td>
+        <td>Justifies carrying <b>life-stage structure</b> (seedling→tree) and stage-specific density dependence into the population→community scaling; supports principle 2.</td></tr>
+      <tr><td><b>Jops et al. 2025</b><br><span class="small"><i>PNAS</i><br>Life history drives abundance fluctuations</span></td>
+        <td>Mean-field model: life history predicts abundance fluctuations; <b>90 species, BCI 50-ha</b>.</td>
+        <td><b>Same-data template &amp; the open niche</b> — built on this exact data but without disturbance; the chapter adds the resilience / cross-scale-buffering dimension they flagged for future work.</td></tr>
+      <tr><td><b>Santos et al. 2026</b><br><span class="small"><i>J. Anim. Ecol.</i><br>Demographic buffering, multi-level</span></td>
+        <td>Demographic buffering damps population growth against environmental stochasticity; multi-level view.</td>
+        <td>Names the <b>"buffering source"</b> mechanism in the hypothesis at the population level; method for quantifying vital-rate buffering.</td></tr>
+      <tr><td><b>Chesson 2017</b><br><span class="small"><i>PLoS Biol.</i><br>AEDT</span></td>
+        <td>Systems track a moving, environmentally-determined trajectory, not a static equilibrium.</td>
+        <td>Defines the <b>reference baseline</b> for measuring resistance/recovery under non-stationary ENSO climate ("recover to what?"); underpins principle 3.</td></tr>
+      <tr><td><b>Simmons et al. 2021</b><br><span class="small"><i>Nat. Ecol. Evol.</i><br>Stressors by target &amp; scale</span></td>
+        <td>Classify disturbances by the ecological scale they target, not their source.</td>
+        <td>Frames principle 1 (entry level &amp; propagation); aligns the framing with the target journal.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout dim">
+    <div class="h">At a glance</div>
+    <p style="margin:6px 0 0"><b>Backbone:</b> Falk 2019 · <b>Engine:</b> Figueiredo 2025 (estar) · <b>Mechanisms:</b> Santos 2026 (buffering),
+    Giménez-Romero 2025 (structure), Jops 2025 (life history) · <b>Baseline:</b> Chesson 2017 · <b>Framing:</b> Simmons 2021.</p>
+  </div>
+
+  <div class="pagenav"><a href="data.html">← Data</a><a href="roadmap.html">Roadmap →</a></div>
+  <footer>Cross.level.resilience · Chapter 3 plan</footer>
+</div>
+</body>
+</html>

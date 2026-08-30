@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data — Ch3 Cross-scale Resilience</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="bar">
+  <a class="home" href="index.html">Ch3 · Cross-scale resilience</a>
+  <a class="l" href="index.html">Home</a>
+  <a class="l" href="strategy.html">Strategy</a>
+  <a class="l" href="levels.html">Levels</a>
+  <a class="l" href="principles.html">Principles</a>
+  <a class="l active" href="data.html">Data</a>
+  <a class="l" href="references.html">References</a>
+  <a class="l" href="roadmap.html">Roadmap</a>
+</nav>
+
+<div class="wrap">
+  <div class="crumb">Home › Data in hand</div>
+  <h1>Data in hand</h1>
+  <p class="lead">All headline numbers below were read directly from the files (19 Jun 2026). Folder naming convention:
+  <code>SITE_theme_period.interval_version</code>.</p>
+
+  <table>
+    <thead><tr><th>Dataset</th><th>Serves</th><th>Resolution &amp; coverage</th><th>Scope (verified)</th><th>ENSO covered</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td><b>Tree census</b><br><span class="small"><code>BCI_tree_1982.2015.5yr_2019v</code><br>Condit et al. 2017/2019</span></td>
+        <td>Community; adult populations</td>
+        <td>5-yr · 8 censuses 1982–2015</td>
+        <td>~423,617 trees (≥1 cm dbh); 2,454,309 measurement rows; mapped &amp; identified</td>
+        <td>1982–83, 1997–98, 2015–16</td><td><span class="pill open">open</span></td></tr>
+      <tr><td><b>Seedling census</b><br><span class="small"><code>BCI_seedling_2011.2018.2yr_2023v</code><br>Comita et al. 2023, <i>Ecology</i></span></td>
+        <td>Individuals → population recruitment</td>
+        <td>1–2 yr · 14 censuses 2001–2018</td>
+        <td>~185,000 individuals; 999,726 rows; 413 species; 19,313 1-m² plots</td>
+        <td>2015–16 (2014→2016)</td><td><span class="pill open">open</span></td></tr>
+      <tr><td><b>Soil water potential</b><br><span class="small"><code>BCI_abiotic_2015.2016.1yr_2019v</code><br>Kupers et al. 2019</span></td>
+        <td>Drought intensity (ΔK) + response params</td>
+        <td>Dry seasons 2015 &amp; 2016 · ~15 cm depth</td>
+        <td>200 seedling sites; retention curves (25 sites); 62-species growth/mortality tables S4–S7</td>
+        <td>2015–16 snapshot</td><td><span class="pill open">open</span></td></tr>
+      <tr><td><b>Taxonomy</b><br><span class="small"><code>BCI_taxonomy_2020v</code><br>Condit et al. 2019</span></td>
+        <td>Species-identity crosswalk (joins all layers)</td>
+        <td>Frozen 1 May 2019</td>
+        <td>489 names / 328 valid species; 4- &amp; 6-letter codes</td>
+        <td>—</td><td><span class="pill open">open</span></td></tr>
+      <tr><td><b>Annual dendrometer</b> ⟵ recommended<br><span class="small">Smithsonian Figshare<br>BCI 50-ha, 2015–2020</span></td>
+        <td>Individual growth at annual resolution; community recovery window</td>
+        <td>annual · 2015–2020 (spans &amp; follows the ENSO)</td>
+        <td>dendrometer-band subset of adult trees (not all stems)</td>
+        <td>2015–16 onset <b>and recovery</b></td><td><span class="pill opt">acquire</span></td></tr>
+      <tr><td><b>SAPFLUXNET</b><br><span class="small"><code>SAP_physio_2015.2016.30m_2020v</code><br>Poyatos et al. 2016/2021</span></td>
+        <td>Physiology (optional sub-individual)</td>
+        <td>30-min sub-daily</td>
+        <td>202 datasets, 174 species — <b>no BCI site</b> (nearest tropical CRI_TAM_TOW)</td>
+        <td>not BCI×2015–16</td><td><span class="pill gap">decide</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2>How the layers join — three independent linking dimensions</h2>
+  <div class="grid2">
+    <div class="card"><h3>① Space</h3><p class="small">All BCI layers share the 50-ha coordinate system. Seedling plots sit at the centre of every 5×5 m quadrat; the 200 SWP sites and every tagged tree carry x/y → exact nesting individual↔population↔community.</p></div>
+    <div class="card"><h3>② Taxonomy</h3><p class="small">The 2019 taxonomy table reconciles 6-letter (tree/seedling) and 4-letter (Kupers) codes to 328 accepted species. <b>Join by Latin name, not by code.</b></p></div>
+  </div>
+  <div class="card"><h3>③ Disturbance</h3><p class="small">A shared ENSO history (1982–83, 1997–98, <b>2015–16</b>) is the common press. The 2015–16 event is the one covered simultaneously by seedlings, trees and the SWP map; individual-level data start in 2001, so low-level multi-event replication is limited to 2015–16.</p></div>
+
+  <div class="callout good">
+    <div class="h">★ A useful find inside the abiotic folder</div>
+    <p style="margin:6px 0 0"><code>Kupers62species.list.xlsx</code> is not a plain list — it contains the published supplementary
+    <b>Tables S4–S7</b>: per-species growth and mortality response parameters to soil water potential for all 62 species. That is a
+    ready-made individual-level drought-response layer you can use or validate against.</p>
+  </div>
+
+  <div class="callout">
+    <div class="h">Resistance vs. recovery — a coverage asymmetry to design around</div>
+    <p style="margin:6px 0 0">The full tree census ends in <b>2015</b>, so for the 2015–16 ENSO the community-level full-census signal is essentially
+    <b>drought onset / resistance</b>, not recovery. Recovery at the adult level for that event must come from the <b>annual dendrometer
+    2015–2020</b> (growth recovery, subset of trees) and/or from the <b>earlier droughts</b> (1982–83, 1997–98) where post-drought full
+    censuses exist. Seedlings (to 2018) give individual/population recovery. Plan the analysis so each level is asked for the resilience
+    component it can actually support.</p>
+  </div>
+
+  <div class="callout bad">
+    <div class="h">⚠ The one open data decision: do we need the physiology layer at all?</div>
+    <p style="margin:6px 0 0">Because the base unit is the <b>individual demographic level</b>, physiology is optional. SAPFLUXNET has no BCI
+    site (breaks "same site"); the only BCI sap flow that exists (NGEE-Tropics) is 2022, not 2015–16 (breaks "same disturbance").
+    <b>Recommendation:</b> do not download the &gt;3 GB SAPFLUXNET set unless the chapter explicitly needs a sub-daily physiological rate
+    — and then only as a trait-space donor. The core hypothesis is fully testable with the four open BCI datasets.</p>
+  </div>
+
+  <p class="small mut"><b>Housekeeping:</b> seedling folder is labelled <code>2011.2018</code> but data span <b>2001–2018</b> (14 censuses);
+  2015 itself is not a census year — the 2015–16 signal is the <b>2014→2016</b> interval.</p>
+
+  <div class="pagenav"><a href="principles.html">← Principles</a><a href="references.html">Key references →</a></div>
+  <footer>Cross.level.resilience · Chapter 3 plan</footer>
+</div>
+</body>
+</html>

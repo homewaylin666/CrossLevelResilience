@@ -1,0 +1,63 @@
+Abstract
+BCI 50-ha Plot Taxonomy
+The 50-ha plot at Barro Colorado Island was initially demarcated and fully censused in 1982, and has been fully censused 7 times since, every 5 years from 1985 through 2015 (Hubbell and Foster 1983, Hubbell et al. 1990, Condit et al. 2012, Condit et al. 2017). The taxonomic component required repeated collecting and sorting so that every individual could be matched to a previously described species from Croat (1978). Over 300 taxa were separated and all but 8 of those identified to species. After the 8th census in 2015, a total of 328 tree taxa have been documented in the plot, though the number alive in any one census has been less. Taxonomy of tropical plants is still in a state of flux because many of the groups have not been studied in detail for decades, and new treatments, especially those using DNA phylogenies, invariably lead to revision and reidentification. To maintain the 50-ha plot up-to-date with recent taxonomy, we have had to make numerous changes to the original list of 300 species. In Condit et al. (1996) we listed every species and added an Appendix documenting revisions done up until that date. In Condit et al. (2004), another species list was provided, but with no list of revisions. Many other papers mention some species, but none since list all species.
+
+Here we provide a complete list with updates since 2004, and with it a list of all obsolete names ever used with a match to the current valid name. We acknowledge, of course, that taxonomy continues and further revisions will be inevitable. The data were frozen as of 1 May 2019, so users will always be able to consult the 2019 version. It updates a 2017 archive with the same format (https://doi.org/10.25570/stri/10088/32990). The same taxonomic tables also appear online in a searchable and sortable format designed to let users explore the data easily (http://conditdatacenter.org/taxonomy/BCI/BCIPlotFullTaxonomy.php). That web site, however, is maintained by one of the PIs and is not guaranteed to be permanent, that is, after he retires from the project it will disappear.
+
+Taxonomy updated and several corrections: 12 November 2019.
+
+ 
+
+Please cite this archive as
+
+Condit R., Perez, R., Aguilar, S., Lao, S., Foster, R., Hubbell, S.P. 2019. BCI 50-ha plot taxonomy, 2019 version.
+
+References
+
+Croat, T.R. 1978. Flora of Barro Colorado Island. Stanford University.
+Hubbell, S. P. and Foster, R. B. 1983. Diversity of canopy trees in a neotropical forest and implications for conservation. Pp. 25-41 in Tropical Rain Forest: Ecology and Management, Whitmore, T., Chadwick, A., and Sutton, A. (Eds.). The British Ecological Society.
+Hubbell, S. P., Condit, R., and Foster, R. B. 1990. Presence and absence of density dependence in a Neotropical tree community. Philosophical Transactions of the Royal Society of London. Series B: Biological Sciences Pages 269–281. pdf http://conditdatacenter.org/pdfs/HubbellConditFoster.PhilTrans1990.pdf
+Condit, R., Hubbell, S. P., and Foster, R. B. 1996. Changes in tree species abundance in a neotropical forest: impact of climate change. Journal of Tropical Ecology 12:231–256. pdf http://conditdatacenter.org/pdfs/Condit_etal1996_JTropEcolpdf.pdf
+Condit, R., 1998. Tropical Forest Census Plots: Methods and Results from Barro Colorado Island, Panama and a Comparison with Other Plots. Springer-Verlag, Berlin. pdf Condit_1998_CensusPlotsmethodsBook.pdf.
+Condit, R., Aguilar, S., Hernandez, A., Pérez, R., Lao, S., Angehr, G., Hubbell, S., and Foster, R. 2004. Tropical forest dynamics across a rainfall gradient and the impact of an El Niño dry season. Journal of Tropical Ecology 20:51–72. pdf http://conditdatacenter.org/pdfs/Condit%20et%20al_2004_J.of%20Trop.Eco.pdf
+Condit, R., Chisholm, R. A., and Hubbell, S. P. 2012. Thirty years of forest census at Barro Colorado and the importance of immigration in maintaining diversity. PLoS ONE 7:e49826. pdf http://conditdatacenter.org/pdfs/ConditChisholmHubbell2012.pdf
+Condit, R., Pérez, R., Aguilar, S., Lao, S., and Hubbell, S. P. 2017. Demographic trends and climate over 35 years in the Barro Colorado 50 ha plot. Forest Ecosystems 4:1–13. pdf http://conditdatacenter.org/pdfs/Condit_et_al-2017-Forest_Ecosystems.pdf
+
+Table 1: All Species Names
+A tab-delimited ascii text table, Condit_FullBCITaxa.tsv, giving all 489 species names used in the BCI 50 ha plot through 2019.
+
+Columns in Table 1: All Species Names
+
+Latin: Latin name
+Status: Status of the given Latin name, either Obsolete or Accepted
+Current: The currently accepted Latin name for the given taxon, always differing from Latin if Status=Obsolete but matching if Status=Accepted
+Mnemonic: The six-letter mnemonic used for the taxon in the field and in R databases
+Family: Following (mostly) the angiosperm classification at http://www.mobot.org/MOBOT/research/APweb/
+Authority: Taxonomic authority
+Notes: Notes about the taxon, mostly for species whose names have changed
+Table 2: Currently Accepted Species Names
+A tab-delimited ascii text table, Condit_ValidBCITaxa.tsv, giving the 328 species names currently in use in the BCI 50-ha plot (2019).
+
+Columns in Table 2: Currently Accepted Species Names
+
+Latin: Accepted Latin name
+Mnemonic: The six-letter mnemonic used for the taxon in the field and in R databases
+Family: Following (mostly) the angiosperm classification at http://www.mobot.org/MOBOT/research/APweb/
+Authority: Taxonomic authority
+Notes: Notes about the taxon, mostly for species whose names have changed
+aka: Previous names for the taxon
+past code: Old abbreviations for the taxon
+Table 3: Taxon History
+A tab-delimited ascii text table, Condit_TaxaHistory.tsv, giving the taxonomic history of the 328 species in the plot since 1982.
+
+Columns in Table 3: Taxon History
+
+Family: Following (mostly) the angiosperm classification at http://www.mobot.org/MOBOT/research/APweb/
+Change: Asterisk for all names changed since the 1982 census
+Current: Name used in this archive
+Croat: Name in Croat Flora of BCI (1978)
+1982: Name initially used in 50-ha census
+1996: Name in Condit et al. (1996)
+2004: Name in Condit et al. (2004)
+2017: Name in use in 2017
+Other: Any other names used in between those years

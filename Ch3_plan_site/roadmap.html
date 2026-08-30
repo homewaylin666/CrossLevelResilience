@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roadmap — Ch3 Cross-scale Resilience</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="bar">
+  <a class="home" href="index.html">Ch3 · Cross-scale resilience</a>
+  <a class="l" href="index.html">Home</a>
+  <a class="l" href="strategy.html">Strategy</a>
+  <a class="l" href="levels.html">Levels</a>
+  <a class="l" href="principles.html">Principles</a>
+  <a class="l" href="data.html">Data</a>
+  <a class="l" href="references.html">References</a>
+  <a class="l active" href="roadmap.html">Roadmap</a>
+</nav>
+
+<div class="wrap">
+  <div class="crumb">Home › Roadmap</div>
+  <h1>Roadmap</h1>
+
+  <h2>The concrete scientific question</h2>
+  <div class="hero">
+    Do lower-level resilience mechanisms <b>lead, filter, and explain</b> community resilience during a shared ENSO press?
+  </div>
+  <p class="lead">The three verbs are three separate, testable claims — and they make <b>different demands on the data</b>:</p>
+  <table>
+    <thead><tr><th>Verb</th><th>Claim</th><th>Replication it needs</th><th>Feasibility here</th></tr></thead>
+    <tbody>
+      <tr><td><b>Filter</b></td><td>density dependence &amp; interactions determine which lower-level responses pass upward</td><td>across species &amp; space (cross-sectional)</td><td><b>Strong</b> — hundreds of species × thousands of spatial units</td></tr>
+      <tr><td><b>Explain</b></td><td>lower-level resilience statistically accounts for community resilience</td><td>across species &amp; space</td><td><b>Strong</b></td></tr>
+      <tr><td><b>Lead</b></td><td>lower levels respond before higher levels in time</td><td>multiple time points / events</td><td><b>Weaker</b> — see the pivot below</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout good">
+    <div class="h">★ The key design pivot: replicate across space &amp; species, not (only) time</div>
+    <p style="margin:6px 0 0">You correctly noted there is essentially <b>one</b> fully cross-scale-resolved event (2015–16). The way out is to stop
+    treating this as a short time series and start treating it as a <b>massively replicated dose–response within one event</b>. BCI's power is
+    <b>N, not T</b>:</p>
+    <ul style="margin:8px 0 0">
+      <li><b>Spatial gradient of ΔK.</b> The SWP map gives ~200 sites (and an interpolatable surface) of <i>local</i> drought intensity across the
+        50 ha. One event becomes thousands of spatially-replicated "mini-experiments": local drought → local individual response → local
+        population response → local community change.</li>
+      <li><b>Species as replicates.</b> 62–400 species, each with its own sensitivity, let "does population resilience predict community
+        contribution?" be tested across species, not across time.</li>
+      <li><b>Earlier droughts for the slow levels.</b> 1982–83 and 1997–98 give the community/population levels <b>multiple</b> events — use them
+        to corroborate the slow-level pattern even though matching individual data start only in 2001.</li>
+    </ul>
+    <p style="margin:8px 0 0">So <b>filter</b> and <b>explain</b> become the primary, well-powered tests; <b>lead</b> becomes a supporting test, run where
+    resolution allows (seedlings 2014→2016→2018; dendrometer 2015–2020) rather than the load-bearing claim.</p>
+  </div>
+
+  <h2>Phase 0 — the feasibility / coverage audit (do this first)</h2>
+  <div class="callout">
+    <div class="h">Why this is its own phase, not a footnote</div>
+    <p style="margin:6px 0 0">Before any modelling, we must establish <b>which species, which intervals, and which spatial units actually carry enough
+    signal at all three levels</b> to support a cross-scale claim. This single audit defines the entire analyzable design and de-risks everything
+    after it. Concretely, build a <b>coverage matrix</b>: for each candidate species, how many individuals across how many censuses and how many
+    quadrats; which 20×20 m units have SWP + seedlings + recruitment + adult stems together; which drought × level × resilience-component cells are
+    populated. Output = the shortlist of species, units and intervals the chapter can honestly use. <b>Confidence this is essential: very high.</b></p>
+  </div>
+
+  <h2>Step sequence</h2>
+  <ol class="steps">
+    <li><b>Phase 0 — coverage audit.</b> Build the species × interval × spatial-unit feasibility matrix; produce the analyzable shortlist.</li>
+    <li><b>Confirm spatial nesting</b> in code — seedling plots, the 200 SWP sites, and tree stems on the shared 50-ha grid — so the joins are exact.</li>
+    <li><b>Define disturbance &amp; moving baseline</b> — formalise the 2015–16 (and earlier) windows and an AEDT-style expected trajectory;
+      assign each level the resilience component it can support (community 2015–16 = resistance; recovery from dendrometer 2015–2020 or earlier droughts).</li>
+    <li><b>(Exploratory) probe species-level leverage</b> — whether any species disproportionately affect community resilience (see note below); secondary to steps 3 &amp; 5, not a gate on them.</li>
+    <li><b>Measure resilience at each level</b> with <code>estar</code>; quantify conspecific NDD (j1) and the interspecific interaction matrix (j2).</li>
+    <li><b>Test filter → explain → lead</b> across the spatial &amp; species replication, with the temporal lead test where resolution allows.</li>
+  </ol>
+
+  <div class="callout dim">
+    <div class="h">On the species-leverage branch — demoted, and to be handled carefully</div>
+    <p style="margin:6px 0 0">This is no longer a primary aim. Three reasons for caution: (1) <b>conceptual fit</b> — keystone logic comes from
+    low-diversity systems; in a ~300-species, high-evenness forest, community resilience may be <b>distributed</b> rather than species-driven, and
+    finding that would itself be informative. (2) <b>label</b> — abundance/basal area identifies <i>dominant / foundation</i> species, not keystones;
+    only effect on community resilience (matrix leverage / per-capita interaction centrality) approximates keystone-ness. (3) <b>circularity</b> —
+    if species are selected by their effect on community resilience and then tested for that effect, the test is circular; selection must use
+    independent, pre-disturbance criteria. If pursued, treat it as a bounded, clearly-caveated extension.</p>
+  </div>
+
+  <div class="callout">
+    <div class="h">Suggested immediate move</div>
+    <p style="margin:6px 0 0">Run <b>Phase 0 + step 2</b> together — pure data work on the open datasets that produces the coverage matrix and clean
+    spatial joins. Everything downstream depends on it, and it will tell us empirically whether the design is as strong as it looks on paper.
+    I can start this in code whenever you're ready.</p>
+  </div>
+
+  <h2>The Unified Framework — kept as an optional extension</h2>
+  <div class="callout dim">
+    <div class="h">Deliberately parked</div>
+    <p style="margin:6px 0 0">Estimating the framework's b<sub>j</sub> / r<sub>j</sub> parameters and simulating is elegant and the data could in
+    principle support it, but the difficulty/risk are high. Deliver the empirical decomposition first; only then revisit whether the level-specific
+    resilience estimates read as b/r and can drive a simulation. A possible final section or follow-up chapter — not a prerequisite.</p>
+  </div>
+
+  <div class="pagenav"><a href="references.html">← References</a><a href="index.html">Back to home →</a></div>
+  <footer>Cross.level.resilience · Chapter 3 plan</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Levels — Ch3 Cross-scale Resilience</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="bar">
+  <a class="home" href="index.html">Ch3 · Cross-scale resilience</a>
+  <a class="l" href="index.html">Home</a>
+  <a class="l" href="strategy.html">Strategy</a>
+  <a class="l active" href="levels.html">Levels</a>
+  <a class="l" href="principles.html">Principles</a>
+  <a class="l" href="data.html">Data</a>
+  <a class="l" href="references.html">References</a>
+  <a class="l" href="roadmap.html">Roadmap</a>
+</nav>
+
+<div class="wrap">
+  <div class="crumb">Home › Levels &amp; transitions</div>
+  <h1>Levels &amp; transitions</h1>
+  <p class="lead">Three nodes connected by two transitions. The object of study is the <b>transition</b> — the aggregation step
+  from one level to the next — because that is where the cross-scale mechanism, and each kind of density dependence, lives.</p>
+
+  <div class="chain">
+    <div class="node ind"><div class="nh">Individual</div><div class="nb">growth &amp; survival</div></div>
+    <div class="trans"><div class="ar">→</div><div class="tj">j1 · ind → pop</div><div class="td">intraspecific DD</div></div>
+    <div class="node pop"><div class="nh">Population</div><div class="nb">abundance, λ, resilience</div></div>
+    <div class="trans"><div class="ar">→</div><div class="tj">j2 · pop → comm</div><div class="td">interspecific interactions</div></div>
+    <div class="node comm"><div class="nh">Community</div><div class="nb">composition, diversity</div></div>
+  </div>
+
+  <h2>Nodes</h2>
+  <table>
+    <thead><tr><th>Node</th><th>State variable</th><th>Data source</th><th>Timescale</th></tr></thead>
+    <tbody>
+      <tr><td><span class="dot" style="background:var(--ind)"></span><b>Individual</b></td>
+        <td>per-organism height growth &amp; survival</td>
+        <td>seedling census (185k tagged individuals) &amp; tree census (every stem tagged); SWP map = drought intensity ΔK</td>
+        <td><b>observed:</b> 1–2 yr (seedling) · 5 yr (full census) · annual (dendrometer subset)</td></tr>
+      <tr><td><span class="dot" style="background:var(--pop)"></span><b>Population</b></td>
+        <td>per-species abundance, recruitment, mean vital rates, λ; population resilience</td>
+        <td>aggregated individuals (seedling recruitment + tree stems)</td>
+        <td>years – decade</td></tr>
+      <tr><td><span class="dot" style="background:var(--comm)"></span><b>Community</b></td>
+        <td>composition, diversity, dominance turnover; community resilience</td>
+        <td>50-ha tree census, 8 censuses 1982–2015 (&gt;400 species)</td>
+        <td>decades</td></tr>
+    </tbody>
+  </table>
+  <p class="small mut">Optional sub-individual layer — <b>physiology</b> (whole-tree water regulation, sap flow), timescale hours–days.
+  Currently has no BCI/2015–16 data; treated as <span class="pill opt">optional</span>. See <a href="data.html">Data §</a>.</p>
+
+  <h2>Transitions — the two places the hypothesis can succeed or fail</h2>
+  <div class="grid2">
+    <div class="card" style="border-color:var(--pop)">
+      <h3 style="color:var(--pop)">j1 · Individual → Population</h3>
+      <p class="small"><b>Emergent term:</b> recruitment &amp; conspecific density — not readable from any single individual.</p>
+      <p class="small"><b>Mechanism that lives here:</b> conspecific negative density dependence (Comita et al. 2010; Zhu et al. 2015, 2018) and demographic buffering (Santos et al. 2026).</p>
+      <p class="small"><b>What we estimate:</b> how individual responses aggregate into population resilience, modulated by intraspecific density.</p>
+    </div>
+    <div class="card" style="border-color:var(--comm)">
+      <h3 style="color:var(--comm)">j2 · Population → Community</h3>
+      <p class="small"><b>Emergent term:</b> interspecific interaction coefficients — the community / Jacobian matrix.</p>
+      <p class="small"><b>Mechanism that lives here:</b> interspecific interactions &amp; stage-specific couplings (Giménez-Romero et al. 2025).</p>
+      <p class="small"><b>What we estimate:</b> how population resiliences combine through the interaction matrix into community resilience.</p>
+    </div>
+  </div>
+
+  <div class="callout dim">
+    <div class="h">Why "transition", not "level"?</div>
+    <p style="margin:6px 0 0">In the data, the population is not a separate file — it is the individual records <i>aggregated by species</i>,
+    plus an emergent term (recruitment, density) that no individual carries. So j1 and j2 are aggregation operators, and the difference
+    they create <i>is</i> the cross-scale phenomenon the chapter quantifies.</p>
+  </div>
+
+  <div class="pagenav"><a href="strategy.html">← Strategy</a><a href="principles.html">Guiding principles →</a></div>
+  <footer>Cross.level.resilience · Chapter 3 plan</footer>
+</div>
+</body>
+</html>
