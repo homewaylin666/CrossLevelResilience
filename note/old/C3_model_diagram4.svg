@@ -1,0 +1,1227 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1715 1225"
+   width="1715"
+   height="1225"
+   version="1.1"
+   id="svg142"
+   sodipodi:docname="C3_model_diagram4.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   inkscape:export-filename="C3_model_diagram4.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:c2pa="http://c2pa.org/manifest">
+  <sodipodi:namedview
+     id="namedview142"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.52797572"
+     inkscape:cx="777.49787"
+     inkscape:cy="591.88327"
+     inkscape:window-width="1470"
+     inkscape:window-height="810"
+     inkscape:window-x="-1"
+     inkscape:window-y="38"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg142" />
+  <metadata
+     id="metadata1">
+    <c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo2ZWYwNjQzYS0zYWM3LTQzNWMtYTRkNi01N2M3OGQ2YzdiMTkAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaCBejLEWRBeaE4pw26JCVssAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDoyOTg1ZGFlOS01NTMxLTQzODQtYjI4MS1mOGQ3ZDEzMDNjZWRscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo3xMprxUHnuJ+3TJRYwMDIgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggsLF9JYk3IYYHVmo0bS95JimsNFjk8zR0KKqabrQHDImkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaGS/Kjxsm6MKm+r4lIEIGMQAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIKATHbJ8WaNpbBqQM9M7PDRclVpg3AXIZkxlJTufojc4ZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GQRMZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjZlZjA2NDNhLTNhYzctNDM1Yy1hNGQ2LTU3Yzc4ZDZjN2IxOS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjUzYmY0ZDU0LTI5MTEtNGVlYy04ZThiLTI5YjdlZDlmYjk1ZHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCCwsX0liTchhgdWajRtL3kmKaw0WOTzNHQoqpputAcMiaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggbU4Ov4Z1msCqD16pdHzwuODWcbHO/3SSes7lt+BHAyWiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggi/TDSVwImcDGncTbmbJQrb5BnN84CLD17CwtR2d3WLN0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQGWr93W74HwOmHciqUmc2Q1vIeIJG9rV1UkMt7xHZyyki0lxAVGxtG7H4siuoPCOfH3SDBK4NQahVX+cDTHLymw=</c2pa:manifest>
+  </metadata>
+  <defs
+     id="defs3">
+    <linearGradient
+       id="swatch158"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#b03a3a;stop-opacity:1;"
+         offset="0"
+         id="stop158" />
+    </linearGradient>
+    <linearGradient
+       id="swatch157"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#b03a3a;stop-opacity:1;"
+         offset="0"
+         id="stop157" />
+    </linearGradient>
+    <linearGradient
+       id="swatch156"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#b03a3a;stop-opacity:1;"
+         offset="0"
+         id="stop156" />
+    </linearGradient>
+    <linearGradient
+       id="swatch155"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#b03a3a;stop-opacity:1;"
+         offset="0"
+         id="stop155" />
+    </linearGradient>
+    <marker
+       id="a"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#111111"
+         id="path1" />
+    </marker>
+    <marker
+       id="ag"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#1e6b2a"
+         id="path2" />
+    </marker>
+    <marker
+       id="ab"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#1560b8"
+         id="path3" />
+    </marker>
+    <marker
+       id="ab-9"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#1560b8"
+         id="path3-5" />
+    </marker>
+    <marker
+       id="ab-9-8"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#1560b8"
+         id="path3-5-9" />
+    </marker>
+    <marker
+       id="ab-9-5"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#1560b8"
+         id="path3-5-2" />
+    </marker>
+    <marker
+       id="ao"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#b0641a"
+         id="path4" />
+    </marker>
+    <marker
+       id="ar"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#b03a3a"
+         id="path5" />
+    </marker>
+  </defs>
+  <style
+     id="style3">
+ text{font-family:&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;fill:#111}
+ .mg{font-size:26px;font-weight:700}
+ .mgs{font-size:19px;fill:#333}
+ .ttl{font-size:26px;font-weight:700}
+ .h{font-size:21px;font-weight:700}
+ .b{font-size:20px}
+ .n{font-size:19px;fill:#222}
+ .eq{font-size:20px}
+ .lbl{font-size:19px}
+ .lg{font-size:17px;fill:#333}
+ i{font-style:italic}
+</style>
+  <rect
+     id="B_outer"
+     x="212"
+     y="18"
+     width="630"
+     height="450"
+     rx="14"
+     fill="#e8f1fb"
+     stroke="#1560b8"
+     stroke-width="2.5" />
+  <text
+     id="t1"
+     class="ttl"
+     x="527"
+     y="52"
+     text-anchor="middle"
+     fill="#0d47a1">Climate context</text>
+  <rect
+     id="r2"
+     x="237"
+     y="70"
+     width="580"
+     height="62"
+     rx="9"
+     fill="#ffffff"
+     stroke="#1560b8"
+     stroke-width="1.6" />
+  <text
+     id="t3"
+     class="h"
+     x="527"
+     y="98"
+     text-anchor="middle">Climate [t]</text>
+  <text
+     id="t4"
+     class="n"
+     x="527"
+     y="121"
+     text-anchor="middle">(e.g., average growing-season precipitation)</text>
+  <path
+     d="m 527,132 v 28"
+     stroke="#1560b8"
+     stroke-width="2.4"
+     fill="none"
+     marker-end="url(#ab)"
+     id="path6" />
+  <rect
+     id="r5"
+     x="237"
+     y="162"
+     width="580"
+     height="164"
+     rx="9"
+     fill="#ffffff"
+     stroke="#1560b8"
+     stroke-width="1.6" />
+  <text
+     id="t6"
+     class="b"
+     x="527"
+     y="190"
+     text-anchor="middle"
+     font-weight="700">Climate effects</text>
+  <text
+     id="t7"
+     class="eq"
+     x="420"
+     y="224"
+     text-anchor="end"><tspan
+   font-style="italic"
+   id="tspan6">η</tspan><tspan
+   font-size="14px"
+   id="tspan7">clim</tspan>[i, t, v]</text>
+  <text
+     id="t8"
+     class="eq"
+     x="428"
+     y="224">=</text>
+  <text
+     id="t9"
+     class="eq"
+     x="448"
+     y="224"><tspan
+   fill="#b03a3a"
+   id="tspan10"><tspan
+   font-style="italic"
+   id="tspan8">β</tspan><tspan
+   font-size="14px"
+   id="tspan9">climate</tspan>[k, v]</tspan> × climate[t]</text>
+  <text
+     id="t10"
+     class="eq"
+     x="428"
+     y="252">+</text>
+  <text
+     id="t11"
+     class="eq"
+     x="448"
+     y="252"><tspan
+   font-style="italic"
+   id="tspan11">δ</tspan><tspan
+   font-size="14px"
+   id="tspan12">size</tspan>[v] × climate[t] × z[i, t]</text>
+  <text
+     id="t12"
+     class="eq"
+     x="428"
+     y="280">+</text>
+  <text
+     id="t13"
+     class="eq"
+     x="448"
+     y="280"><tspan
+   font-style="italic"
+   id="tspan13">δ</tspan><tspan
+   font-size="14px"
+   id="tspan14">intra</tspan>[v] × climate[t] × INTRA[i, t]</text>
+  <text
+     id="t14"
+     class="eq"
+     x="428"
+     y="308">+</text>
+  <text
+     id="t15"
+     class="eq"
+     x="448"
+     y="308"><tspan
+   font-style="italic"
+   id="tspan15">δ</tspan><tspan
+   font-size="14px"
+   id="tspan16">inter</tspan>[v] × climate[t] × INTER[i, t]</text>
+  <rect
+     id="r16"
+     x="237"
+     y="342"
+     width="580"
+     height="108"
+     rx="9"
+     fill="#ffffff"
+     stroke="#1560b8"
+     stroke-width="1.6"
+     stroke-dasharray="8, 5" />
+  <text
+     id="t17"
+     class="b"
+     x="527"
+     y="370"
+     text-anchor="middle"
+     font-weight="700">Year (random effect)</text>
+  <text
+     id="t18"
+     class="eq"
+     x="364"
+     y="404"
+     text-anchor="end"><tspan
+   font-style="italic"
+   id="tspan17">η</tspan><tspan
+   font-size="14px"
+   id="tspan18">year</tspan>[i, t, v]</text>
+  <text
+     id="t19"
+     class="eq"
+     x="372"
+     y="404">=</text>
+  <text
+     id="t20"
+     class="eq"
+     x="392"
+     y="404"><tspan
+   font-style="italic"
+   id="tspan19">ε</tspan><tspan
+   font-size="14px"
+   id="tspan20">t</tspan>[v] + <tspan
+   font-style="italic"
+   id="tspan21">ε</tspan><tspan
+   font-size="14px"
+   id="tspan22">t,k</tspan>[v] + <tspan
+   font-style="italic"
+   id="tspan23">ε</tspan><tspan
+   font-size="14px"
+   id="tspan24">t,size</tspan>[v] × z[i, t]</text>
+  <text
+     id="t21"
+     class="eq"
+     x="372"
+     y="432">+</text>
+  <text
+     id="t22"
+     class="eq"
+     x="392"
+     y="432"><tspan
+   font-style="italic"
+   id="tspan25">ε</tspan><tspan
+   font-size="14px"
+   id="tspan26">t,intra</tspan>[v] × INTRA[i, t] + <tspan
+   font-style="italic"
+   id="tspan27">ε</tspan><tspan
+   font-size="14px"
+   id="tspan28">t,inter</tspan>[v] × INTER[i, t]</text>
+  <text
+     id="t23"
+     class="n"
+     x="1207"
+     y="52"
+     text-anchor="middle">All the <tspan
+   fill="#b03a3a"
+   id="tspan29">red coefficients [k, v]</tspan> are set by the population level</text>
+  <rect
+     id="P_outer"
+     x="892"
+     y="76"
+     width="630"
+     height="392"
+     rx="14"
+     fill="#fad4d4"
+     stroke="#b03a3a"
+     stroke-width="2.5" />
+  <text
+     id="t24"
+     class="ttl"
+     x="1207"
+     y="110"
+     text-anchor="middle"
+     fill="#8a1f1f">Population-level variation</text>
+  <rect
+     id="r25"
+     x="917"
+     y="128"
+     width="580"
+     height="62"
+     rx="9"
+     fill="#ffffff"
+     stroke="#b03a3a"
+     stroke-width="1.6" />
+  <text
+     id="t26"
+     class="h"
+     x="1207"
+     y="156"
+     text-anchor="middle">Life-history trait [k] (trait)</text>
+  <text
+     id="t27"
+     class="n"
+     x="1207"
+     y="179"
+     text-anchor="middle">(e.g., GenTime, Iteroparity, etc.)</text>
+  <path
+     d="m 1207,190 v 28"
+     stroke="#b03a3a"
+     stroke-width="2.4"
+     fill="none"
+     marker-end="url(#ar)"
+     id="path29" />
+  <rect
+     id="r28"
+     x="917"
+     y="220"
+     width="580"
+     height="180"
+     rx="9"
+     fill="#ffffff"
+     stroke="#b03a3a"
+     stroke-width="1.6" />
+  <text
+     id="t29"
+     class="b"
+     x="1207"
+     y="248"
+     text-anchor="middle"
+     font-weight="700">Population-specific coefficients</text>
+  <text
+     id="t30"
+     class="eq"
+     x="1146"
+     y="282"
+     text-anchor="end">X[k, v]</text>
+  <text
+     id="t31"
+     class="eq"
+     x="1154"
+     y="282">=</text>
+  <text
+     id="t32"
+     class="eq"
+     x="1174"
+     y="282">d0<tspan
+   font-size="14px"
+   id="tspan30">X</tspan>[v]</text>
+  <text
+     id="t33"
+     class="eq"
+     x="1154"
+     y="310">+</text>
+  <text
+     id="t34"
+     class="eq"
+     x="1174"
+     y="310">d1<tspan
+   font-size="14px"
+   id="tspan31">X</tspan>[v] × trait[k]</text>
+  <text
+     id="t35"
+     class="eq"
+     x="1154"
+     y="338">+</text>
+  <text
+     id="t36"
+     class="eq"
+     x="1174"
+     y="338"><tspan
+   font-style="italic"
+   id="tspan32">σ</tspan><tspan
+   font-size="14px"
+   id="tspan33">X</tspan>[k]</text>
+  <text
+     id="t37"
+     class="eq"
+     x="1207"
+     y="382"
+     text-anchor="middle"><tspan
+       fill="#b03a3a"
+       id="tspan47">X ∈ { <tspan
+   font-style="italic"
+   id="tspan34">α</tspan><tspan
+   font-size="14px"
+   id="tspan35">0</tspan>, <tspan
+   font-style="italic"
+   id="tspan36">α</tspan><tspan
+   font-size="14px"
+   id="tspan37">1</tspan>, <tspan
+   font-style="italic"
+   id="tspan38">α</tspan><tspan
+   font-size="14px"
+   id="tspan39">2</tspan>, <tspan
+   font-style="italic"
+   id="tspan40">γ</tspan>, <tspan
+   font-style="italic"
+   id="tspan41">β</tspan><tspan
+   font-size="14px"
+   id="tspan42">intra</tspan>, <tspan
+   font-style="italic"
+   id="tspan43">β</tspan><tspan
+   font-size="14px"
+   id="tspan44">inter</tspan>, <tspan
+   font-style="italic"
+   id="tspan45">β</tspan><tspan
+   font-size="14px"
+   id="tspan46">climate</tspan> }</tspan></text>
+  <rect
+     id="O_outer"
+     x="212"
+     y="548"
+     width="630"
+     height="370"
+     rx="14"
+     fill="#fffaf1"
+     stroke="#b0641a"
+     stroke-width="2.5" />
+  <rect
+     id="I_outer"
+     x="892"
+     y="548"
+     width="630"
+     height="370"
+     rx="14"
+     fill="#eaf6ec"
+     stroke="#1e6b2a"
+     stroke-width="2.5" />
+  <text
+     id="t38"
+     class="ttl"
+     x="527"
+     y="582"
+     text-anchor="middle"
+     fill="#8a4a10">Individual-level variation</text>
+  <text
+     id="t39"
+     class="ttl"
+     x="1207"
+     y="582"
+     text-anchor="middle"
+     fill="#1b5e20">Interactions</text>
+  <rect
+     id="r40"
+     x="237"
+     y="600"
+     width="580"
+     height="50"
+     rx="9"
+     fill="#ffffff"
+     stroke="#b0641a"
+     stroke-width="1.6" />
+  <text
+     id="t41"
+     class="h"
+     x="527"
+     y="632"
+     text-anchor="middle">Size [i, t] &amp; Microenvironment [i] (z &amp; mic)</text>
+  <rect
+     id="r42"
+     x="917"
+     y="600"
+     width="580"
+     height="50"
+     rx="9"
+     fill="#ffffff"
+     stroke="#1e6b2a"
+     stroke-width="1.6" />
+  <text
+     id="t43"
+     class="h"
+     x="1207"
+     y="632"
+     text-anchor="middle">Intraspecific &amp; Interspecisfic [i, t] (INTRA &amp; INTER)</text>
+  <path
+     d="m 527,650 v 28"
+     stroke="#b0641a"
+     stroke-width="2.4"
+     fill="none"
+     marker-end="url(#ao)"
+     id="path47" />
+  <path
+     d="m 1207,650 v 28"
+     stroke="#1e6b2a"
+     stroke-width="2.4"
+     fill="none"
+     marker-end="url(#ag)"
+     id="path48" />
+  <rect
+     id="r44"
+     x="237"
+     y="680"
+     width="580"
+     height="220"
+     rx="9"
+     fill="#ffffff"
+     stroke="#b0641a"
+     stroke-width="1.6" />
+  <text
+     id="t45"
+     class="b"
+     x="527"
+     y="708"
+     text-anchor="middle"
+     font-weight="700">Individual effects</text>
+  <text
+     id="t46"
+     class="eq"
+     x="486"
+     y="742"
+     text-anchor="end"><tspan
+   font-style="italic"
+   id="tspan48">η</tspan><tspan
+   font-size="14px"
+   id="tspan49">ind</tspan>[i, t, v]</text>
+  <text
+     id="t47"
+     class="eq"
+     x="494"
+     y="742">=</text>
+  <text
+     id="t48"
+     class="eq"
+     x="514"
+     y="742"><tspan
+       fill="#b03a3a"
+       id="tspan52"><tspan
+   font-style="italic"
+   id="tspan50">α</tspan><tspan
+   font-size="14px"
+   id="tspan51">0</tspan>[k, v]</tspan></text>
+  <text
+     id="t49"
+     class="eq"
+     x="494"
+     y="770">+</text>
+  <text
+     id="t50"
+     class="eq"
+     x="514"
+     y="770"><tspan
+   fill="#b03a3a"
+   id="tspan55"><tspan
+   font-style="italic"
+   id="tspan53">α</tspan><tspan
+   font-size="14px"
+   id="tspan54">1</tspan>[k, v]</tspan> × z[i, t]</text>
+  <text
+     id="t51"
+     class="eq"
+     x="494"
+     y="798">+</text>
+  <text
+     id="t52"
+     class="eq"
+     x="514"
+     y="798"><tspan
+   fill="#b03a3a"
+   id="tspan58"><tspan
+   font-style="italic"
+   id="tspan56">α</tspan><tspan
+   font-size="14px"
+   id="tspan57">2</tspan>[k, v]</tspan> × z²[i, t]</text>
+  <text
+     id="t53"
+     class="eq"
+     x="494"
+     y="826">+</text>
+  <text
+     id="t54"
+     class="eq"
+     x="514"
+     y="826"><tspan
+   fill="#b03a3a"
+   id="tspan60"><tspan
+   font-style="italic"
+   id="tspan59">γ</tspan>[k, v]</tspan> × mic[i]</text>
+  <text
+     id="t55"
+     class="eq"
+     x="494"
+     y="854">+</text>
+  <text
+     id="t56"
+     class="eq"
+     x="514"
+     y="854"><tspan
+   font-style="italic"
+   id="tspan61">ε</tspan><tspan
+   font-size="14px"
+   id="tspan62">i</tspan>[v]</text>
+  <rect
+     id="r57"
+     x="917"
+     y="680"
+     width="580"
+     height="220"
+     rx="9"
+     fill="#ffffff"
+     stroke="#1e6b2a"
+     stroke-width="1.6" />
+  <text
+     id="t58"
+     class="b"
+     x="1207"
+     y="708"
+     text-anchor="middle"
+     font-weight="700">Interaction effects</text>
+  <text
+     id="t59"
+     class="eq"
+     x="1120"
+     y="742"
+     text-anchor="end"><tspan
+   font-style="italic"
+   id="tspan63">η</tspan><tspan
+   font-size="14px"
+   id="tspan64">crowd</tspan>[i, t, v]</text>
+  <text
+     id="t60"
+     class="eq"
+     x="1128"
+     y="742">=</text>
+  <text
+     id="t61"
+     class="eq"
+     x="1148"
+     y="742"><tspan
+   fill="#b03a3a"
+   id="tspan67"><tspan
+   font-style="italic"
+   id="tspan65">β</tspan><tspan
+   font-size="14px"
+   id="tspan66">intra</tspan>[k, v]</tspan> × INTRA[i, t]</text>
+  <text
+     id="t62"
+     class="eq"
+     x="1128"
+     y="770">+</text>
+  <text
+     id="t63"
+     class="eq"
+     x="1148"
+     y="770"><tspan
+   fill="#b03a3a"
+   id="tspan70"><tspan
+   font-style="italic"
+   id="tspan68">β</tspan><tspan
+   font-size="14px"
+   id="tspan69">inter</tspan>[k, v]</tspan> × INTER[i, t]</text>
+  <text
+     id="t64"
+     class="eq"
+     x="1128"
+     y="798">+</text>
+  <text
+     id="t65"
+     class="eq"
+     x="1148"
+     y="798"><tspan
+   font-style="italic"
+   id="tspan71">θ</tspan><tspan
+   font-size="14px"
+   id="tspan72">intra</tspan>[v] × INTRA[i, t] × z[i, t]</text>
+  <text
+     id="t66"
+     class="eq"
+     x="1128"
+     y="826">+</text>
+  <text
+     id="t67"
+     class="eq"
+     x="1148"
+     y="826"><tspan
+   font-style="italic"
+   id="tspan73">θ</tspan><tspan
+   font-size="14px"
+   id="tspan74">inter</tspan>[v] × INTER[i, t] × z[i, t]</text>
+  <text
+     id="t68"
+     class="eq"
+     x="1128"
+     y="854">+</text>
+  <text
+     id="t69"
+     class="eq"
+     x="1148"
+     y="854"><tspan
+   font-style="italic"
+   id="tspan75">ω</tspan><tspan
+   font-size="14px"
+   id="tspan76">intra</tspan>[v] × INTRA[i, t] × mic[i]</text>
+  <text
+     id="t70"
+     class="eq"
+     x="1128"
+     y="882">+</text>
+  <text
+     id="t71"
+     class="eq"
+     x="1148"
+     y="882"><tspan
+   font-style="italic"
+   id="tspan77">ω</tspan><tspan
+   font-size="14px"
+   id="tspan78">inter</tspan>[v] × INTER[i, t] × mic[i]</text>
+  <rect
+     id="r72"
+     x="482.9097"
+     y="953.80847"
+     width="778.56293"
+     height="88.383125"
+     rx="5.552351"
+     fill="#ffffff"
+     stroke="#6a2c91"
+     stroke-width="1.41688" />
+  <text
+     id="t73"
+     class="h"
+     x="867"
+     y="982"
+     text-anchor="middle">Linear predictor for individual i, population k, year t, vital rate v</text>
+  <text
+     id="t74"
+     class="eq"
+     x="867"
+     y="1022"
+     text-anchor="middle"><tspan
+   font-style="italic"
+   id="tspan79">η</tspan>[i, t, v] = <tspan
+   fill="#b0641a"
+   id="tspan82"><tspan
+   font-style="italic"
+   id="tspan80">η</tspan><tspan
+   font-size="14px"
+   id="tspan81">ind</tspan>[i, t, v]</tspan> + <tspan
+   fill="#1e6b2a"
+   id="tspan85"><tspan
+   font-style="italic"
+   id="tspan83">η</tspan><tspan
+   font-size="14px"
+   id="tspan84">crowd</tspan>[i, t, v]</tspan> + <tspan
+   fill="#1560b8"
+   id="tspan88"><tspan
+   font-style="italic"
+   id="tspan86">η</tspan><tspan
+   font-size="14px"
+   id="tspan87">clim</tspan>[i, t, v]</tspan> + <tspan
+   fill="#1560b8"
+   id="tspan91"><tspan
+   font-style="italic"
+   id="tspan89">η</tspan><tspan
+   font-size="14px"
+   id="tspan90">year</tspan>[i, t, v]</tspan></text>
+  <rect
+     id="r75"
+     x="367"
+     y="1080"
+     width="1000"
+     height="128"
+     rx="10"
+     fill="#f3ecf9"
+     stroke="#6a2c91"
+     stroke-width="1.8" />
+  <text
+     id="t76"
+     class="h"
+     x="867"
+     y="1112"
+     text-anchor="middle">Vital rate [i, t, v]</text>
+  <text
+     id="t77"
+     class="eq"
+     x="549"
+     y="1152"
+     text-anchor="end">survival[i, t]</text>
+  <text
+     id="t78"
+     class="eq"
+     x="557"
+     y="1152">~</text>
+  <text
+     id="t79"
+     class="eq"
+     x="577"
+     y="1152">Bernoulli( logit⁻¹ <tspan
+   font-style="italic"
+   id="tspan92">η</tspan>[i, t, 1] )</text>
+  <text
+     id="t80"
+     class="eq"
+     x="549"
+     y="1186"
+     text-anchor="end">growth[i, t]</text>
+  <text
+     id="t81"
+     class="eq"
+     x="557"
+     y="1186">~</text>
+  <text
+     id="t82"
+     class="eq"
+     x="577"
+     y="1186">Normal( <tspan
+   font-style="italic"
+   id="tspan93">η</tspan>[i, t, 2] , <tspan
+   font-style="italic"
+   id="tspan94">σ</tspan><tspan
+   font-size="14px"
+   id="tspan95">grow</tspan> )</text>
+  <text
+     id="t83"
+     class="eq"
+     x="1049"
+     y="1152"
+     text-anchor="end">flowering[i, t]</text>
+  <text
+     id="t84"
+     class="eq"
+     x="1057"
+     y="1152">~</text>
+  <text
+     id="t85"
+     class="eq"
+     x="1077"
+     y="1152">Bernoulli( logit⁻¹ <tspan
+   font-style="italic"
+   id="tspan96">η</tspan>[i, t, 3] )</text>
+  <text
+     id="t86"
+     class="eq"
+     x="1049"
+     y="1186"
+     text-anchor="end">fecundity[i, t]</text>
+  <text
+     id="t87"
+     class="eq"
+     x="1057"
+     y="1186">~</text>
+  <text
+     id="t88"
+     class="eq"
+     x="1077"
+     y="1186">ZTNB( exp <tspan
+   font-style="italic"
+   id="tspan97">η</tspan>[i, t, 4] , r )</text>
+  <path
+     d="m 844,288 h 44"
+     stroke="#1560b8"
+     stroke-width="2.4"
+     fill="none"
+     marker-end="url(#ab)"
+     id="path97" />
+  <path
+     d="m 527,468 v 77"
+     stroke="#1560b8"
+     stroke-width="2.4"
+     fill="none"
+     marker-end="url(#ab)"
+     id="path98" />
+  <path
+     d="m 1207,468 v 77"
+     stroke="#b03a3a"
+     stroke-width="2.4"
+     fill="none"
+     marker-end="url(#ar)"
+     id="path99" />
+  <path
+     d="m 782,468 170,77"
+     stroke="#1560b8"
+     stroke-width="2.4"
+     fill="none"
+     marker-end="url(#ab)"
+     id="path100" />
+  <path
+     d="M 952,468 782,545"
+     stroke="#b03a3a"
+     stroke-width="2.4"
+     fill="none"
+     marker-end="url(#ar)"
+     id="path101" />
+  <path
+     d="m 844.08,790 h 44"
+     stroke="#1e6b2a"
+     stroke-width="2.4"
+     fill="none"
+     marker-end="url(#ag)"
+     id="path102" />
+  <path
+     d="m 527,918 v 34"
+     stroke="#b0641a"
+     stroke-width="2.4"
+     fill="none"
+     marker-end="url(#ao)"
+     id="path103" />
+  <path
+     d="m 1207,918 v 34"
+     stroke="#1e6b2a"
+     stroke-width="2.4"
+     fill="none"
+     marker-end="url(#ag)"
+     id="path104" />
+  <path
+     d="m 867,1042 v 36"
+     stroke="#111111"
+     stroke-width="2.4"
+     fill="none"
+     marker-end="url(#a)"
+     id="path105" />
+  <text
+     id="t89"
+     class="mg"
+     x="38"
+     y="56"
+     fill="#0d47a1">Level-</text>
+  <text
+     id="t90"
+     class="mg"
+     x="38"
+     y="88"
+     fill="#0d47a1">Community</text>
+  <text
+     id="t92"
+     class="mgs"
+     x="38"
+     y="130">Climate shifts</text>
+  <text
+     id="t93"
+     class="mgs"
+     x="38"
+     y="154">vital rates directly</text>
+  <text
+     id="t94"
+     class="mgs"
+     x="38"
+     y="178">and modulates</text>
+  <text
+     id="t95"
+     class="mgs"
+     x="38"
+     y="202">the effects of</text>
+  <text
+     id="t96"
+     class="mgs"
+     x="38"
+     y="226">size, traits and</text>
+  <text
+     id="t97"
+     class="mgs"
+     x="38"
+     y="250">interactions.</text>
+  <text
+     id="t98"
+     class="mgs"
+     x="38"
+     y="372">Year random</text>
+  <text
+     id="t99"
+     class="mgs"
+     x="38"
+     y="396">effects capture</text>
+  <text
+     id="t100"
+     class="mgs"
+     x="38"
+     y="420">what climate</text>
+  <text
+     id="t101"
+     class="mgs"
+     x="38"
+     y="444">cannot explain.</text>
+  <text
+     id="t102"
+     class="mg"
+     x="1540"
+     y="113"
+     fill="#b03a3a">Level-</text>
+  <text
+     id="t103"
+     class="mg"
+     x="1540"
+     y="145"
+     fill="#b03a3a">Population</text>
+  <text
+     id="t104"
+     class="mgs"
+     x="1540"
+     y="181">Population traits</text>
+  <text
+     id="t105"
+     class="mgs"
+     x="1540"
+     y="205">explain species</text>
+  <text
+     id="t106"
+     class="mgs"
+     x="1540"
+     y="229">differences in</text>
+  <text
+     id="t107"
+     class="mgs"
+     x="1540"
+     y="253">every coefficient.</text>
+  <text
+     id="t108"
+     class="mg"
+     x="38"
+     y="585"
+     fill="#b0641a">Level-</text>
+  <text
+     id="t109"
+     class="mg"
+     x="38"
+     y="617"
+     fill="#b0641a">Individual</text>
+  <text
+     id="t110"
+     class="mgs"
+     x="38"
+     y="653">Individual's own</text>
+  <text
+     id="t111"
+     class="mgs"
+     x="38"
+     y="677">size and the</text>
+  <text
+     id="t112"
+     class="mgs"
+     x="38"
+     y="701">microenvironment</text>
+  <text
+     id="t113"
+     class="mgs"
+     x="38"
+     y="725">it occupies.</text>
+  <text
+     id="t114"
+     class="lg"
+     x="1550.5415"
+     y="742.09491">Arrows between</text>
+  <text
+     id="t115"
+     class="lg"
+     x="1550.5415"
+     y="766.09491">levels: the upper</text>
+  <text
+     id="t116"
+     class="lg"
+     x="1550.5415"
+     y="790.09491">level sets the</text>
+  <text
+     id="t117"
+     class="lg"
+     x="1550.5415"
+     y="814.09491">intercepts or</text>
+  <text
+     id="t118"
+     class="lg"
+     x="1550.5415"
+     y="838.09491">modulates the</text>
+  <text
+     id="t119"
+     class="lg"
+     x="1550.5415"
+     y="862.09491">effect sizes of</text>
+  <text
+     id="t120"
+     class="lg"
+     x="1550.5415"
+     y="886.09491">the lower level.</text>
+  <text
+     id="t121"
+     class="mg"
+     x="38"
+     y="1112"
+     fill="#6a2c91">Observation</text>
+  <text
+     id="t122"
+     class="mgs"
+     x="38"
+     y="1148">Observed vital rates</text>
+  <text
+     id="t123"
+     class="mgs"
+     x="38"
+     y="1172">for each individual</text>
+  <text
+     id="t124"
+     class="mgs"
+     x="38"
+     y="1196">and year.</text>
+</svg>

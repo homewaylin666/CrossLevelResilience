@@ -49,3 +49,7 @@ po/*~
 rsconnect/
 *.tsv
 *.sql
+
+# derived data and outputs (rebuildable from data.source/)
+data/
+output/

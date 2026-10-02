@@ -1,0 +1,1029 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1540 1030"
+   width="1540"
+   height="1030"
+   version="1.1"
+   id="svg139"
+   sodipodi:docname="C3_model_diagram.svg"
+   inkscape:export-filename="C3_model_diagram.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:c2pa="http://c2pa.org/manifest">
+  <sodipodi:namedview
+     id="namedview139"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.63110049"
+     inkscape:cx="807.31992"
+     inkscape:cy="644.90522"
+     inkscape:window-width="1470"
+     inkscape:window-height="919"
+     inkscape:window-x="0"
+     inkscape:window-y="37"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg139" />
+  <metadata
+     id="metadata1">
+    <c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo5Mjc1Y2UzMC0wNGMyLTQyMjQtOTQ2Mi1iM2YxZWJhOGRhNzEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaHl5fXqYQMpCeumVRTqtoVwAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDozY2E1ZDc1OC1lZjQ0LTRkNTEtYWI4Ni03MGViNjgyZDllYjRscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNooS4D1eHW+JXBckVTWBgWpwAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg2kKAAVv/B0lRFqwh2sg839aq79AqOoFTKrNlBQjfjZSkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaHT75yJT+tEmv1UeMNarsbUAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCD/EVcp8wOkg1S0m64aGzVX49qo2JPtmf0C1n1OvTkFaWRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiaZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjkyNzVjZTMwLTA0YzItNDIyNC05NDYyLWIzZjFlYmE4ZGE3MS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjIzMDVhMDBlLTQyNTAtNGUwZC04MTQwLTNhYmU4MDhkZjBiZXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDaQoABW/8HSVEWrCHayDzf1qrv0Co6gVMqs2UFCN+NlKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggH0qj320tkFEdmufWZ1oc6gwwyW3uy1cvqh7FFQmDsbyiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggQW2C7Wj+Fo2NXDn2eSZLu32d9M7/MeItjzkflyxOKkd0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQAxzG3Jy1B9vyx1dJRteCfa6s8DmpeF8sed198/6liZdMoNT+XFiLCSwxMxXbHG3xqN5Gu8Vjwepc+mZru+6DGU=</c2pa:manifest>
+  </metadata>
+  <defs
+     id="defs6">
+    <style
+       id="style1">
+      .sans { font-family: 'Roboto', 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif; }
+      .math { font-family: 'Cambria Math', 'STIX Two Math', 'Times New Roman', 'Liberation Serif', serif; }
+      .b { font-weight: bold; }
+      .it { font-style: italic; }
+    </style>
+    <marker
+       id="arGreen"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="7"
+       markerHeight="7"
+       orient="auto-start-reverse">
+      <path
+         d="M0,0 L10,5 L0,10 z"
+         fill="#1e6b2a"
+         id="path1" />
+    </marker>
+    <marker
+       id="arRed"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="7"
+       markerHeight="7"
+       orient="auto-start-reverse">
+      <path
+         d="M0,0 L10,5 L0,10 z"
+         fill="#a31f1f"
+         id="path2" />
+    </marker>
+    <marker
+       id="arBlue"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="7"
+       markerHeight="7"
+       orient="auto-start-reverse">
+      <path
+         d="M0,0 L10,5 L0,10 z"
+         fill="#1560b8"
+         id="path3" />
+    </marker>
+    <marker
+       id="arOrange"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="7"
+       markerHeight="7"
+       orient="auto-start-reverse">
+      <path
+         d="M0,0 L10,5 L0,10 z"
+         fill="#c07a17"
+         id="path4" />
+    </marker>
+    <marker
+       id="arDark"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="7"
+       markerHeight="7"
+       orient="auto-start-reverse">
+      <path
+         d="M0,0 L10,5 L0,10 z"
+         fill="#2a1838"
+         id="path5" />
+    </marker>
+    <marker
+       id="arBlack"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="7"
+       markerHeight="7"
+       orient="auto-start-reverse">
+      <path
+         d="M0,0 L10,5 L0,10 z"
+         fill="#111"
+         id="path6" />
+    </marker>
+  </defs>
+  <rect
+     x="0"
+     y="0"
+     width="1540"
+     height="1030"
+     fill="#ffffff"
+     id="rect6" />
+  <!-- ============ LEFT LEVEL LABELS ============ -->
+  <g
+     class="sans"
+     id="g22">
+    <text
+       x="17"
+       y="138"
+       font-size="26px"
+       class="b"
+       fill="#1e6b2a"
+       id="text6">Level-</text>
+    <text
+       x="17"
+       y="170"
+       font-size="26px"
+       class="b"
+       fill="#1e6b2a"
+       id="text7">Population</text>
+    <g
+       font-size="17.5"
+       fill="#1e6b2a"
+       id="g11">
+      <text
+         x="17"
+         y="198"
+         id="text8">Traits explain</text>
+      <text
+         x="17"
+         y="222"
+         id="text9">species differences</text>
+      <text
+         x="17"
+         y="247"
+         id="text10">in competition</text>
+      <text
+         x="17"
+         y="271"
+         id="text11">effects.</text>
+    </g>
+    <text
+       x="17"
+       y="478"
+       font-size="26px"
+       class="b"
+       fill="#b0641a"
+       id="text12">Level -</text>
+    <text
+       x="17"
+       y="510"
+       font-size="26"
+       class="b"
+       fill="#b0641a"
+       id="text13">Individual</text>
+    <g
+       font-size="17.5"
+       fill="#b0641a"
+       id="g17">
+      <text
+         x="17"
+         y="566"
+         id="text14">Individual vital-rate</text>
+      <text
+         x="17"
+         y="590"
+         id="text15">model (for each</text>
+      <text
+         x="17"
+         y="614"
+         id="text16">individual <tspan
+   class="it"
+   id="tspan15">i</tspan>, year <tspan
+   class="it"
+   id="tspan16">t</tspan>,</text>
+      <text
+         x="17"
+         y="638"
+         id="text17">and vital rate <tspan
+   class="it"
+   id="tspan17">v</tspan>).</text>
+    </g>
+    <text
+       x="17"
+       y="868"
+       font-size="24"
+       class="b"
+       fill="#6a2c91"
+       id="text18">Observation layer</text>
+    <g
+       font-size="19"
+       fill="#6a2c91"
+       id="g21">
+      <text
+         x="17"
+         y="897"
+         id="text19">Observed vital rates</text>
+      <text
+         x="17"
+         y="922"
+         id="text20">for each individual</text>
+      <text
+         x="17"
+         y="947"
+         id="text21">and year.</text>
+    </g>
+  </g>
+  <!-- ============ LEVEL 3: SPECIES BOX ============ -->
+  <rect
+     x="197"
+     y="11"
+     width="620"
+     height="333"
+     rx="8"
+     fill="#dcefe0"
+     stroke="#2e7d32"
+     stroke-width="2.2"
+     id="rect22" />
+  <text
+     x="507"
+     y="50"
+     text-anchor="middle"
+     class="sans b"
+     font-size="28px"
+     fill="#1b5e20"
+     id="text22">Population-level variation (K = 18)</text>
+  <rect
+     x="320"
+     y="69"
+     width="374"
+     height="76"
+     rx="7"
+     fill="#eaf6ec"
+     stroke="#2e7d32"
+     stroke-width="2"
+     id="rect23" />
+  <text
+     x="507"
+     y="100"
+     text-anchor="middle"
+     class="sans b"
+     font-size="21"
+     fill="#111"
+     id="text23">Life-history trait[k]</text>
+  <text
+     x="507"
+     y="130"
+     text-anchor="middle"
+     class="sans"
+     font-size="20px"
+     fill="#222222"
+     id="text24">(e.g. GenTime, Iteroparity, etc.)</text>
+  <line
+     x1="507"
+     y1="145"
+     x2="507"
+     y2="181"
+     stroke="#1e6b2a"
+     stroke-width="2.5"
+     marker-end="url(#arGreen)"
+     id="line24" />
+  <rect
+     x="215"
+     y="184"
+     width="585"
+     height="144"
+     rx="7"
+     fill="#eaf6ec"
+     stroke="#2e7d32"
+     stroke-width="2"
+     id="rect24" />
+  <text
+     x="507"
+     y="216"
+     text-anchor="middle"
+     class="sans b"
+     font-size="20"
+     fill="#111"
+     id="text25">Species-specific coefficients</text>
+  <g
+     class="sans"
+     font-size="19"
+     fill="#111"
+     id="g44">
+    <text
+       x="240"
+       y="250"
+       id="text34"><tspan
+         class="it"
+         id="tspan25">β</tspan><tspan
+         dy="5"
+         font-size="14"
+         id="tspan26">intra</tspan><tspan
+         dy="-5"
+         id="tspan27">[k, v]  =  d0</tspan><tspan
+         dy="5"
+         font-size="14"
+         id="tspan28">intra</tspan><tspan
+         dy="-5"
+         id="tspan29">[v]  +  d1</tspan><tspan
+         dy="5"
+         font-size="14"
+         id="tspan30">intra</tspan><tspan
+         dy="-5"
+         id="tspan31">[v]  ×  trait[k]  +  </tspan><tspan
+         class="it"
+         id="tspan32">σ</tspan><tspan
+         dy="5"
+         font-size="14"
+         id="tspan33">intra</tspan><tspan
+         dy="-5"
+         id="tspan34">[k]</tspan></text>
+    <text
+       x="240"
+       y="279"
+       id="text44"><tspan
+         class="it"
+         id="tspan35">β</tspan><tspan
+         dy="5"
+         font-size="14"
+         id="tspan36">inter</tspan><tspan
+         dy="-5"
+         id="tspan37">[k, v]  =  d0</tspan><tspan
+         dy="5"
+         font-size="14"
+         id="tspan38">inter</tspan><tspan
+         dy="-5"
+         id="tspan39">[v]  +  d1</tspan><tspan
+         dy="5"
+         font-size="14"
+         id="tspan40">inter</tspan><tspan
+         dy="-5"
+         id="tspan41">[v]  ×  trait[k]  +  </tspan><tspan
+         class="it"
+         id="tspan42">σ</tspan><tspan
+         dy="5"
+         font-size="14"
+         id="tspan43">inter</tspan><tspan
+         dy="-5"
+         id="tspan44">[k]</tspan></text>
+  </g>
+  <text
+     x="507"
+     y="312"
+     text-anchor="middle"
+     class="sans"
+     font-size="19"
+     fill="#222"
+     id="text45">(vary among species and vital rates)</text>
+  <!-- ============ LEVEL 5: CLIMATE BOX ============ -->
+  <rect
+     x="856"
+     y="11"
+     width="482"
+     height="184"
+     rx="8"
+     fill="#d7e7f8"
+     stroke="#1565c0"
+     stroke-width="2.2"
+     id="rect45" />
+  <text
+     x="918"
+     y="50"
+     class="sans"
+     font-size="26"
+     fill="#0d47a1"
+     id="text46"><tspan
+   class="b"
+   id="tspan45">Climate context</tspan> (T = 7 years)</text>
+  <rect
+     x="949"
+     y="69"
+     width="307"
+     height="107"
+     rx="7"
+     fill="#e9f2fc"
+     stroke="#1565c0"
+     stroke-width="2"
+     id="rect46" />
+  <text
+     x="1102"
+     y="99"
+     text-anchor="middle"
+     class="sans b"
+     font-size="20"
+     fill="#111"
+     id="text47">Annual precipitation[t]</text>
+  <text
+     x="1102"
+     y="132"
+     text-anchor="middle"
+     class="sans b"
+     font-size="20"
+     fill="#111"
+     id="text48">precip[t]</text>
+  <text
+     x="1102"
+     y="162"
+     text-anchor="middle"
+     class="sans"
+     font-size="20"
+     fill="#222"
+     id="text49">(site × year)</text>
+  <g
+     class="sans"
+     id="g57">
+    <text
+       x="1355"
+       y="60"
+       font-size="26px"
+       class="b"
+       fill="#0d47a1"
+       id="text50">Level-</text>
+    <text
+       x="1355"
+       y="92"
+       font-size="26"
+       class="b"
+       fill="#0d47a1"
+       id="text51">Community</text>
+    <text
+       x="1355"
+       y="124"
+       font-size="26"
+       class="b"
+       fill="#0d47a1"
+       id="text52">(site/year)</text>
+    <g
+       font-size="18.5"
+       fill="#1560b8"
+       id="g56">
+      <text
+         x="1355"
+         y="161"
+         id="text53"><tspan
+   class="b"
+   id="tspan52">Climate</tspan> modulates</text>
+      <text
+         x="1355"
+         y="186"
+         id="text54">the effects of size</text>
+      <text
+         x="1355"
+         y="211"
+         id="text55">and iteraction on</text>
+      <text
+         x="1355"
+         y="235"
+         id="text56">vital rates.</text>
+    </g>
+  </g>
+  <!-- ============ LEVEL 1: INDIVIDUAL BOX ============ -->
+  <rect
+     x="186"
+     y="400"
+     width="1168"
+     height="377"
+     rx="8"
+     fill="#fdf3e0"
+     stroke="#d4891a"
+     stroke-width="2.2"
+     id="rect57" />
+  <!-- dashed climate arrow -->
+  <line
+     x1="1103"
+     y1="176"
+     x2="1103"
+     y2="580"
+     stroke="#1560b8"
+     stroke-width="2.2"
+     stroke-dasharray="7,5"
+     marker-end="url(#arBlue)"
+     id="line57" />
+  <text
+     x="1121"
+     y="276"
+     class="sans b"
+     font-size="19"
+     fill="#1560b8"
+     id="text57">Interacts with</text>
+  <text
+     x="1121"
+     y="301"
+     class="sans"
+     font-size="19"
+     fill="#1560b8"
+     id="text58">size, INTRA, INTER</text>
+  <!-- green connectors from species box -->
+  <polyline
+     points="591,344 591,385 938,385"
+     fill="none"
+     stroke="#1e6b2a"
+     stroke-width="2.5"
+     id="polyline58" />
+  <line
+     x1="679"
+     y1="385"
+     x2="679"
+     y2="422"
+     stroke="#1e6b2a"
+     stroke-width="2.5"
+     marker-end="url(#arGreen)"
+     id="line58" />
+  <line
+     x1="938"
+     y1="384"
+     x2="938"
+     y2="422"
+     stroke="#1e6b2a"
+     stroke-width="2.5"
+     marker-end="url(#arGreen)"
+     id="line59" />
+  <text
+     x="600"
+     y="373"
+     class="sans b"
+     font-size="19"
+     fill="#1e6b2a"
+     id="text59">β_intra[k, v]</text>
+  <text
+     x="868"
+     y="373"
+     class="sans b"
+     font-size="19"
+     fill="#1e6b2a"
+     id="text60">β_inter[k, v]</text>
+  <!-- individual traits box -->
+  <rect
+     x="205"
+     y="466"
+     width="261"
+     height="212"
+     rx="7"
+     fill="#fffaf1"
+     stroke="#d4891a"
+     stroke-width="2"
+     id="rect60" />
+  <text
+     x="336"
+     y="500"
+     text-anchor="middle"
+     class="sans b"
+     font-size="21"
+     fill="#111"
+     id="text61">Individual traits</text>
+  <text
+     x="336"
+     y="528"
+     text-anchor="middle"
+     class="sans b"
+     font-size="21"
+     fill="#111"
+     id="text62">and environment</text>
+  <g
+     class="sans"
+     font-size="20"
+     fill="#111"
+     id="g74">
+    <text
+       x="224"
+       y="566"
+       id="text65">•  Size[<tspan
+   class="it"
+   id="tspan62">i</tspan>, t]  (<tspan
+   class="math it"
+   id="tspan63">z</tspan><tspan
+   class="math it"
+   dy="5"
+   font-size="14"
+   id="tspan64">i,t</tspan><tspan
+   dy="-5"
+   id="tspan65">)</tspan></text>
+    <text
+       x="224"
+       y="598"
+       id="text72">•  Size<tspan
+   dy="-8"
+   font-size="13"
+   id="tspan66">2</tspan><tspan
+   dy="8"
+   id="tspan67">[</tspan><tspan
+   class="it"
+   id="tspan68">i</tspan>, t]  (<tspan
+   class="math it"
+   id="tspan69">z</tspan><tspan
+   dy="-9"
+   font-size="13"
+   class="math"
+   id="tspan70">2</tspan><tspan
+   class="math it"
+   dx="-7"
+   dy="14"
+   font-size="14"
+   id="tspan71">i,t</tspan><tspan
+   dy="-5"
+   id="tspan72">)</tspan></text>
+    <text
+       x="224"
+       y="633"
+       id="text73">•  Microenvironment[<tspan
+   class="it"
+   id="tspan73">i</tspan>]</text>
+    <text
+       x="248"
+       y="658"
+       id="text74">(mic1, mic2, mic3)</text>
+  </g>
+  <line
+     x1="466"
+     y1="653"
+     x2="508"
+     y2="653"
+     stroke="#c07a17"
+     stroke-width="2.5"
+     marker-end="url(#arOrange)"
+     id="line74" />
+  <!-- competition box -->
+  <rect
+     x="534"
+     y="426"
+     width="533"
+     height="121"
+     rx="7"
+     fill="#fbe1e1"
+     stroke="#c62828"
+     stroke-width="2"
+     id="rect74" />
+  <text
+     x="800"
+     y="456"
+     text-anchor="middle"
+     class="sans b"
+     font-size="20px"
+     fill="#111111"
+     id="text75">Interactions</text>
+  <rect
+     x="545"
+     y="471"
+     width="250"
+     height="66"
+     rx="7"
+     fill="#fad4d4"
+     stroke="#c62828"
+     stroke-width="2"
+     id="rect75" />
+  <text
+     x="670"
+     y="498"
+     text-anchor="middle"
+     class="sans b"
+     font-size="18"
+     fill="#111"
+     id="text76">Intraspecific density</text>
+  <text
+     x="670"
+     y="524"
+     text-anchor="middle"
+     class="sans"
+     font-size="19"
+     fill="#111"
+     id="text77">INTRA[i, t]</text>
+  <rect
+     x="806"
+     y="471"
+     width="251"
+     height="66"
+     rx="7"
+     fill="#fad4d4"
+     stroke="#c62828"
+     stroke-width="2"
+     id="rect77" />
+  <text
+     x="931"
+     y="498"
+     text-anchor="middle"
+     class="sans b"
+     font-size="18px"
+     fill="#111111"
+     id="text78">Interspecific density</text>
+  <text
+     x="931"
+     y="524"
+     text-anchor="middle"
+     class="sans"
+     font-size="19"
+     fill="#111"
+     id="text79">INTER[i, t]</text>
+  <line
+     x1="666"
+     y1="537"
+     x2="666"
+     y2="580"
+     stroke="#a31f1f"
+     stroke-width="2.5"
+     marker-end="url(#arRed)"
+     id="line79" />
+  <line
+     x1="912"
+     y1="537"
+     x2="912"
+     y2="580"
+     stroke="#a31f1f"
+     stroke-width="2.5"
+     marker-end="url(#arRed)"
+     id="line80" />
+  <!-- climate interactions label -->
+  <text
+     x="1229"
+     y="498"
+     text-anchor="middle"
+     class="sans b"
+     font-size="19"
+     fill="#1560b8"
+     id="text80">Climate interactions</text>
+  <text
+     x="1229"
+     y="522"
+     text-anchor="middle"
+     class="sans"
+     font-size="16"
+     fill="#1560b8"
+     id="text81">precip[t] × size, INTRA, INTER</text>
+  <!-- linear predictor box -->
+  <rect
+     x="511"
+     y="583"
+     width="825"
+     height="179"
+     rx="6"
+     fill="#fffdf7"
+     stroke="#222"
+     stroke-width="2"
+     id="rect81" />
+  <text
+     x="593"
+     y="620"
+     class="sans b"
+     font-size="21"
+     fill="#111"
+     id="text84">Linear predictor for individual <tspan
+   class="it"
+   id="tspan81">i</tspan>, year <tspan
+   class="it"
+   id="tspan82">t</tspan>, vital rate <tspan
+   class="it"
+   id="tspan83">v</tspan> (species <tspan
+   class="it"
+   id="tspan84">k</tspan>)</text>
+  <g
+     class="math"
+     font-size="24"
+     fill="#111"
+     id="g128">
+    <text
+       x="548"
+       y="662"
+       id="text107"><tspan
+         class="it"
+         id="tspan85">η</tspan><tspan
+         class="it"
+         dy="6"
+         font-size="16"
+         id="tspan86">i,t,v</tspan><tspan
+         dy="-6"
+         id="tspan87">  =  </tspan><tspan
+         class="it"
+         id="tspan88">α</tspan><tspan
+         dy="6"
+         font-size="16"
+         id="tspan89">0</tspan><tspan
+         dy="-6"
+         id="tspan90">[k, v]  +  </tspan><tspan
+         class="it"
+         id="tspan91">α</tspan><tspan
+         dy="6"
+         font-size="16"
+         id="tspan92">1</tspan><tspan
+         dy="-6"
+         id="tspan93">[k, v] · </tspan><tspan
+         class="it"
+         id="tspan94">z</tspan><tspan
+         class="it"
+         dy="6"
+         font-size="16"
+         id="tspan95">i,t</tspan><tspan
+         dy="-6"
+         id="tspan96">  +  </tspan><tspan
+         class="it"
+         id="tspan97">α</tspan><tspan
+         dy="6"
+         font-size="16"
+         id="tspan98">2</tspan><tspan
+         dy="-6"
+         id="tspan99">[v] · </tspan><tspan
+         class="it"
+         id="tspan100">z</tspan><tspan
+         dy="-11"
+         font-size="15"
+         id="tspan101">2</tspan><tspan
+         class="it"
+         dx="-8"
+         dy="17"
+         font-size="16"
+         id="tspan102">i,t</tspan><tspan
+         dy="-6"
+         id="tspan103">  +  </tspan><tspan
+         class="it"
+         id="tspan104">γ</tspan><tspan
+         class="it"
+         dy="6"
+         font-size="16"
+         id="tspan105">m</tspan><tspan
+         dy="-6"
+         id="tspan106">[v] · micro</tspan><tspan
+         class="it"
+         dy="6"
+         font-size="16"
+         id="tspan107">i</tspan></text>
+    <text
+       x="648"
+       y="702"
+       id="text117"><tspan
+         id="tspan108">+  </tspan><tspan
+         class="it"
+         id="tspan109">β</tspan><tspan
+         dy="6"
+         font-size="16"
+         id="tspan110">intra</tspan><tspan
+         dy="-6"
+         id="tspan111">[k, v] · INTRA</tspan><tspan
+         class="it"
+         dy="6"
+         font-size="16"
+         id="tspan112">i,t</tspan><tspan
+         dy="-6"
+         id="tspan113">  +  </tspan><tspan
+         class="it"
+         id="tspan114">β</tspan><tspan
+         dy="6"
+         font-size="16"
+         id="tspan115">inter</tspan><tspan
+         dy="-6"
+         id="tspan116">[k, v] · INTER</tspan><tspan
+         class="it"
+         dy="6"
+         font-size="16"
+         id="tspan117">i,t</tspan></text>
+    <text
+       x="648"
+       y="742"
+       id="text128"><tspan
+         id="tspan118">+  precip[t]  ×  (</tspan><tspan
+         class="it"
+         id="tspan119">α</tspan><tspan
+         id="tspan120">, </tspan><tspan
+         class="it"
+         id="tspan121">β</tspan><tspan
+         dy="6"
+         font-size="16"
+         id="tspan122">intra</tspan><tspan
+         dy="-6"
+         id="tspan123">, </tspan><tspan
+         class="it"
+         id="tspan124">β</tspan><tspan
+         dy="6"
+         font-size="16"
+         id="tspan125">inter</tspan><tspan
+         dy="-6"
+         id="tspan126">)  +  </tspan><tspan
+         class="it"
+         id="tspan127">ε</tspan><tspan
+         class="it"
+         dy="6"
+         font-size="16"
+         id="tspan128">i,v</tspan></text>
+  </g>
+  <line
+     x1="768"
+     y1="762"
+     x2="768"
+     y2="815"
+     stroke="#2a1838"
+     stroke-width="2.5"
+     marker-end="url(#arDark)"
+     id="line128" />
+  <!-- ============ OBSERVATION LAYER ============ -->
+  <rect
+     x="288"
+     y="818"
+     width="960"
+     height="180"
+     rx="7"
+     fill="#e5d6f1"
+     stroke="#7b3fa0"
+     stroke-width="2.2"
+     id="rect128" />
+  <text
+     x="678"
+     y="857"
+     class="sans b"
+     font-size="25"
+     fill="#111"
+     id="text130">Vital rate[<tspan
+   class="it"
+   id="tspan129">i</tspan>, t, <tspan
+   class="it"
+   id="tspan130">v</tspan>]</text>
+  <g
+     class="sans"
+     font-size="19"
+     fill="#111"
+     id="g134">
+    <text
+       x="611"
+       y="892"
+       id="text131"><tspan
+   class="it"
+   id="tspan131">v</tspan> = 1: survival (Bernoulli)</text>
+    <text
+       x="611"
+       y="919"
+       id="text132"><tspan
+   class="it"
+   id="tspan132">v</tspan> = 2: growth (Normal)</text>
+    <text
+       x="611"
+       y="946"
+       id="text133"><tspan
+   class="it"
+   id="tspan133">v</tspan> = 3: flowering (Bernoulli)</text>
+    <text
+       x="611"
+       y="973"
+       id="text134">v = 4: fecundity(truncated negative binomial)</text>
+  </g>
+  <!-- ============ LEGEND ============ -->
+  <rect
+     x="1283"
+     y="829"
+     width="236"
+     height="165"
+     rx="6"
+     fill="#ffffff"
+     stroke="#9a9a9a"
+     stroke-width="1.8"
+     stroke-dasharray="6,4"
+     id="rect134" />
+  <g
+     class="sans"
+     fill="#333"
+     id="g139">
+    <text
+       x="1298"
+       y="857"
+       font-size="17"
+       id="text135">Arrows indicate</text>
+    <text
+       x="1298"
+       y="879"
+       font-size="17"
+       id="text136">how variables inform</text>
+    <text
+       x="1298"
+       y="901"
+       font-size="17"
+       id="text137">the model.</text>
+    <line
+       x1="1298"
+       y1="931"
+       x2="1336"
+       y2="931"
+       stroke="#111"
+       stroke-width="2.2"
+       marker-end="url(#arBlack)"
+       id="line137" />
+    <text
+       x="1346"
+       y="936"
+       font-size="14.5"
+       id="text138">direct effect</text>
+    <line
+       x1="1298"
+       y1="968"
+       x2="1336"
+       y2="968"
+       stroke="#111"
+       stroke-width="2.2"
+       stroke-dasharray="6,4"
+       marker-end="url(#arBlack)"
+       id="line138" />
+    <text
+       x="1346"
+       y="973"
+       font-size="14.5"
+       id="text139">interaction/modulation</text>
+  </g>
+</svg>

@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1550 930"
+   width="1550"
+   height="930"
+   version="1.1"
+   id="svg142"
+   sodipodi:docname="C3_model_diagram2.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:c2pa="http://c2pa.org/manifest">
+  <sodipodi:namedview
+     id="namedview142"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.53220986"
+     inkscape:cx="793.85978"
+     inkscape:cy="471.61847"
+     inkscape:window-width="1470"
+     inkscape:window-height="919"
+     inkscape:window-x="0"
+     inkscape:window-y="37"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg142" />
+  <metadata
+     id="metadata1">
+    <c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYToyYzMxMDc5Yi0yZjEwLTQ2NjYtYWFlZi0wOTM3YjdlYmJhNWEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaKHXrbTSDeYikHLR/60V8zgAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpiYmFiNGQzMS01MTE4LTQ2NWItYWJhYi03Mjk3MjYzYTQ1ZmVscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoPy/digokDwtLi0wCW49fPAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggROv6e+epmPFMIGOamjmQfNV4fR3W4MmgQk4A1lmzkCCkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaA60unFMDSqolNtnMM2H1KYAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCCzhC/19i7nsuN1qOoY3dphCb9daSstni1NQH38pF5PBWRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjfZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjJjMzEwNzliLTJmMTAtNDY2Ni1hYWVmLTA5MzdiN2ViYmE1YS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjYwMWFmMWE4LWZiY2QtNDVhOS05YzQxLTVjMDk4N2IwZjIwNHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBE6/p756mY8UwgY5qaOZB81Xh9HdbgyaBCTgDWWbOQIKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg4C/6GbVK35sp+gGpcxPbQemFXVdmRrZmtpzIXRCr4qSiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggjpSJdalJbSEj24d8eFjeTR2S4Dc+x3PysjCtWMtsFKd0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQE0KFVeN4npjSYMjBdU9UGJKbMy5DCJ2vsLu+75nj03EA5LJuaZL0C+eYpU/1GFN4TubQH4HjxX/1kiC9r+rOnA=</c2pa:manifest>
+  </metadata>
+  <defs
+     id="defs3">
+    <rect
+       x="170.95173"
+       y="166.95286"
+       width="214.93931"
+       height="154.95624"
+       id="rect171" />
+    <linearGradient
+       id="swatch169"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#b0641a;stop-opacity:1;"
+         offset="0"
+         id="stop169" />
+    </linearGradient>
+    <linearGradient
+       id="swatch165"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#b0641a;stop-opacity:1;"
+         offset="0"
+         id="stop165" />
+    </linearGradient>
+    <linearGradient
+       id="swatch158"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#b03a3a;stop-opacity:1;"
+         offset="0"
+         id="stop158" />
+    </linearGradient>
+    <linearGradient
+       id="swatch157"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#b03a3a;stop-opacity:1;"
+         offset="0"
+         id="stop157" />
+    </linearGradient>
+    <linearGradient
+       id="swatch156"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#b03a3a;stop-opacity:1;"
+         offset="0"
+         id="stop156" />
+    </linearGradient>
+    <linearGradient
+       id="swatch155"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#b03a3a;stop-opacity:1;"
+         offset="0"
+         id="stop155" />
+    </linearGradient>
+    <marker
+       id="a"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#111111"
+         id="path1" />
+    </marker>
+    <marker
+       id="ag"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#1e6b2a"
+         id="path2" />
+    </marker>
+    <marker
+       id="ab"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#1560b8"
+         id="path3" />
+    </marker>
+    <marker
+       id="ab-9"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#1560b8"
+         id="path3-5" />
+    </marker>
+    <marker
+       id="ab-9-8"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#1560b8"
+         id="path3-5-9" />
+    </marker>
+    <marker
+       id="ab-9-5"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#1560b8"
+         id="path3-5-2" />
+    </marker>
+    <marker
+       id="a-1"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#111111"
+         id="path1-8" />
+    </marker>
+    <marker
+       id="ab-9-51"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#1560b8"
+         id="path3-5-1" />
+    </marker>
+    <marker
+       id="ag-2"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#1e6b2a"
+         id="path2-4" />
+    </marker>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch165"
+       id="linearGradient169"
+       x1="498.50665"
+       y1="611.33655"
+       x2="515.95782"
+       y2="611.33655"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(17,6)" />
+    <marker
+       id="ag-24"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#1e6b2a"
+         id="path2-9" />
+    </marker>
+    <marker
+       id="ag-6"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#1e6b2a"
+         id="path2-7" />
+    </marker>
+    <marker
+       id="ag-24-1"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#1e6b2a"
+         id="path2-9-0" />
+    </marker>
+  </defs>
+  <style
+     id="style3">
+ text{font-family:&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;fill:#111}
+ .mg{font-size:26px;font-weight:700}
+ .mgs{font-size:19px;fill:#333}
+ .ttl{font-size:26px;font-weight:700}
+ .h{font-size:21px;font-weight:700}
+ .b{font-size:20px}
+ .n{font-size:19px;fill:#222}
+ .eq{font-size:20px}
+ .lbl{font-size:19px}
+ .lg{font-size:17px;fill:#333}
+ i{font-style:italic}
+</style>
+  <!-- ============ LEVEL — POPULATION ============ -->
+  <rect
+     x="204.88576"
+     y="51.25"
+     width="640"
+     height="312"
+     rx="14"
+     fill="#eaf6ec"
+     stroke="#1e6b2a"
+     stroke-width="2.5"
+     id="rect8" />
+  <rect
+     x="310.53854"
+     y="134.15178"
+     width="434.86899"
+     height="62.223881"
+     rx="6.633595"
+     fill="#ffffff"
+     stroke="#1e6b2a"
+     stroke-width="1.37612"
+     id="rect9" />
+  <text
+     class="h"
+     x="518.38324"
+     y="162.2637"
+     text-anchor="middle"
+     id="text10">Life-history trait [k]</text>
+  <text
+     class="n"
+     x="518.38324"
+     y="185.2637"
+     text-anchor="middle"
+     id="text11">(e.g., GenTime, Iteroparity, etc.)</text>
+  <path
+     d="m 518.38323,196.26369 v 30"
+     stroke="#1e6b2a"
+     stroke-width="2.4"
+     marker-end="url(#ag)"
+     id="path11" />
+  <path
+     d="m 524.886,364 v 30"
+     stroke="#1e6b2a"
+     stroke-width="2.4"
+     marker-end="url(#ag-24)"
+     id="path11-7"
+     style="marker-end:url(#ag-24)" />
+  <rect
+     x="310.44092"
+     y="230.05414"
+     width="437.94113"
+     height="113.62074"
+     rx="6.6804581"
+     fill="#ffffff"
+     stroke="#1e6b2a"
+     stroke-width="1.27319"
+     id="rect11" />
+  <text
+     class="b"
+     x="518.38324"
+     y="256.2637"
+     text-anchor="middle"
+     font-weight="700"
+     id="text12">Population-specific coefficients</text>
+  <text
+     class="eq"
+     x="333.89276"
+     y="283.77261"
+     id="text17">β[k, v] = d0[v] + d1[v] × LHtrait[k] + σ[k]</text>
+  <text
+     class="eq"
+     x="334.72742"
+     y="311.65836"
+     fill="#1b5e20"
+     id="text29">β ∈ { α0, α1, α2, γ, βintra, βinter, βclimate }</text>
+  <!-- ============ LEVEL — COMMUNITY ============ -->
+  <text
+     class="mg"
+     x="1345.2061"
+     y="49.781509"
+     fill="#0d47a1"
+     id="text31">Level-</text>
+  <text
+     class="mg"
+     x="1346.012"
+     y="81.781509"
+     fill="#0d47a1"
+     id="text32">Community</text>
+  <text
+     class="mg"
+     x="1345.6479"
+     y="113.78151"
+     fill="#0d47a1"
+     id="text33">(site/year)</text>
+  <text
+     class="mgs"
+     x="1346.183"
+     y="148.51938"
+     id="text34">Climate affects</text>
+  <text
+     class="mgs"
+     x="1345.8409"
+     y="168.34837"
+     id="text34-3"
+     style="font-size:19px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;fill:#333333">vital rates differently</text>
+  <text
+     class="mgs"
+     x="1346.411"
+     y="188.34837"
+     id="text35">across population</text>
+  <text
+     class="mgs"
+     x="1346.829"
+     y="208.34839"
+     id="text36">and modulates the</text>
+  <text
+     class="mg"
+     x="228.20599"
+     y="89.83931"
+     fill="#1e6b2a"
+     id="text3">Level-Population</text>
+  <text
+     class="mg"
+     x="309.17044"
+     y="91.769768"
+     fill="#1e6b2a"
+     id="text4" />
+  <text
+     class="mgs"
+     x="229.51802"
+     y="118.52515"
+     id="text5">Population traits explain population differences in every coefficient.</text>
+  <text
+     class="mgs"
+     x="229.67996"
+     y="142.52515"
+     id="text6" />
+  <text
+     class="mgs"
+     x="229.67996"
+     y="166.52513"
+     id="text7" />
+  <text
+     class="mgs"
+     x="229.67996"
+     y="190.52513"
+     id="text8" />
+  <text
+     class="mgs"
+     x="1345.689"
+     y="228.19638"
+     id="text37">effects of size and</text>
+  <text
+     class="mgs"
+     x="1345.689"
+     y="248.19638"
+     id="text37-1"
+     style="font-size:19px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;fill:#333333">interactions on vital</text>
+  <text
+     class="mgs"
+     x="1345.689"
+     y="268.19638"
+     id="text37-1-0"
+     style="font-size:19px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;fill:#333333">rates.</text>
+  <text
+     class="mgs"
+     x="1346.962"
+     y="333.34839"
+     id="text38">Year random effect</text>
+  <text
+     class="mgs"
+     x="1345.7841"
+     y="357.34839"
+     id="text39">help explaining what</text>
+  <text
+     class="mgs"
+     x="1346.316"
+     y="381.34839"
+     id="text40">climate cant explain</text>
+  <rect
+     x="879.12286"
+     y="27.37286"
+     width="449.75427"
+     height="376.55338"
+     rx="13.992356"
+     fill="#e8f1fb"
+     stroke="#1560b8"
+     stroke-width="2.74572"
+     id="rect40" />
+  <text
+     class="ttl"
+     x="1104"
+     y="68.636398"
+     text-anchor="middle"
+     fill="#0d47a1"
+     id="text41">Climate context</text>
+  <rect
+     x="901.13239"
+     y="89.30632"
+     width="405.7352"
+     height="68.447975"
+     rx="8.9941301"
+     fill="#ffffff"
+     stroke="#1560b8"
+     stroke-width="0.955318"
+     id="rect41"
+     style="stroke-width:1.6;stroke-dasharray:none;stroke-dashoffset:0" />
+  <rect
+     x="902.89893"
+     y="191.40268"
+     width="405.57352"
+     height="83.015488"
+     rx="8.9905453"
+     fill="#ffffff"
+     stroke="#1560b8"
+     stroke-width="0.955318"
+     id="rect41-7"
+     style="stroke-width:1.7617;stroke-dasharray:none;stroke-dashoffset:0" />
+  <text
+     class="h"
+     x="1104"
+     y="114.98138"
+     text-anchor="middle"
+     id="text42">Climate [t]</text>
+  <text
+     class="n"
+     x="1104"
+     y="142.98138"
+     text-anchor="middle"
+     id="text43">(e.g.,Average growing season precipitation)</text>
+  <rect
+     x="900.79614"
+     y="297.26114"
+     width="406.40781"
+     height="92.698166"
+     rx="9.0090408"
+     fill="#ffffff"
+     stroke="#1560b8"
+     stroke-width="1.55655"
+     stroke-dasharray="8, 5"
+     id="rect43" />
+  <text
+     class="b"
+     x="1104"
+     y="324.2504"
+     text-anchor="middle"
+     font-weight="700"
+     id="text44">Year (random effect)</text>
+  <text
+     class="eq"
+     x="911.42133"
+     y="348.27576"
+     id="text55"
+     style="font-size:18.6667px">εt [v] on intercept + slop on size, INTRA,INTER</text>
+  <text
+     class="eq"
+     x="911.42133"
+     y="371.27576"
+     id="text58"
+     style="font-size:18.6667px">εt,k [v] on the population intercept</text>
+  <!-- ============ ARROWS DOWN ============ -->
+  <path
+     d="m 877.55256,48.362456 -38.91975,0.637991"
+     stroke="#1560b8"
+     stroke-width="2.29699"
+     stroke-dasharray="9 6"
+     marker-end="url(#ab-9)"
+     id="path64-2"
+     style="stroke-width:2.34367;stroke-dasharray:none;marker-end:url(#ab-9)"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="m 882.97774,399.48584 -48.02917,38.93828"
+     stroke="#1560b8"
+     stroke-width="2.29699"
+     stroke-dasharray="9 6"
+     marker-end="url(#ab-9-51)"
+     id="path64-2-4"
+     style="stroke-width:2.34367;stroke-dasharray:none;marker-end:url(#ab-9-51)"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="m 1277.5098,403.96448 -72.9664,48.81354"
+     stroke="#1560b8"
+     stroke-width="2.29699"
+     stroke-dasharray="9 6"
+     marker-end="url(#ab-9-8)"
+     id="path64-2-7"
+     style="stroke-width:2.34367;stroke-dasharray:none;marker-end:url(#ab-9-8)"
+     sodipodi:nodetypes="cc" />
+  <text
+     class="lbl"
+     x="922.93604"
+     y="238.51938"
+     fill="#1560b8"
+     id="text65-1"
+     style="font-size:19px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;fill:#111111">climate[t] × Population</text>
+  <text
+     class="lbl"
+     x="922.93604"
+     y="213.51901"
+     fill="#1560b8"
+     id="text65-1-7"
+     style="font-size:19px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;fill:#111111">climate[t] × Individaul</text>
+  <text
+     class="lbl"
+     x="922.93604"
+     y="263.51938"
+     fill="#1560b8"
+     id="text65-5-2"
+     style="font-size:19px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;fill:#111111">climate[t] × size, INTRA, INTER</text>
+  <path
+     d="m 1102.7335,158.3564 v 29.99999"
+     stroke="#1e6b2a"
+     stroke-width="2.4"
+     marker-end="url(#ag-2)"
+     id="path11-0"
+     style="stroke:#1560b8;stroke-opacity:1;marker-end:url(#ab-9)" />
+  <text
+     class="lbl"
+     x="1071"
+     y="386"
+     fill="#1560b8"
+     id="text66" />
+  <!-- ============ LEVEL — INDIVIDUAL ============ -->
+  <text
+     class="mg"
+     x="50.205994"
+     y="438.56403"
+     fill="#b0641a"
+     id="text67">Level -</text>
+  <text
+     class="mg"
+     x="50.205994"
+     y="470.56403"
+     fill="#b0641a"
+     id="text68">Individual</text>
+  <text
+     class="mgs"
+     x="50.441986"
+     y="510.56403"
+     id="text69">Individual's own</text>
+  <text
+     class="mgs"
+     x="51.772018"
+     y="534.56403"
+     id="text70">size and the</text>
+  <text
+     class="mgs"
+     x="51.772018"
+     y="558.56403"
+     id="text71">microenviroment</text>
+  <text
+     class="mgs"
+     x="51.316013"
+     y="582.56403"
+     id="text72">it locates.</text>
+  <rect
+     x="221.31602"
+     y="399.58301"
+     width="584.92603"
+     height="195.21642"
+     rx="18.936455"
+     fill="#fffaf1"
+     stroke="#b0641a"
+     stroke-width="2.40364"
+     id="rect73" />
+  <path
+     d="m 524.886,494.24005 v 30"
+     stroke="#1e6b2a"
+     stroke-width="2.4"
+     marker-end="url(#ag-24-1)"
+     id="path11-7-9"
+     style="marker-end:url(#ag-24-1);stroke:#b56e28;stroke-opacity:1" />
+  <text
+     class="h"
+     x="514.40332"
+     y="434.08798"
+     text-anchor="middle"
+     id="text73"
+     style="font-size:25.3333px">Individual-level variation</text>
+  <text
+     class="h"
+     x="320.73044"
+     y="470.71301"
+     text-anchor="middle"
+     id="text74" />
+  <text
+     class="b"
+     x="262.74677"
+     y="551.84735"
+     id="text76">Size[i, t] (z<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan152">i</tspan>,t) + Size<tspan
+   style="font-size:65%;baseline-shift:super"
+   id="tspan150">2</tspan>[i, t] (z<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan153">i</tspan>,t)<tspan
+   style="font-size:65%;baseline-shift:super"
+   id="tspan154">2</tspan> + Microenvironment[i] (mic)</text>
+  <rect
+     x="241.1409"
+     y="447.71777"
+     width="544.15063"
+     height="46.084846"
+     rx="8.3006029"
+     fill="#ffffff"
+     stroke="#1e6b2a"
+     stroke-width="1.32476"
+     id="rect9-7"
+     style="stroke:#b0641a;stroke-opacity:1" />
+  <rect
+     x="247.36003"
+     y="530.76013"
+     width="544.11456"
+     height="48.63055"
+     rx="8.3000526"
+     fill="#ffffff"
+     stroke="#1e6b2a"
+     stroke-width="1.36081"
+     id="rect9-7-0"
+     style="stroke:#b0641a;stroke-opacity:1" />
+  <rect
+     x="866.47876"
+     y="460.2998"
+     width="413.1387"
+     height="105.70178"
+     rx="7.9111676"
+     fill="#fad4d4"
+     stroke="#b03a3a"
+     stroke-width="1.59726"
+     id="rect84" />
+  <text
+     class="h"
+     x="1074.438"
+     y="487.71075"
+     text-anchor="middle"
+     id="text85">Interactions</text>
+  <text
+     class="b"
+     x="879.23688"
+     y="515.8205"
+     id="text86">Intraspecific crowding degree:</text>
+  <text
+     class="b"
+     x="879.23688"
+     y="542.64636"
+     id="text86-3"
+     style="font-size:20px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;fill:#111111">Interspecific crowding degree:</text>
+  <text
+     class="b"
+     x="1171.9669"
+     y="516.16046"
+     font-weight="700"
+     id="text87"><tspan
+       style="font-weight:normal"
+       id="tspan144">INTRA[i, t]</tspan></text>
+  <text
+     class="b"
+     x="1172.337"
+     y="542.98633"
+     font-weight="700"
+     id="text89"><tspan
+       style="font-weight:normal"
+       id="tspan145">INTER[i, t]</tspan></text>
+  <path
+     d="m 524.43,594.63518 v 30"
+     stroke="#b0641a"
+     stroke-width="2.2"
+     marker-end="url(#a)"
+     id="path95"
+     style="opacity:1;fill:#b0641a;fill-opacity:1" />
+  <text
+     class="h"
+     x="511.87842"
+     y="477.39859"
+     text-anchor="middle"
+     id="text10-1"
+     style="font-weight:700;font-size:21px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;fill:#111111">Size [i,t] &amp; Microenviroment [i]</text>
+  <rect
+     x="228.9373"
+     y="632.58087"
+     width="1078.1254"
+     height="96.928711"
+     rx="9.0010471"
+     fill="#ffffff"
+     stroke="#b0641a"
+     stroke-width="1.8"
+     id="rect96"
+     style="stroke:#6a2c91;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <text
+     class="h"
+     x="768"
+     y="658.64355"
+     text-anchor="middle"
+     id="text96">Linear predictor for individual i, population k, year t, vital rate v</text>
+  <text
+     class="eq"
+     x="324.74155"
+     y="681.92493"
+     id="text111"
+     style="fill:#b0641a;fill-opacity:1">α0[k,v] + α1[k,v]·z + α2[k,v]·z<tspan
+   style="font-size:65%;baseline-shift:super"
+   id="tspan149">2</tspan> + γ[k,v]·mic</text>
+  <text
+     class="eq"
+     x="700.42944"
+     y="683.5611"
+     id="text111-3"
+     style="font-size:20px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;fill:#1e6b2a;fill-opacity:1">+ βclimate[k,v]·climate[t] + βintra[k,v]·INTRA + βinter[k,v]·INTER</text>
+  <text
+     class="eq"
+     x="255.95874"
+     y="682.50818"
+     id="text111-0"
+     style="font-size:20px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;fill:#b0641a;fill-opacity:1"><tspan
+       style="fill:#000000"
+       id="tspan146">ηi,t,v =</tspan></text>
+  <text
+     class="eq"
+     x="324.91721"
+     y="709.25037"
+     id="text120"
+     style="fill:#b0641a;fill-opacity:1">+ (z, mic]) × (βintra, βinter)</text>
+  <text
+     class="eq"
+     x="561.03998"
+     y="709.25037"
+     id="text120-9"
+     style="font-size:20px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;fill:#1560b8;fill-opacity:1">+ climate[t]) × (βintra, βinter, z)</text>
+  <text
+     class="eq"
+     x="866.03998"
+     y="709.23236"
+     id="text128">+εt +εt,k +εi,v</text>
+  <path
+     d="m 768,728.04608 v 53.15213"
+     stroke="#111111"
+     stroke-width="2.85764"
+     marker-end="url(#a)"
+     id="path128" />
+  <!-- ============ OBSERVATION ============ -->
+  <text
+     class="mg"
+     x="336.01199"
+     y="815.07056"
+     fill="#6a2c91"
+     font-size="24"
+     id="text129">Observation</text>
+  <text
+     class="mgs"
+     x="336.27802"
+     y="847.0705"
+     id="text130">Observed vital rates</text>
+  <text
+     class="mgs"
+     x="336.77203"
+     y="871.0705"
+     id="text131">for each individual</text>
+  <text
+     class="mgs"
+     x="336.31601"
+     y="895.0705"
+     id="text132">and year.</text>
+  <rect
+     x="520.75513"
+     y="786.88818"
+     width="516.1911"
+     height="114.08173"
+     rx="10.037047"
+     fill="#f3ecf9"
+     stroke="#6a2c91"
+     stroke-width="1.77636"
+     id="rect132" />
+  <text
+     class="h"
+     x="798.40088"
+     y="821.36603"
+     text-anchor="middle"
+     font-size="25"
+     id="text133"
+     style="font-size:25.3333px">Vital rate[i, t, v]</text>
+  <text
+     class="b"
+     x="544.62555"
+     y="851.29645"
+     id="text134"><tspan
+   font-style="italic"
+   id="tspan133">v</tspan> = 1: survival (Bernoulli)</text>
+  <text
+     class="b"
+     x="544.62555"
+     y="877.29645"
+     id="text135"><tspan
+   font-style="italic"
+   id="tspan134">v</tspan> = 2: growth (Normal)</text>
+  <text
+     class="b"
+     x="771.78485"
+     y="850.50586"
+     id="text136"><tspan
+   font-style="italic"
+   id="tspan135">v</tspan> = 3: flowering (Bernoulli)</text>
+  <text
+     class="b"
+     x="771.78485"
+     y="876.50586"
+     id="text137">v = 4: fecundity (ZTNB)</text>
+  <!-- ============ LEGEND ============ -->
+  <text
+     xml:space="preserve"
+     style="font-size:25.3333px;font-family:Seravek;-inkscape-font-specification:Seravek;writing-mode:lr-tb;direction:ltr;fill:#b03a3a;fill-opacity:1;stroke:#b03a3a;stroke-width:2.344;stroke-dasharray:none;stroke-opacity:0.796078"
+     x="686.17151"
+     y="476.29007"
+     id="text160"><tspan
+       sodipodi:role="line"
+       id="tspan160"
+       x="686.17151"
+       y="476.29007"></tspan></text>
+  <path
+     style="opacity:1;fill:#b03a3a;fill-opacity:1;stroke:#6a2c91;stroke-width:0.283062;stroke-dasharray:2.54755, 0.318444;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 1056.7761,627.43725 c -0.1561,-0.30182 -0.3851,-0.65718 -0.509,-0.78968 -0.1239,-0.1325 -1.2018,-2.19002 -2.3953,-4.57228 -1.1935,-2.38226 -3.2106,-6.38773 -4.4824,-8.90106 -1.2718,-2.51332 -2.2829,-4.59916 -2.2469,-4.63521 0.089,-0.0891 5.1869,-0.28414 7.0097,-0.26813 l 1.4718,0.0129 -0.085,-8.98075 c -0.047,-4.93942 -0.1313,-11.48851 -0.1875,-14.55354 -0.056,-3.06502 -0.1479,-8.45101 -0.2038,-11.96885 l -0.1015,-6.39607 0.9847,-0.0613 0.9848,-0.0613 v 1.14994 c 0,0.63246 0.041,2.78196 0.089,4.77666 0.1835,7.6777 0.2452,10.76239 0.3276,16.38574 0.047,3.1993 0.1319,8.40427 0.189,11.5666 0.057,3.16233 0.098,6.29258 0.092,6.95611 l -0.012,1.20642 3.312,-0.11053 c 1.8217,-0.0608 3.3586,-0.11554 3.4153,-0.12166 0.6007,-0.0648 2.3581,0.0671 2.2142,0.16617 -0.2643,0.18184 -1.3059,2.46831 -1.1812,2.59301 0.056,0.0562 0.02,0.10221 -0.08,0.10221 -0.1002,0 -0.3993,0.49757 -0.6647,1.10571 -0.2653,0.60814 -0.7538,1.63482 -1.0856,2.28152 -0.3318,0.64669 -0.6032,1.29685 -0.6032,1.44479 0,0.14794 -0.066,0.29552 -0.1473,0.32796 -0.1849,0.074 -1.0911,2.05084 -1.0911,2.38022 0,0.1342 -0.065,0.24399 -0.1444,0.24399 -0.079,0 -0.3707,0.49757 -0.6472,1.10571 -0.2765,0.60814 -0.7688,1.63483 -1.094,2.28152 -0.3252,0.6467 -0.5912,1.29685 -0.5912,1.4448 0,0.14794 -0.066,0.29552 -0.1473,0.32795 -0.1802,0.0722 -1.0911,2.0469 -1.0911,2.36549 0,0.12608 -0.069,0.25578 -0.153,0.28822 -0.084,0.0324 -0.3129,0.37317 -0.5082,0.75719 l -0.3552,0.69822 z"
+     id="path167" />
+  <path
+     style="opacity:1;fill:#b0641a;fill-opacity:1;stroke:url(#linearGradient169);stroke-width:0.443;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 520.07629,617.43527 -4.21168,-8.42874 h 8.43597 c 4.63978,0 8.43597,0.0564 8.43597,0.12526 0,0.20906 -8.04042,16.31811 -8.25182,16.53259 -0.10822,0.1098 -2.09202,-3.5933 -4.40844,-8.22911 z"
+     id="path168" />
+  <path
+     style="opacity:1;fill:#b0641a;fill-opacity:1;stroke:#1560b8;stroke-width:0.0697803;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 524.37791,625.83776 c -0.30064,-0.1209 -2.31503,-3.96231 -6.71669,-12.80864 l -2.10192,-4.22439 8.1878,0.0273 c 4.50329,0.015 8.38078,0.0417 8.61664,0.0594 0.4507,0.0337 0.55244,0.0858 0.55244,0.28295 0,0.12964 -1.41801,3.02682 -4.41323,9.01681 -2.96913,5.93782 -3.78697,7.5345 -3.90375,7.62132 -0.0765,0.0569 -0.12799,0.0628 -0.22129,0.0253 z m 1.70173,-3.68874 c 2.60927,-5.13863 6.38961,-12.79295 6.34184,-12.84073 -0.0735,-0.0735 -16.20895,-0.15197 -16.20895,-0.0788 0,0.048 5.65656,11.31815 6.26003,12.47251 0.97911,1.87294 1.9303,3.59805 1.98389,3.59805 0.0128,0 0.74319,-1.41796 1.62319,-3.15102 z"
+     id="path169" />
+  <path
+     style="opacity:1;fill:#b56e28;fill-opacity:1;stroke:#b56e28;stroke-width:0.0354252;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 520.1122,516.52364 -4.76807,-9.53588 h 9.51609 c 5.23384,0 9.51409,0.027 9.51167,0.06 -0.002,0.033 -2.13904,4.32413 -4.74802,9.53587 l -4.7436,9.4759 z"
+     id="path171" />
+  <text
+     xml:space="preserve"
+     id="text171"
+     style="text-orientation:auto;font-size:18.66666667px;fill:#b56e28;stroke-width:0.443;-inkscape-font-specification:Seravek;font-family:Seravek;stroke:#b56e28;stroke-dasharray:none;writing-mode:lr-tb;direction:ltr;fill-opacity:1;stroke-opacity:1;stroke-dashoffset:0;opacity:1;white-space:pre;shape-inside:url(#rect171)" />
+</svg>
