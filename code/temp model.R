@@ -7,6 +7,16 @@
 #      若报错改回字面量 1–4。nVR 作矩阵维度同理。
 #   零截断 NB 目前用 T(...,1,)。封闭形式是 1 - p^size，
 #      profile 之后可换成 nimbleFunction 自订分布。
+#
+# trait[k]（生活史性状）的来源与用法（2026-10 定案，方案 A）
+#   Stage 1：只估 baseline demography（不含 trait），对每个 posterior draw s
+#            建 IPM_k^(s) → 算 trait_k^(s)（GenTime、Iteroparity 等）。
+#   Stage 2：就是本模型。trait 作为 constants 传入；抽 M 组完整的
+#            trait^(s)（保留偏斜与物种间相关），每组跑一次，最后合并后验
+#            （posterior-draw propagation / multiple imputation，Plummer 2015 的 cut）。
+#   trait 只解释 γ（mic）、β_intra、β_inter、β_precip；
+#   α0 / α1 / α2（pop.int、pop.slope.size、pop.slope.size2）不放 trait，
+#   因为 trait 正是由它们算出来的（放了就是同义反复）。
 # ═══════════════════════════════════════════════════════════════════════════
 
 library(nimble)
@@ -49,17 +59,17 @@ model <- nimbleCode({
   
   # ═══════════════════ 物种层 · 先验 ═══════════════════
   for (v in 1:nVR){
+    # α0 / α1 / α2：只有物种随机效应，不放 trait（trait 由它们导出）
     pop.int.mu[v]    ~ dnorm(0, sd = 5)   # 物种截距的总均值
-    pop.int.trait[v] ~ dnorm(0, sd = 2)   # 性状对物种截距的效应
-    pop.int.sd[v]    ~ dexp(1)            # 性状解释不掉的物种间残差
+    pop.int.sd[v]    ~ dexp(1)            # 物种间差异
     
-    pop.slope.size.mu[v]    ~ dnorm(0, sd = 2)   # 物种大小斜率的三件套
-    pop.slope.size.trait[v] ~ dnorm(0, sd = 2)   # 假设大小的重要性也受性状影响
+    pop.slope.size.mu[v]    ~ dnorm(0, sd = 2)   # 物种大小斜率的均值
     pop.slope.size.sd[v]    ~ dexp(1)
     
-    pop.slope.size2.mu[v]    ~ dnorm(0, sd = 2)  # 物种大小平方项的三件套
-    pop.slope.size2.trait[v] ~ dnorm(0, sd = 2)  # 曲率是否也受性状影响
+    pop.slope.size2.mu[v]    ~ dnorm(0, sd = 2)  # 物种大小平方项的均值
     pop.slope.size2.sd[v]    ~ dexp(1)           # ★ 若压到 0 → 曲率一致，可收回 com
+    
+    # γ / β_intra / β_inter / β_precip：三件套，trait 只在这里出现
     
     pop.slope.INTRA.mu[v]    ~ dnorm(0, sd = 2)  # 物种种内斜率的三件套
     pop.slope.INTRA.trait[v] ~ dnorm(0, sd = 2)  # ★ 什么性状的物种更怕种内竞争
@@ -83,15 +93,9 @@ model <- nimbleCode({
   # ═══════════ 物种层 · 每个物种的系数 ═══════════
   for (k in 1:nSp){
     for (v in 1:nVR){
-      pop.int[k,v] ~
-        dnorm(pop.int.mu[v] + pop.int.trait[v] * trait[k],
-              sd = pop.int.sd[v])
-      pop.slope.size[k,v] ~
-        dnorm(pop.slope.size.mu[v] + pop.slope.size.trait[v] * trait[k],
-              sd = pop.slope.size.sd[v])
-      pop.slope.size2[k,v] ~
-        dnorm(pop.slope.size2.mu[v] + pop.slope.size2.trait[v] * trait[k],
-              sd = pop.slope.size2.sd[v])
+      pop.int[k,v]         ~ dnorm(pop.int.mu[v],         sd = pop.int.sd[v])
+      pop.slope.size[k,v]  ~ dnorm(pop.slope.size.mu[v],  sd = pop.slope.size.sd[v])
+      pop.slope.size2[k,v] ~ dnorm(pop.slope.size2.mu[v], sd = pop.slope.size2.sd[v])
       pop.slope.INTRA[k,v] ~
         dnorm(pop.slope.INTRA.mu[v] + pop.slope.INTRA.trait[v] * trait[k],
               sd = pop.slope.INTRA.sd[v])
@@ -271,7 +275,8 @@ model <- nimbleCode({
 #   idSp = idSp, idInd = idInd, idYr = idYr,
 #   idSurv = idSurv, idGrow = idGrow, idFlow = idFlow, idSpRec = idSpRec,
 #   # 协变量
-#   size = size, size2 = size2, trait = trait, mic = mic,
+#   size = size, size2 = size2, mic = mic,
+#   trait = trait_draw,    # ★ Stage 1 的一组 posterior draw（长度 nSp，已置中/标准化），每个 imputation 换一组
 #   precip = precip,       # ★ 必须置中： precip <- precip - mean(precip)
 #   INTRA = INTRA, INTER = INTER,
 #   obsInfl = obsInfl, obsCov = obsCov
@@ -309,9 +314,9 @@ model <- nimbleCode({
 
 # params <- c(
 #   # 物种层超参数
-#   "pop.int.mu","pop.int.trait","pop.int.sd",
-#   "pop.slope.size.mu","pop.slope.size.trait","pop.slope.size.sd",
-#   "pop.slope.size2.mu","pop.slope.size2.trait","pop.slope.size2.sd",
+#   "pop.int.mu","pop.int.sd",
+#   "pop.slope.size.mu","pop.slope.size.sd",
+#   "pop.slope.size2.mu","pop.slope.size2.sd",
 #   "pop.slope.mic.mu","pop.slope.mic.trait","pop.slope.mic.sd",
 #   "pop.slope.INTRA.mu","pop.slope.INTRA.trait","pop.slope.INTRA.sd",
 #   "pop.slope.INTER.mu","pop.slope.INTER.trait","pop.slope.INTER.sd",
@@ -348,12 +353,9 @@ model <- nimbleCode({
 
 # inits <- function() list(
 #   # 物种层超参数
-#   pop.int.mu    = rnorm(4, 0, 0.5),   pop.int.trait = rnorm(4, 0, 0.2),
-#   pop.int.sd    = rexp(4, 2),
-#   pop.slope.size.mu   = rnorm(4, 0, 0.3), pop.slope.size.trait  = rnorm(4, 0, 0.2),
-#   pop.slope.size.sd   = rexp(4, 2),
-#   pop.slope.size2.mu  = rnorm(4, 0, 0.2), pop.slope.size2.trait = rnorm(4, 0, 0.2),
-#   pop.slope.size2.sd  = rexp(4, 2),
+#   pop.int.mu    = rnorm(4, 0, 0.5),   pop.int.sd    = rexp(4, 2),
+#   pop.slope.size.mu   = rnorm(4, 0, 0.3), pop.slope.size.sd   = rexp(4, 2),
+#   pop.slope.size2.mu  = rnorm(4, 0, 0.2), pop.slope.size2.sd  = rexp(4, 2),
 #   pop.slope.INTRA.mu  = rnorm(4, 0, 0.3), pop.slope.INTRA.trait = rnorm(4, 0, 0.2),
 #   pop.slope.INTRA.sd  = rexp(4, 2),
 #   pop.slope.INTER.mu  = rnorm(4, 0, 0.3), pop.slope.INTER.trait = rnorm(4, 0, 0.2),
