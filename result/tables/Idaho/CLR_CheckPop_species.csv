@@ -1,0 +1,180 @@
+"species","type","unit","growth_form","n_years_present","first_year","last_year","n_records","mean_abundance","max_abundance","n_quad_polygon","n_quad_point"
+"Pseudoroegneria spicata","size (basal)","cover (%)","grass",29,1923,1973,32384,2.28976432830806,5.507114633836,26,0
+"Poa secunda","size (basal)","cover (%)","grass",29,1923,1973,14559,0.692802221411957,2.53877151333408,26,0
+"Hesperostipa comata","size (basal)","cover (%)","grass",29,1923,1973,10935,1.29329734792589,4.5028453183304,25,0
+"Koeleria macrantha","size (basal)","cover (%)","grass",29,1923,1973,5987,0.320889443250204,0.897972782211525,24,0
+"Elymus albicans","size (basal)","cover (%)","grass",28,1923,1957,5298,0.0384049338270516,0.0952924116382365,20,0
+"Carex douglasii","size (basal)","cover (%)","grass",25,1926,1957,3391,0.0171648280319295,0.0346992228273332,16,0
+"Achnatherum hymenoides","size (basal)","cover (%)","grass",29,1923,1973,1828,0.175708730852984,0.588823185794673,20,0
+"Antennaria spp.","size (basal)","cover (%)","forb",28,1923,1957,807,0.149190233312349,0.568563433813717,20,0
+"unknown","size (basal)","cover (%)","unknown",22,1923,1973,149,0.0667335851712178,1.11496750932209,23,25
+"Elymus elymoides","size (basal)","cover (%)","grass",20,1933,1973,63,0.00573983491117272,0.0657172816157545,9,0
+"Carex spp.","size (basal)","cover (%)","grass",7,1923,1934,47,0.000553350490694252,0.0047442458940375,3,0
+"unknown grass","size (basal)","cover (%)","grass",2,1926,1927,37,0.00467987752177184,0.12980713864385,4,0
+"unknown moss","size (basal)","cover (%)","moss",3,1956,1973,15,0.0159580187599259,0.411835226965109,6,0
+"Hordeum jubatum","size (basal)","cover (%)","grass",6,1930,1955,13,0.000224566298170522,0.00265429326043125,5,0
+"unknown lichen","size (basal)","cover (%)","lichen",1,1973,1973,8,0.00307880563464953,0.0892853634048364,2,0
+"Antennaria rosea","size (basal)","cover (%)","forb",1,1973,1973,6,0.0355318406228733,1.03042337806333,2,0
+"Elymus trachycaulus","size (basal)","cover (%)","grass",1,1945,1945,1,9.84669931959247e-06,0.000285554280268182,1,0
+"Artemisia tripartita","size (canopy)","cover (%)","shrub",29,1923,1973,2134,6.08141171641038,15.4634305933926,26,26
+"Chrysothamnus viscidiflorus","size (canopy)","cover (%)","shrub",29,1923,1973,845,1.27473483232666,2.28381476675453,21,23
+"Linanthus pungens","size (canopy)","cover (%)","shrub",29,1923,1973,767,0.71886669404267,2.19179580944526,13,15
+"Tetradymia canescens","size (canopy)","cover (%)","shrub",29,1923,1973,341,0.483178360887841,1.23295613238062,14,17
+"Gutierrezia sarothrae","size (canopy)","cover (%)","shrub",28,1923,1973,265,0.180903610445703,0.68933674003965,19,20
+"Eriogonum microthecum","size (canopy)","cover (%)","shrub",23,1931,1973,215,0.0843259674634327,0.583422333897958,11,13
+"Purshia tridentata","size (canopy)","cover (%)","shrub",23,1931,1957,138,1.12589471752771,3.97907742186488,9,13
+"Phlox longifolia","no size","plants per m2","forb",29,1923,1973,8333,13.6871519285312,36.0952380952381,0,25
+"Erigeron corymbosus","no size","plants per m2","forb",20,1934,1957,5212,8.22472612082412,21.4090909090909,0,14
+"Arnica fulgens","no size","plants per m2","forb",20,1932,1955,4637,7.28146022156912,16.5,0,7
+"Crepis acuminata","no size","plants per m2","forb",29,1923,1973,3777,6.45935190036823,24.9545454545455,0,25
+"Artemisia tripartita","no size","plants per m2","shrub",28,1923,1973,2684,4.30274976838044,20.4230769230769,26,26
+"Balsamorhiza sagittata","no size","plants per m2","forb",29,1923,1973,2176,3.49327476062957,12.7727272727273,0,18
+"Phlox hoodii","no size","plants per m2","forb",29,1923,1973,1817,3.24166026048966,10.1875,0,22
+"Agoseris taraxacifolia","no size","plants per m2","forb",14,1932,1955,1344,2.0208318602148,15.0454545454545,0,15
+"Linanthus pungens","no size","plants per m2","shrub",24,1926,1973,1172,1.91865182609284,8.09090909090909,13,15
+"Arabis holboellii","no size","plants per m2","forb",20,1933,1956,936,1.4656009447298,8.76190476190476,0,25
+"Comandra umbellata","no size","plants per m2","forb",22,1930,1973,888,1.58411865660051,9.45454545454546,0,10
+"Erigeron engelmannii","no size","plants per m2","forb",18,1933,1954,765,1.17739217829962,3.54545454545455,0,17
+"Chrysothamnus viscidiflorus","no size","plants per m2","shrub",27,1923,1973,656,1.24892485010452,3.5,21,23
+"Astragalus lentiginosus","no size","plants per m2","forb",24,1930,1973,613,0.974265412445993,3.10526315789474,0,18
+"Gutierrezia sarothrae","no size","plants per m2","shrub",28,1923,1973,546,1.11143896182462,6.45454545454545,19,20
+"Lomatium triternatum","no size","plants per m2","forb",21,1932,1956,482,0.766506330934643,2.66666666666667,0,12
+"Astragalus spp.","no size","plants per m2","forb",22,1923,1952,481,0.939601724651634,3.75,0,21
+"Astragalus convallarius","no size","plants per m2","forb",26,1926,1973,461,0.808940492357008,1.5,0,20
+"Eriogonum microthecum","no size","plants per m2","shrub",25,1930,1973,411,0.677052454502545,1.61904761904762,11,13
+"unknown","no size","plants per m2","unknown",26,1923,1973,329,0.966697058235171,8,23,25
+"Viola praemorsa","no size","plants per m2","forb",19,1931,1955,272,0.424510191865001,2,0,11
+"Senecio integerrimus","no size","plants per m2","forb",21,1932,1973,233,0.486733774392577,6.27272727272727,0,8
+"Penstemon speciosus","no size","plants per m2","forb",18,1930,1952,229,0.364002074755251,1.47368421052632,0,13
+"Tetradymia canescens","no size","plants per m2","shrub",26,1923,1957,206,0.369279427469083,1,14,17
+"Lupinus caudatus","no size","plants per m2","forb",22,1932,1973,191,0.291920420777045,1.13636363636364,0,9
+"Aster spp.","no size","plants per m2","forb",13,1923,1951,179,0.784313274444853,8,0,10
+"Purshia tridentata","no size","plants per m2","shrub",20,1934,1957,158,0.248909439018332,2.04545454545455,9,13
+"Lomatium spp.","no size","plants per m2","forb",13,1926,1949,152,0.24009826380516,1.86363636363636,0,12
+"Erigeron eatonii","no size","plants per m2","forb",4,1932,1935,140,0.217506631299735,6,0,8
+"Penstemon radicosus","no size","plants per m2","forb",19,1927,1973,131,0.294017046172219,2.45454545454545,0,10
+"Astragalus filipes","no size","plants per m2","forb",23,1929,1956,126,0.259979698160279,2,0,15
+"Calochortus macrocarpus","no size","plants per m2","forb",15,1932,1957,123,0.190108590743799,1,0,11
+"Eriogonum ovalifolium","no size","plants per m2","forb",22,1932,1973,103,0.170852136369378,0.619047619047619,0,3
+"Castilleja angustifolia","no size","plants per m2","forb",15,1933,1973,100,0.165673407052717,1.13636363636364,0,13
+"Lomatium foeniculaceum","no size","plants per m2","forb",11,1935,1973,93,0.153303744047846,1.0952380952381,0,11
+"Eriogonum heracleoides","no size","plants per m2","forb",13,1939,1957,67,0.119253402374999,0.736842105263158,0,3
+"Allium acuminatum","no size","plants per m2","forb",10,1933,1956,56,0.0867018643788154,1.05263157894737,0,7
+"Viola beckwithii","no size","plants per m2","forb",13,1932,1955,52,0.080951413982267,0.272727272727273,0,2
+"Astragalus miser","no size","plants per m2","forb",3,1954,1973,44,0.0996535225210361,1.36363636363636,0,9
+"Allium textile","no size","plants per m2","forb",13,1932,1973,38,0.0611889622778915,0.272727272727273,0,8
+"Agoseris spp.","no size","plants per m2","forb",2,1935,1955,28,0.0503280748289823,1.42105263157895,0,2
+"Opuntia polyacantha","no size","plants per m2","shrub",14,1932,1957,28,0.0462308411491715,0.346153846153846,0,5
+"Astragalus purshii","no size","plants per m2","forb",11,1931,1957,26,0.0479552963672746,0.625,0,11
+"Zigadenus paniculatus","no size","plants per m2","forb",18,1933,1955,26,0.040858717809716,0.210526315789474,0,4
+"Erigeron concinnus","no size","plants per m2","shrub",2,1954,1955,25,0.0453720508166969,0.947368421052632,0,5
+"Machaeranthera canescens","no size","plants per m2","forb",12,1926,1973,25,0.053291687139237,0.454545454545455,0,10
+"unknown seedling","no size","plants per m2","unknown",2,1923,1956,24,0.199602122015915,5.75,0,2
+"Erigeron filifolius","no size","plants per m2","forb",2,1952,1956,21,0.0278514588859416,0.692307692307692,0,6
+"Sphaeralcea munroana","no size","plants per m2","forb",14,1932,1952,21,0.031543169474204,0.153846153846154,0,4
+"Fritillaria atropurpurea","no size","plants per m2","forb",6,1933,1955,19,0.0302755320904141,0.409090909090909,0,4
+"Erigeron pumilus","no size","plants per m2","forb",2,1941,1973,18,0.054858934169279,1.54545454545455,0,8
+"Machaeranthera spp.","no size","plants per m2","forb",2,1923,1926,18,0.155172413793103,4.25,0,2
+"Erigeron spp.","no size","plants per m2","forb",4,1930,1957,16,0.0350906277630416,0.5625,0,6
+"Oenothera caespitosa","no size","plants per m2","forb",3,1945,1956,14,0.0207378828068483,0.318181818181818,0,4
+"Phlox speciosa","no size","plants per m2","forb",1,1923,1923,14,0.120689655172414,3.5,0,1
+"Allium spp.","no size","plants per m2","forb",6,1932,1957,13,0.0234961650569636,0.210526315789474,0,7
+"Penstemon spp.","no size","plants per m2","forb",5,1923,1930,11,0.108477011494253,2.33333333333333,0,2
+"Phlox spp.","no size","plants per m2","forb",1,1929,1929,10,0.0862068965517241,2.5,0,1
+"Eriogonum spp.","no size","plants per m2","forb",6,1923,1931,9,0.0704022988505747,0.75,0,1
+"Cirsium undulatum","no size","plants per m2","forb",1,1945,1945,7,0.0109717868338558,0.318181818181818,0,1
+"Hackelia patens","no size","plants per m2","forb",6,1934,1956,6,0.00916959628393385,0.0526315789473684,0,4
+"Schoenocrambe linifolia","no size","plants per m2","forb",2,1942,1957,5,0.00944170771756979,0.19047619047619,0,1
+"Taraxacum officinale","no size","plants per m2","forb",3,1942,1955,5,0.00872871834759312,0.105263157894737,0,3
+"Chaetopappa ericoides","no size","plants per m2","forb",1,1945,1945,4,0.00626959247648903,0.181818181818182,0,3
+"Ipomopsis aggregata","no size","plants per m2","forb",2,1945,1946,4,0.00626959247648903,0.0909090909090909,0,1
+"Symphyotrichum ascendens","no size","plants per m2","forb",2,1946,1947,4,0.00626959247648903,0.0909090909090909,0,1
+"Achillea millefolium","no size","plants per m2","forb",1,1945,1945,3,0.00470219435736677,0.136363636363636,0,2
+"Arnica amplexicaulis","no size","plants per m2","forb",1,1933,1933,2,0.00313479623824451,0.0909090909090909,0,1
+"Chaenactis douglasii","no size","plants per m2","forb",2,1933,1938,2,0.00313479623824451,0.0454545454545455,0,2
+"Hackelia floribunda","no size","plants per m2","forb",1,1931,1931,2,0.00431034482758621,0.125,0,1
+"Lithospermum ruderale","no size","plants per m2","forb",2,1942,1973,2,0.00477683236303926,0.0909090909090909,0,2
+"unknown weed","no size","plants per m2","unknown",1,1929,1929,2,0.0172413793103448,0.5,0,1
+"Aconitum spp.","no size","plants per m2","forb",1,1945,1945,1,0.00156739811912226,0.0454545454545455,0,1
+"Arnica cordifolia","no size","plants per m2","forb",1,1945,1945,1,0.00156739811912226,0.0454545454545455,0,1
+"Calochortus nuttallii","no size","plants per m2","forb",1,1973,1973,1,0.00313479623824451,0.0909090909090909,0,1
+"Ericameria nana","no size","plants per m2","shrub",1,1945,1945,1,0.00156739811912226,0.0454545454545455,0,1
+"Eriogonum longifolium","no size","plants per m2","forb",1,1945,1945,1,0.00156739811912226,0.0454545454545455,0,1
+"Fritillaria pudica","no size","plants per m2","forb",1,1935,1935,1,0.0013262599469496,0.0384615384615385,0,1
+"Ionactis alpina","no size","plants per m2","forb",1,1952,1952,1,0.0013262599469496,0.0384615384615385,0,1
+"Lesquerella spp.","no size","plants per m2","forb",1,1923,1923,1,0.00862068965517242,0.25,0,1
+"Sidalcea nervata","no size","plants per m2","forb",1,1942,1942,1,0.00164203612479474,0.0476190476190476,0,1
+"unknown cactus","no size","plants per m2","shrub",1,1930,1930,1,0.0021551724137931,0.0625,0,1
+"Lappula occidentalis","count only","plants per m2",NA,19,1932,1956,200,6.37010962419311,76.4090909090909,0,0
+"Cordylanthus ramosus","count only","plants per m2",NA,18,1932,1973,167,2.76988090554334,14.6818181818182,0,0
+"Bromus tectorum","count only","plants per m2",NA,25,1926,1973,138,12.3042790542791,127.47619047619,0,0
+"Polygonum douglasii","count only","plants per m2",NA,16,1935,1956,137,4.50924151468616,36.1363636363636,0,0
+"Chenopodium inamoenum","count only","plants per m2",NA,12,1932,1957,106,1.73143296509903,14.25,0,0
+"unknown annual","count only","plants per m2",NA,15,1932,1957,63,2.99842308326882,29.7894736842105,0,0
+"Gayophytum diffusum","count only","plants per m2",NA,11,1932,1957,48,1.20794435449608,9.45454545454546,0,0
+"Sphaerostigma andinum","count only","plants per m2",NA,8,1932,1941,44,3.76308174584037,59.5454545454545,0,0
+"Artemisia tripartita","count only","plants per m2","shrub",2,1932,1933,42,0.928743670122981,21.6153846153846,26,26
+"Pseudoroegneria spicata","count only","plants per m2","grass",3,1932,1936,41,3.15891005546178,81.6538461538462,26,0
+"Camissonia andina","count only","plants per m2",NA,11,1932,1946,40,1.50982350982351,14.4090909090909,0,0
+"Collinsia parviflora","count only","plants per m2",NA,7,1923,1947,36,0.308355437665782,2.86363636363636,0,0
+"Leptosiphon liniflorus","count only","plants per m2",NA,7,1935,1945,30,2.6073696418524,58.6818181818182,0,0
+"Lepidium densiflorum","count only","plants per m2",NA,8,1931,1973,21,0.0849516862447897,0.636363636363636,0,0
+"Cryptantha spp.","count only","plants per m2",NA,7,1935,1945,19,0.225337880510294,1.90909090909091,0,0
+"Linanthus pungens","count only","plants per m2","shrub",3,1932,1941,14,0.424764890282132,11,13,15
+"Lepidium spp.","count only","plants per m2",NA,4,1935,1952,12,0.0856040511212925,1.26923076923077,0,0
+"Poa cusickii","count only","plants per m2",NA,1,1932,1932,10,0.0848806366047746,2.46153846153846,0,0
+"Poa secunda","count only","plants per m2","grass",1,1932,1932,10,0.112732095490716,3.26923076923077,26,0
+"Crepis acuminata","count only","plants per m2","forb",2,1932,1936,9,0.844948155292983,22.2727272727273,0,25
+"Phlox stansburyi","count only","plants per m2",NA,2,1932,1933,9,0.02724861345551,0.653846153846154,0,0
+"Astragalus lentiginosus","count only","plants per m2","forb",2,1932,1933,8,0.0378586930311068,0.961538461538462,0,18
+"Chenopodium spp.","count only","plants per m2",NA,3,1923,1947,8,0.0313479623824451,0.863636363636364,0,0
+"Descurainia pinnata","count only","plants per m2",NA,4,1932,1941,8,0.0189293465155534,0.227272727272727,0,0
+"Polygonum buxiforme","count only","plants per m2",NA,2,1932,1933,8,0.0502773088979986,0.730769230769231,0,0
+"Tetradymia canescens","count only","plants per m2","shrub",2,1932,1933,8,0.0370147094285025,0.846153846153846,14,17
+"Adenostegia ramosa","count only","plants per m2",NA,1,1932,1932,7,0.0557029177718833,1.61538461538462,0,0
+"Gutierrezia sarothrae","count only","plants per m2","shrub",2,1932,1933,7,0.02724861345551,0.653846153846154,19,20
+"Phlox multiflora","count only","plants per m2",NA,2,1932,1933,7,0.02724861345551,0.653846153846154,0,0
+"Eriogonum microthecum","count only","plants per m2","shrub",2,1932,1933,6,0.0403906438389197,0.863636363636364,11,13
+"Salsola tragus","count only","plants per m2",NA,5,1935,1957,6,0.0386000871481815,0.346153846153846,0,0
+"Achnatherum hymenoides","count only","plants per m2","grass",1,1932,1932,5,0.0676392572944297,1.96153846153846,20,0
+"Crucifer","count only","plants per m2",NA,2,1956,1957,5,0.0338196286472148,0.75,0,0
+"Lomatium sp.","count only","plants per m2",NA,2,1932,1933,5,0.0232698336146612,0.538461538461538,0,0
+"Chenopodium album","count only","plants per m2",NA,3,1932,1936,4,0.106341933928141,2.90909090909091,0,0
+"Chrysothamnus viscidiflorus","count only","plants per m2","shrub",2,1932,1933,4,0.00711357607909332,0.115384615384615,21,23
+"Erigeron engelmannii","count only","plants per m2","forb",1,1933,1933,4,0.0141065830721003,0.409090909090909,0,17
+"Hackelia patens","count only","plants per m2","forb",1,1945,1945,4,0.0470219435736677,1.36363636363636,0,4
+"Lactuca spp.","count only","plants per m2",NA,2,1945,1946,4,0.0376175548589342,0.909090909090909,0,0
+"Nassella viridula","count only","plants per m2",NA,1,1932,1932,4,0.168435013262599,4.88461538461539,0,0
+"Tragopogon dubius","count only","plants per m2",NA,1,1973,1973,4,0.0282131661442006,0.818181818181818,0,0
+"Antennaria microphylla","count only","plants per m2",NA,1,1932,1932,3,0.00530503978779841,0.153846153846154,0,0
+"Cryptantha ambigua","count only","plants per m2",NA,2,1942,1945,3,0.0949395432154053,2.18181818181818,0,0
+"Lupinus caudatus","count only","plants per m2","forb",2,1932,1945,3,0.0189293465155534,0.318181818181818,0,9
+"Tragopogon spp.","count only","plants per m2",NA,3,1950,1954,3,0.00603480004568934,0.0769230769230769,0,0
+"Achnatherum nelsonii","count only","plants per m2",NA,1,1933,1933,2,0.00313479623824451,0.0909090909090909,0,0
+"Draba spp.","count only","plants per m2",NA,1,1951,1951,2,0.0163339382940109,0.473684210526316,0,0
+"Erigeron spp.","count only","plants per m2","forb",1,1932,1932,2,0.00928381962864721,0.269230769230769,0,6
+"Lappula sp.","count only","plants per m2",NA,1,1923,1923,2,0.0344827586206897,1,0,0
+"Orobanche ludoviciana","count only","plants per m2",NA,2,1946,1949,2,0.00313479623824451,0.0454545454545455,0,0
+"Orobanche sp.","count only","plants per m2",NA,2,1952,1973,2,0.00446105618519412,0.0909090909090909,0,0
+"Viola praemorsa","count only","plants per m2","forb",1,1932,1932,2,0.00397877984084881,0.115384615384615,0,11
+"Achillea millefolium","count only","plants per m2","forb",1,1932,1932,1,0.00795755968169761,0.230769230769231,0,2
+"Artemisia tridentata","count only","plants per m2",NA,1,1933,1933,1,0.00783699059561129,0.227272727272727,0,0
+"Aster spp.","count only","plants per m2","forb",1,1932,1932,1,0.00663129973474801,0.192307692307692,0,10
+"Castilleja angustifolia","count only","plants per m2","forb",1,1932,1932,1,0.0013262599469496,0.0384615384615385,0,13
+"Comandra umbellata","count only","plants per m2","forb",1,1955,1955,1,0.00181488203266788,0.0526315789473684,0,10
+"Cryptantha affinis","count only","plants per m2",NA,1,1945,1945,1,0.0109717868338558,0.318181818181818,0,0
+"Descurainia spp.","count only","plants per m2",NA,1,1941,1941,1,0.00783699059561128,0.227272727272727,0,0
+"Draba verna","count only","plants per m2",NA,1,1947,1947,1,0.00626959247648903,0.181818181818182,0,0
+"Gayophytum spp.","count only","plants per m2",NA,1,1946,1946,1,0.00156739811912226,0.0454545454545455,0,0
+"Gilia tweedyi","count only","plants per m2",NA,1,1936,1936,1,0.0658307210031348,1.90909090909091,0,0
+"Hesperostipa comata","count only","plants per m2","grass",1,1936,1936,1,0.253918495297806,7.36363636363636,25,0
+"Koeleria macrantha","count only","plants per m2","grass",1,1932,1932,1,0.00663129973474801,0.192307692307692,24,0
+"Lactuca serriola","count only","plants per m2",NA,1,1947,1947,1,0.00156739811912226,0.0454545454545455,0,0
+"Lewisia rediviva","count only","plants per m2",NA,1,1946,1946,1,0.00783699059561129,0.227272727272727,0,0
+"Lithospermum ruderale","count only","plants per m2","forb",1,1942,1942,1,0.00164203612479474,0.0476190476190476,0,2
+"Lomatium macrocarpum","count only","plants per m2",NA,1,1957,1957,1,0.00287356321839081,0.0833333333333333,0,0
+"Navarretia breweri","count only","plants per m2",NA,1,1936,1936,1,0.0470219435736677,1.36363636363636,0,0
+"Polygonum engelmannii","count only","plants per m2",NA,1,1956,1956,1,0.0159151193633952,0.461538461538462,0,0
+"Polygonum spp.","count only","plants per m2",NA,1,1957,1957,1,0.028735632183908,0.833333333333333,0,0
+"Thlaspi arvense","count only","plants per m2",NA,1,1957,1957,1,0.00287356321839081,0.0833333333333333,0,0
+"unknown annual mustard","count only","plants per m2",NA,1,1935,1935,1,0.0013262599469496,0.0384615384615385,0,0

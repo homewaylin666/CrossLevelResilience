@@ -7,6 +7,7 @@
 ## numeric variable for coverage, broad range, QC flags, spikes, flat runs and
 ## cross-variable consistency. Raw values stay as they are (flags only);
 ## cleaning decisions belong to the next step.
+## Uses 'site_tag' from the runscript (output sub-folder).
 
 # Read the raw csv -------------------------------------------------------------
 macroenv_file <- here("data", "data.source", "SNOTEL737, macroenv, 1985-2026", "sp737_all.csv")
@@ -216,13 +217,15 @@ macroenv_coverage <- macroenv_raw %>%
   mutate(code = factor(code, levels = var_info$code))
 
 # Save tables ------------------------------------------------------------------
-dir.create(here("result", "tables"), recursive = TRUE, showWarnings = FALSE)
-write.csv(macroenv_summary, here("result", "tables", "CLR_CheckMacroEnv_summary.csv"), row.names = FALSE)
-write.csv(macroenv_flags, here("result", "tables", "CLR_CheckMacroEnv_flags.csv"), row.names = FALSE)
-write.csv(macroenv_coverage, here("result", "tables", "CLR_CheckMacroEnv_coverage.csv"), row.names = FALSE)
+tab_dir <- here("result", "tables", site_tag)
+fig_dir <- here("result", "figs", site_tag)
+dir.create(tab_dir, recursive = TRUE, showWarnings = FALSE)
+dir.create(fig_dir, recursive = TRUE, showWarnings = FALSE)
+write.csv(macroenv_summary, file.path(tab_dir, "CLR_CheckMacroEnv_summary.csv"), row.names = FALSE)
+write.csv(macroenv_flags, file.path(tab_dir, "CLR_CheckMacroEnv_flags.csv"), row.names = FALSE)
+write.csv(macroenv_coverage, file.path(tab_dir, "CLR_CheckMacroEnv_coverage.csv"), row.names = FALSE)
 
 # Figures ----------------------------------------------------------------------
-dir.create(here("result", "figs"), recursive = TRUE, showWarnings = FALSE)
 
   # Coverage heat map: which variable has data in which year
 p_cov <- ggplot(macroenv_coverage, aes(x = Year, y = code, fill = pct_present)) +
@@ -232,7 +235,7 @@ p_cov <- ggplot(macroenv_coverage, aes(x = Year, y = code, fill = pct_present)) 
   scale_y_discrete(limits = rev) +
   labs(x = NULL, y = NULL, title = "Schofield Pass SNOTEL 737: yearly coverage") +
   theme_bw(base_size = 9)
-ggsave(here("result", "figs", "CLR_CheckMacroEnv_coverage.png"), p_cov, width = 10, height = 5, dpi = 300)
+ggsave(file.path(fig_dir, "CLR_CheckMacroEnv_coverage.png"), p_cov, width = 10, height = 5, dpi = 300)
 
   # Daily series, one page per variable group; flagged days in red
   # (several pages, so this one stays a pdf)
@@ -246,7 +249,7 @@ flag_points <- macroenv_flags %>%
   left_join(var_info[, c("code", "group")], by = "code") %>%
   mutate(code = factor(code, levels = var_info$code))
 
-pdf(here("result", "figs", "CLR_CheckMacroEnv_series.pdf"), width = 11, height = 8)
+pdf(file.path(fig_dir, "CLR_CheckMacroEnv_series.pdf"), width = 11, height = 8)
 for (g in unique(var_info$group)) {
   fp <- filter(flag_points, group == g)
   p <- ggplot(filter(macroenv_long, group == g), aes(x = Date, y = value)) +
@@ -262,7 +265,7 @@ dev.off()
 
 # Report saved files -----------------------------------------------------------
 saved_files <- data.frame(
-  folder = c(rep("result/tables", 3), rep("result/figs", 2)),
+  folder = c(rep(file.path("result/tables", site_tag), 3), rep(file.path("result/figs", site_tag), 2)),
   file   = c("CLR_CheckMacroEnv_summary.csv", "CLR_CheckMacroEnv_flags.csv",
              "CLR_CheckMacroEnv_coverage.csv", "CLR_CheckMacroEnv_coverage.png",
              "CLR_CheckMacroEnv_series.pdf"),
@@ -273,7 +276,7 @@ saved_files <- data.frame(
               "daily series per variable group, flagged days in red")
 )
 stopifnot(all(file.exists(here(saved_files$folder, saved_files$file))))
-cat("\nCLR_CheckMacroEnv.R saved these files:\n")
+cat("\nCLR_CheckMacroEnv.R (", site_tag, ") saved these files:\n", sep = "")
 for (fd in unique(saved_files$folder)) {
   cat(sprintf("  %s/\n", fd))
   sf <- saved_files[saved_files$folder == fd, ]
@@ -288,4 +291,4 @@ rm(list = intersect(c("i", "v", "x", "qc", "has", "span", "n_missing", "out_rang
                       "d_next", "hdr", "val_hdr", "qc_hdr", "soil_rows", "soil_codes",
                       "summary_list", "flag_list", "n_dup", "n_skip", "n_elem", "g", "p", "fp",
                       "p_cov", "macroenv_long", "flag_points", "add_flag", "macroenv_file",
-                      "saved_files", "fd", "sf"), ls()))
+                      "saved_files", "fd", "sf", "tab_dir", "fig_dir"), ls()))

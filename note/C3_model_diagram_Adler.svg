@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1760 1520" width="1760" height="1520" version="1.1">
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0,0 10,5 0,10 Z" fill="#111111"/></marker>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0,0 10,5 0,10 Z" fill="#1e6b2a"/></marker>
+<marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0,0 10,5 0,10 Z" fill="#1560b8"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0,0 10,5 0,10 Z" fill="#b0641a"/></marker>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0,0 10,5 0,10 Z" fill="#b03a3a"/></marker>
+</defs>
+<style>
+ text{font-family:"Helvetica Neue",Helvetica,Arial,"Liberation Sans",sans-serif;fill:#111}
+ .mg{font-size:26px;font-weight:700}
+ .mgs{font-size:19px;fill:#333}
+ .ttl{font-size:26px;font-weight:700}
+ .h{font-size:21px;font-weight:700}
+ .b{font-size:20px}
+ .n{font-size:19px;fill:#222}
+ .eq{font-size:20px}
+ .sm{font-size:17px;fill:#333}
+ .lg{font-size:17px;fill:#333}
+</style>
+<rect x="0" y="0" width="1760" height="1520" fill="#ffffff"/>
+<rect x="212" y="18" width="630" height="450" rx="14" fill="#e8f1fb" stroke="#1560b8" stroke-width="2.5"/>
+<text class="ttl" x="527" y="52" text-anchor="middle" style="fill:#0d47a1">Climate context</text>
+<rect x="237" y="70" width="580" height="62" rx="9" fill="#ffffff" stroke="#1560b8" stroke-width="1.6"/>
+<text class="h" x="527" y="98" text-anchor="middle">Climate [t]</text>
+<text class="n" x="527" y="121" text-anchor="middle">(e.g., water-year precipitation, mean temperature; anomalies)</text>
+<path d="M 527,132 L 527,160" stroke="#1560b8" stroke-width="2.4" fill="none" marker-end="url(#ab)"/>
+<rect x="237" y="162" width="580" height="164" rx="9" fill="#ffffff" stroke="#1560b8" stroke-width="1.6"/>
+<text class="b" x="527" y="190" text-anchor="middle" font-weight="700">Climate effects</text>
+<text class="eq" x="420" y="224" text-anchor="end"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">clim</tspan></tspan>[i, t, v]</text>
+<text class="eq" x="428" y="224">=</text>
+<text class="eq" x="448" y="224"><tspan fill="#b03a3a"><tspan font-style="italic">β</tspan><tspan font-size="14px">climate</tspan>[k, v]</tspan> × climate[t]</text>
+<text class="eq" x="428" y="252">+</text>
+<text class="eq" x="448" y="252"><tspan><tspan font-style="italic">δ</tspan><tspan font-size="14px">size</tspan></tspan>[v] × climate[t] × z[i, t]</text>
+<text class="eq" x="428" y="280">+</text>
+<text class="eq" x="448" y="280"><tspan><tspan font-style="italic">δ</tspan><tspan font-size="14px">intra</tspan></tspan>[v] × climate[t] × INTRA[i, t]</text>
+<text class="eq" x="428" y="308">+</text>
+<text class="eq" x="448" y="308"><tspan><tspan font-style="italic">δ</tspan><tspan font-size="14px">inter</tspan></tspan>[v] × climate[t] × INTER[i, t]</text>
+<rect x="237" y="342" width="580" height="108" rx="9" fill="#ffffff" stroke="#1560b8" stroke-width="1.6" stroke-dasharray="8, 5"/>
+<text class="b" x="527" y="370" text-anchor="middle" font-weight="700">Year (random effect)</text>
+<text class="eq" x="364" y="404" text-anchor="end"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">year</tspan></tspan>[i, t, v]</text>
+<text class="eq" x="372" y="404">=</text>
+<text class="eq" x="392" y="404"><tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">t</tspan></tspan>[v] + <tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">t,k</tspan></tspan>[v] + <tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">t,size</tspan></tspan>[v] × z[i, t]</text>
+<text class="eq" x="372" y="432">+</text>
+<text class="eq" x="392" y="432"><tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">t,intra</tspan></tspan>[v] × INTRA[i, t] + <tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">t,inter</tspan></tspan>[v] × INTER[i, t]</text>
+<text class="n" x="1207" y="52" text-anchor="middle">All the <tspan fill="#b03a3a">red coefficients [k, v]</tspan> are set by the population level</text>
+<rect x="892" y="76" width="630" height="392" rx="14" fill="#fad4d4" stroke="#b03a3a" stroke-width="2.5"/>
+<text class="ttl" x="1207" y="110" text-anchor="middle" style="fill:#8a1f1f">Population-level variation</text>
+<rect x="917" y="128" width="580" height="62" rx="9" fill="#ffffff" stroke="#b03a3a" stroke-width="1.6"/>
+<text class="h" x="1207" y="156" text-anchor="middle">Life-history trait [k] (trait)</text>
+<text class="n" x="1207" y="179" text-anchor="middle">(e.g., GenTime, Iteroparity; posterior draws from Stage 1)</text>
+<path d="M 1207,190 L 1207,218" stroke="#b03a3a" stroke-width="2.4" fill="none" marker-end="url(#ar)"/>
+<rect x="917" y="220" width="580" height="234" rx="9" fill="#ffffff" stroke="#b03a3a" stroke-width="1.6"/>
+<text class="b" x="1207" y="248" text-anchor="middle" font-weight="700">Population-specific coefficients</text>
+<text class="eq" x="1146" y="282" text-anchor="end">X[k, v]</text>
+<text class="eq" x="1154" y="282">=</text>
+<text class="eq" x="1174" y="282">d0<tspan font-size="14px">X</tspan>[v]</text>
+<text class="eq" x="1154" y="310">+</text>
+<text class="eq" x="1174" y="310">d1<tspan font-size="14px">X</tspan>[v] × trait[k]</text>
+<text class="eq" x="1154" y="338">+</text>
+<text class="eq" x="1174" y="338"><tspan><tspan font-style="italic">σ</tspan><tspan font-size="14px">X</tspan></tspan>[k]</text>
+<text class="eq" x="1207" y="368" text-anchor="middle"><tspan fill="#b03a3a">X ∈ { <tspan font-style="italic">γ</tspan>, <tspan><tspan font-style="italic">β</tspan><tspan font-size="14px">intra</tspan></tspan>, <tspan><tspan font-style="italic">β</tspan><tspan font-size="14px">inter</tspan></tspan>, <tspan><tspan font-style="italic">β</tspan><tspan font-size="14px">climate</tspan></tspan> }</tspan></text>
+<text class="eq" x="1146" y="406" text-anchor="end">Y[k, v]</text>
+<text class="eq" x="1154" y="406">=</text>
+<text class="eq" x="1174" y="406">d0<tspan font-size="14px">Y</tspan>[v]  +  <tspan><tspan font-style="italic">σ</tspan><tspan font-size="14px">Y</tspan></tspan>[k]</text>
+<text class="eq" x="1207" y="438" text-anchor="middle" style="fill:#b03a3a">Y ∈ { α0, α1, α2 }</text>
+<rect x="212" y="548" width="630" height="612" rx="14" fill="#fffaf1" stroke="#b0641a" stroke-width="2.5"/>
+<text class="ttl" x="527" y="582" text-anchor="middle" style="fill:#8a4a10">Individual-level variation</text>
+<rect x="237" y="600" width="580" height="50" rx="9" fill="#ffffff" stroke="#b0641a" stroke-width="1.6"/>
+<text class="h" x="527" y="632" text-anchor="middle">Size [i, t] &amp; Local environment [q, t] (z &amp; E)</text>
+<path d="M 527,650 L 527,678" stroke="#b0641a" stroke-width="2.4" fill="none" marker-end="url(#ao)"/>
+<rect x="237" y="680" width="580" height="340" rx="9" fill="#ffffff" stroke="#b0641a" stroke-width="1.6"/>
+<text class="b" x="527" y="708" text-anchor="middle" font-weight="700">Individual effects</text>
+<text class="eq" x="431" y="742" text-anchor="end"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">ind</tspan></tspan>[i, t, v]</text>
+<text class="eq" x="439" y="742">=</text>
+<text class="eq" x="459" y="742"><tspan fill="#b03a3a"><tspan font-style="italic">α</tspan><tspan font-size="14px">0</tspan>[k, v]</tspan></text>
+<text class="eq" x="439" y="770">+</text>
+<text class="eq" x="459" y="770"><tspan fill="#b03a3a"><tspan font-style="italic">α</tspan><tspan font-size="14px">1</tspan>[k, v]</tspan> × z[i, t]</text>
+<text class="eq" x="439" y="798">+</text>
+<text class="eq" x="459" y="798"><tspan fill="#b03a3a"><tspan font-style="italic">α</tspan><tspan font-size="14px">2</tspan>[k, v]</tspan> × z²[i, t]</text>
+<text class="eq" x="439" y="826">+</text>
+<text class="eq" x="459" y="826"><tspan fill="#b03a3a"><tspan font-style="italic">γ</tspan>[k, v]</tspan> × E[q, t]</text>
+<text class="eq" x="439" y="854">+</text>
+<text class="eq" x="459" y="854"><tspan><tspan font-style="italic">θ</tspan><tspan font-size="14px">intra</tspan></tspan>[v] × z[i, t] × INTRA[i, t]</text>
+<text class="eq" x="439" y="882">+</text>
+<text class="eq" x="459" y="882"><tspan><tspan font-style="italic">θ</tspan><tspan font-size="14px">inter</tspan></tspan>[v] × z[i, t] × INTER[i, t]</text>
+<text class="eq" x="439" y="910">+</text>
+<text class="eq" x="459" y="910"><tspan><tspan font-style="italic">ω</tspan><tspan font-size="14px">intra</tspan></tspan>[v] × E[q, t] × INTRA[i, t]</text>
+<text class="eq" x="439" y="938">+</text>
+<text class="eq" x="459" y="938"><tspan><tspan font-style="italic">ω</tspan><tspan font-size="14px">inter</tspan></tspan>[v] × E[q, t] × INTER[i, t]</text>
+<text class="eq" x="439" y="966">+</text>
+<text class="eq" x="459" y="966"><tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">i</tspan></tspan>[v]</text>
+<rect x="237" y="1036" width="580" height="108" rx="9" fill="#ffffff" stroke="#b0641a" stroke-width="1.6" stroke-dasharray="8, 5"/>
+<text class="b" x="527" y="1064" text-anchor="middle" font-weight="700">Plot (random effect)</text>
+<text class="eq" x="431" y="1098" text-anchor="end"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">plot</tspan></tspan>[q, v]</text>
+<text class="eq" x="439" y="1098">=</text>
+<text class="eq" x="459" y="1098"><tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">g</tspan></tspan>[v] + <tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">q</tspan></tspan>[v]</text>
+<text class="sm" x="527" y="1128" text-anchor="middle">(quadrat q nested in group g)</text>
+<rect x="892" y="548" width="630" height="612" rx="14" fill="#eaf6ec" stroke="#1e6b2a" stroke-width="2.5"/>
+<text class="ttl" x="1207" y="582" text-anchor="middle" style="fill:#1b5e20">Interactions</text>
+<rect x="917" y="600" width="580" height="50" rx="9" fill="#ffffff" stroke="#1e6b2a" stroke-width="1.6"/>
+<text class="h" x="1207" y="632" text-anchor="middle">Intraspecific &amp; Interspecific [i, t] (INTRA &amp; INTER)</text>
+<path d="M 1207,650 L 1207,678" stroke="#1e6b2a" stroke-width="2.4" fill="none" marker-end="url(#ag)"/>
+<rect x="917" y="680" width="580" height="340" rx="9" fill="#ffffff" stroke="#1e6b2a" stroke-width="1.6"/>
+<text class="b" x="1207" y="708" text-anchor="middle" font-weight="700">Interaction effects</text>
+<text class="eq" x="1147" y="742" text-anchor="end"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">crowd</tspan></tspan>[i, t, v]</text>
+<text class="eq" x="1155" y="742">=</text>
+<text class="eq" x="1175" y="742"><tspan fill="#b03a3a"><tspan font-style="italic">β</tspan><tspan font-size="14px">intra</tspan>[k, v]</tspan> × INTRA[i, t]</text>
+<text class="eq" x="1155" y="770">+</text>
+<text class="eq" x="1175" y="770"><tspan fill="#b03a3a"><tspan font-style="italic">β</tspan><tspan font-size="14px">inter</tspan>[k, v]</tspan> × INTER[i, t]</text>
+<text class="n" x="1207" y="814" text-anchor="middle" font-style="italic">Effective interaction strength <tspan font-style="normal">(summary)</tspan></text>
+<text class="eq" x="1147" y="848" text-anchor="end"><tspan><tspan font-style="italic">β</tspan><tspan font-size="14px">x,eff</tspan></tspan>[i, t, v]</text>
+<text class="eq" x="1155" y="848">=</text>
+<text class="eq" x="1175" y="848"><tspan fill="#b03a3a"><tspan font-style="italic">β</tspan><tspan font-size="14px">x</tspan>[k, v]</tspan></text>
+<text class="eq" x="1155" y="876">+</text>
+<text class="eq" x="1175" y="876"><tspan fill="#b0641a"><tspan><tspan font-style="italic">θ</tspan><tspan font-size="14px">x</tspan></tspan>[v] × z[i, t]</tspan></text>
+<text class="eq" x="1155" y="904">+</text>
+<text class="eq" x="1175" y="904"><tspan fill="#b0641a"><tspan><tspan font-style="italic">ω</tspan><tspan font-size="14px">x</tspan></tspan>[v] × E[q, t]</tspan></text>
+<text class="eq" x="1155" y="932">+</text>
+<text class="eq" x="1175" y="932"><tspan fill="#1560b8"><tspan><tspan font-style="italic">δ</tspan><tspan font-size="14px">x</tspan></tspan>[v] × climate[t]</tspan></text>
+<text class="eq" x="1155" y="960">+</text>
+<text class="eq" x="1175" y="960"><tspan fill="#1560b8"><tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">t,x</tspan></tspan>[v]</tspan></text>
+<text class="eq" x="1207" y="1000" text-anchor="middle">x ∈ { intra, inter }</text>
+<rect x="917" y="1036" width="580" height="108" rx="9" fill="#ffffff" stroke="#1e6b2a" stroke-width="1.6"/>
+<text class="b" x="1207" y="1072" text-anchor="middle" font-weight="700">Crowding index (one kernel for all species)</text>
+<text class="eq" x="1207" y="1112" text-anchor="middle">INTRA, INTER[i, t] = Σ<tspan font-size="14px" dy="5">a</tspan><tspan dy="-5"> </tspan><tspan font-style="italic">F</tspan>(<tspan font-style="italic">d</tspan><tspan font-size="14px" dy="5">a</tspan><tspan dy="-5">) × </tspan>Area<tspan font-size="14px" dy="5">a</tspan><tspan dy="-5">[i, t]</tspan></text>
+<rect x="442" y="1196" width="850" height="88" rx="6" fill="#ffffff" stroke="#6a2c91" stroke-width="1.6"/>
+<text class="h" x="867" y="1224" text-anchor="middle">Linear predictor for individual i, population k, quadrat q, year t, vital rate v</text>
+<text class="eq" x="867" y="1264" text-anchor="middle"><tspan font-style="italic">η</tspan>[i, t, v] = <tspan fill="#b0641a"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">ind</tspan></tspan>[i, t, v]</tspan> + <tspan fill="#b0641a"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">plot</tspan></tspan>[q, v]</tspan> + <tspan fill="#1e6b2a"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">crowd</tspan></tspan>[i, t, v]</tspan> + <tspan fill="#1560b8"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">clim</tspan></tspan>[i, t, v]</tspan> + <tspan fill="#1560b8"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">year</tspan></tspan>[i, t, v]</tspan></text>
+<rect x="287" y="1322" width="1160" height="176" rx="10" fill="#f3ecf9" stroke="#6a2c91" stroke-width="1.8"/>
+<text class="h" x="867" y="1354" text-anchor="middle">Vital rate [i, t, v]</text>
+<text class="eq" x="500" y="1394" text-anchor="end">survival[i, t]</text>
+<text class="eq" x="508" y="1394">~</text>
+<text class="eq" x="528" y="1394">Bernoulli( logit⁻¹ <tspan font-style="italic">η</tspan>[i, t, 1] )</text>
+<text class="eq" x="500" y="1428" text-anchor="end">growth[i, t]</text>
+<text class="eq" x="508" y="1428">~</text>
+<text class="eq" x="528" y="1428">Normal( <tspan font-style="italic">η</tspan>[i, t, 2] , <tspan><tspan font-style="italic">σ</tspan><tspan font-size="14px">grow</tspan></tspan> )</text>
+<text class="eq" x="1000" y="1394" text-anchor="end">recruits[k, q, t]</text>
+<text class="eq" x="1008" y="1394">~</text>
+<text class="eq" x="1028" y="1394">NegBin( C′ × exp <tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">R</tspan></tspan>[k, q, t] , r )</text>
+<text class="eq" x="1000" y="1428" text-anchor="end">recruit size[k]</text>
+<text class="eq" x="1008" y="1428">~</text>
+<text class="eq" x="1028" y="1428">Normal( <tspan><tspan font-style="italic">μ</tspan><tspan font-size="14px">rec</tspan></tspan>[k] , <tspan><tspan font-style="italic">σ</tspan><tspan font-size="14px">rec</tspan></tspan> )</text>
+<text class="sm" x="867" y="1472" text-anchor="middle">C′ = p × quadrat cover + (1 − p) × group mean cover;  <tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">R</tspan></tspan> uses quadrat cover in place of z, INTRA and INTER</text>
+<path d="M 844,288 L 888,288" stroke="#1560b8" stroke-width="2.4" fill="none" marker-end="url(#ab)"/>
+<path d="M 527,468 L 527,545" stroke="#1560b8" stroke-width="2.4" fill="none" marker-end="url(#ab)"/>
+<path d="M 1207,468 L 1207,545" stroke="#b03a3a" stroke-width="2.4" fill="none" marker-end="url(#ar)"/>
+<path d="M 782,468 L 952,545" stroke="#1560b8" stroke-width="2.4" fill="none" marker-end="url(#ab)"/>
+<path d="M 952,468 L 782,545" stroke="#b03a3a" stroke-width="2.4" fill="none" marker-end="url(#ar)"/>
+<path d="M 844,904 L 888,904" stroke="#b0641a" stroke-width="2.4" fill="none" marker-end="url(#ao)"/>
+<path d="M 527,1160 L 527,1194" stroke="#b0641a" stroke-width="2.4" fill="none" marker-end="url(#ao)"/>
+<path d="M 1207,1160 L 1207,1194" stroke="#1e6b2a" stroke-width="2.4" fill="none" marker-end="url(#ag)"/>
+<path d="M 867,1284 L 867,1320" stroke="#111111" stroke-width="2.4" fill="none" marker-end="url(#a)"/>
+<text class="mg" x="38" y="56" style="fill:#0d47a1">Level-</text>
+<text class="mg" x="38" y="88" style="fill:#0d47a1">Community</text>
+<text class="mgs" x="38" y="130">Climate shifts</text>
+<text class="mgs" x="38" y="154">vital rates directly</text>
+<text class="mgs" x="38" y="178">and modulates</text>
+<text class="mgs" x="38" y="202">the effects of</text>
+<text class="mgs" x="38" y="226">size, traits and</text>
+<text class="mgs" x="38" y="250">interactions.</text>
+<text class="mgs" x="38" y="372">Year random</text>
+<text class="mgs" x="38" y="396">effects capture</text>
+<text class="mgs" x="38" y="420">what climate</text>
+<text class="mgs" x="38" y="444">cannot explain.</text>
+<text class="mg" x="1540" y="113" style="fill:#b03a3a">Level-</text>
+<text class="mg" x="1540" y="145" style="fill:#b03a3a">Population</text>
+<text class="mgs" x="1540" y="187">Life-history traits</text>
+<text class="mgs" x="1540" y="211">explain species</text>
+<text class="mgs" x="1540" y="235">differences in their</text>
+<text class="mgs" x="1540" y="259">responses (γ, β).</text>
+<text class="mgs" x="1540" y="395" style="fill:#b03a3a">Y is trait-free as trait</text>
+<text class="mgs" x="1540" y="419" style="fill:#b03a3a">is derived from them</text>
+<text class="mg" x="38" y="585" style="fill:#8a4a10">Level-</text>
+<text class="mg" x="38" y="617" style="fill:#8a4a10">Individual</text>
+<text class="mgs" x="38" y="659">Individual's own</text>
+<text class="mgs" x="38" y="683">size and the local</text>
+<text class="mgs" x="38" y="707">environment of its</text>
+<text class="mgs" x="38" y="731">quadrat (e.g.,</text>
+<text class="mgs" x="38" y="755">grazing, soil or</text>
+<text class="mgs" x="38" y="779">community type).</text>
+<text class="mgs" x="38" y="1060">Plot random</text>
+<text class="mgs" x="38" y="1084">effects capture</text>
+<text class="mgs" x="38" y="1108">what the local</text>
+<text class="mgs" x="38" y="1132">environment</text>
+<text class="mgs" x="38" y="1156">cannot explain.</text>
+<text class="lg" x="1550" y="742">Arrows between</text>
+<text class="lg" x="1550" y="766">levels: the upper</text>
+<text class="lg" x="1550" y="790">level sets the</text>
+<text class="lg" x="1550" y="814">intercepts or</text>
+<text class="lg" x="1550" y="838">modulates the</text>
+<text class="lg" x="1550" y="862">effect sizes of</text>
+<text class="lg" x="1550" y="886">the lower level.</text>
+<text class="lg" x="1550" y="1040">F(d) is estimated</text>
+<text class="lg" x="1550" y="1064">from the data</text>
+<text class="lg" x="1550" y="1088">(Teller et al. 2016);</text>
+<text class="lg" x="1550" y="1112">focal plants near the</text>
+<text class="lg" x="1550" y="1136">quadrat edge serve</text>
+<text class="lg" x="1550" y="1160">only as neighbours.</text>
+<text class="mg" x="38" y="1360" style="fill:#6a2c91">Observation</text>
+<text class="mgs" x="38" y="1402">Survival and growth</text>
+<text class="mgs" x="38" y="1426">per individual;</text>
+<text class="mgs" x="38" y="1450">recruitment per</text>
+<text class="mgs" x="38" y="1474">quadrat and year.</text>
+</svg>
