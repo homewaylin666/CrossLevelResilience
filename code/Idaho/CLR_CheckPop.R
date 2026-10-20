@@ -16,7 +16,8 @@ pop_path <- function(f) here("data", "data.source", site_dir, f)
 
   # Polygons: basal cover of grasses, canopy cover of shrubs; area in m2
 cover_raw   <- read.csv(pop_path("allrecords_cover.csv"), na.strings = c("NA", "null"))
-  # Points: forbs and single tillers; shrubs also have stem points linked to their canopy
+  # Points: forbs, single grass tillers and small young shrubs (without canopy);
+  # shrubs with a canopy polygon also have a stem point (stem = "Y") linked to it
 density_raw <- read.csv(pop_path("allrecords_density.csv"), na.strings = c("NA", "null"))
   # Counts per quadrat and year (plants counted, without a map)
 counts_raw  <- read.csv(pop_path("annuals_counts_v3.csv"), na.strings = c("NA", ""))
@@ -29,6 +30,12 @@ stopifnot(all(c("quad", "year", "species", "seedling", "stem", "x", "y") %in% na
 stopifnot(all(c("quad", "year", "species", "count") %in% names(counts_raw)))
 dim(cover_raw)   # one row per polygon
 dim(density_raw) # one row per point
+
+  # Stem points duplicate the shrub canopy polygons they belong to, so they leave the
+  # point records here (as the data paper metadata advises: remove stem = "Y" before analysis)
+n_stem <- sum(density_raw$stem %in% "Y")
+density_raw <- density_raw[!density_raw$stem %in% "Y", ]
+cat(sprintf("Removed %d shrub stem points (stem = Y); %d point records left.\n", n_stem, nrow(density_raw)))
 
   # Years come as two digits (23 = 1923, 73 = 1973)
 cover_raw$Year     <- cover_raw$year + 1900
@@ -107,7 +114,7 @@ abund_cover <- cover_raw %>%
   left_join(effort, by = "Year") %>%
   mutate(abundance = 100 * total / n_quad, unit = "cover (%)")
 
-  # Points: plants per m2 (stem points of shrubs are stems, kept as they are)
+  # Points: plants per m2 (shrub stem points already removed above)
 abund_point <- density_raw %>%
   group_by(species, Year) %>%
   summarise(n_records = n(), total = n(), .groups = "drop") %>%
@@ -198,7 +205,9 @@ heat_data <- pop_abundance %>%
   ungroup() %>%
   mutate(row = paste0(species, ifelse(type == "size (canopy)" | (type == "no size" &
                         growth_form[species] %in% "shrub"), paste0(" [", type, "]"), "")),
-         Year_f = factor(Year))
+         # year labels carry the number of sampled quadrats, e.g. "1923 (4)"
+         Year_f = factor(Year, levels = effort$Year,
+                         labels = paste0(effort$Year, " (", effort$n_quad, ")")))
 row_order <- heat_data %>% distinct(row, type, n_total) %>% arrange(type, n_total) %>% pull(row)
 heat_data$row <- factor(heat_data$row, levels = unique(row_order))
 p_heat <- ggplot(heat_data, aes(x = Year_f, y = row, fill = type, alpha = rel)) +
@@ -206,7 +215,7 @@ p_heat <- ggplot(heat_data, aes(x = Year_f, y = row, fill = type, alpha = rel)) 
   scale_fill_manual(values = type_colour, name = "Data type") +
   scale_alpha_continuous(range = c(0, 1), name = "Abundance\n(relative to\nspecies max)") +
   facet_grid(type ~ ., scales = "free_y", space = "free_y") +
-  labs(x = "Census year", y = NULL,
+  labs(x = "Census year (number of quadrats sampled)", y = NULL,
        title = paste0(site_tag, ": abundance of every species in every census year")) +
   theme_bw(base_size = 7) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5),
@@ -279,7 +288,7 @@ cat("Workspace objects kept: cover_raw, density_raw, counts_raw, species_raw, sa
     "pop_abundance, pop_species, pop_flags, pointshare\n")
 
   # Tidy up temporary objects
-rm(list = intersect(c("pop_path", "inventory_raw", "flag_list", "add_flag", "recorded",
+rm(list = intersect(c("pop_path", "n_stem", "inventory_raw", "flag_list", "add_flag", "recorded",
                       "off_inventory", "unlisted", "type_levels", "type_colour", "growth_form",
                       "abund_cover", "abund_point", "abund_count", "assumed_cm2", "basal_qy",
                       "point_qy", "pointshare_summary", "tab_dir", "fig_dir", "heat_data",
