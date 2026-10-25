@@ -1,0 +1,41 @@
+"variant","description","parameter","median","q2.5","q97.5","rhat","ess"
+"A","plant effect centred, prior exp(1); year effects as in run 1","ind.sd",1.489,0.667,1.648,1.264,25
+"A","plant effect centred, prior exp(1); year effects as in run 1","pop.int.mu",1.316,0.502,2.127,1.003,323
+"A","plant effect centred, prior exp(1); year effects as in run 1","pop.slope.size.mu",1.895,1.446,2.401,1.749,180
+"A","plant effect centred, prior exp(1); year effects as in run 1","pop.slope.clim.mu",0.136,-0.196,0.423,1.359,46
+"A","plant effect centred, prior exp(1); year effects as in run 1","com.size.x.clim",0.058,-0.251,0.54,2.044,37
+"A","plant effect centred, prior exp(1); year effects as in run 1","com.W.x.clim[1]",-0.121,-0.294,0.013,1.005,199
+"A","plant effect centred, prior exp(1); year effects as in run 1","com.W.x.clim[3]",-0.127,-0.259,0.003,1.012,175
+"A","plant effect centred, prior exp(1); year effects as in run 1","yr.int.sd",0.402,0.211,0.647,1.054,138
+"B","plant effect centred, prior half-normal(0, 0.5); year effects as in run 1","ind.sd",1.474,0.666,1.595,1.245,21
+"B","plant effect centred, prior half-normal(0, 0.5); year effects as in run 1","pop.int.mu",1.331,0.535,2.143,1.004,848
+"B","plant effect centred, prior half-normal(0, 0.5); year effects as in run 1","pop.slope.size.mu",1.928,1.386,2.392,1.126,61
+"B","plant effect centred, prior half-normal(0, 0.5); year effects as in run 1","pop.slope.clim.mu",0.184,-0.085,0.515,1.229,22
+"B","plant effect centred, prior half-normal(0, 0.5); year effects as in run 1","com.size.x.clim",0.059,-0.327,0.392,1.148,43
+"B","plant effect centred, prior half-normal(0, 0.5); year effects as in run 1","com.W.x.clim[1]",-0.103,-0.262,0.038,1.019,194
+"B","plant effect centred, prior half-normal(0, 0.5); year effects as in run 1","com.W.x.clim[3]",-0.123,-0.238,-0.003,1.057,222
+"B","plant effect centred, prior half-normal(0, 0.5); year effects as in run 1","yr.int.sd",0.405,0.221,0.633,1.036,129
+"C","plant effect non-centred, prior exp(1); year effects as in run 1","ind.sd",1.507,1.373,1.627,1.029,123
+"C","plant effect non-centred, prior exp(1); year effects as in run 1","pop.int.mu",1.371,0.494,2.231,1.064,122
+"C","plant effect non-centred, prior exp(1); year effects as in run 1","pop.slope.size.mu",1.852,1.337,2.334,1.031,120
+"C","plant effect non-centred, prior exp(1); year effects as in run 1","pop.slope.clim.mu",0.199,-0.245,0.556,2.089,22
+"C","plant effect non-centred, prior exp(1); year effects as in run 1","com.size.x.clim",-0.011,-0.406,0.463,1.046,33
+"C","plant effect non-centred, prior exp(1); year effects as in run 1","com.W.x.clim[1]",-0.124,-0.257,0.02,1.017,188
+"C","plant effect non-centred, prior exp(1); year effects as in run 1","com.W.x.clim[3]",-0.126,-0.265,0.012,1.01,167
+"C","plant effect non-centred, prior exp(1); year effects as in run 1","yr.int.sd",0.423,0.217,0.674,1.089,112
+"D","plant effect non-centred; year effects centred on precipitation","ind.sd",1.508,1.375,1.646,1.072,109
+"D","plant effect non-centred; year effects centred on precipitation","pop.int.mu",1.208,0.35,2.045,1.219,404
+"D","plant effect non-centred; year effects centred on precipitation","pop.slope.size.mu",1.892,1.454,2.298,1.027,183
+"D","plant effect non-centred; year effects centred on precipitation","pop.slope.clim.mu",0.12,-0.195,0.532,1.702,54
+"D","plant effect non-centred; year effects centred on precipitation","com.size.x.clim",0.008,-0.353,0.36,1.01,465
+"D","plant effect non-centred; year effects centred on precipitation","com.W.x.clim[1]",-0.113,-0.267,0.034,1.097,148
+"D","plant effect non-centred; year effects centred on precipitation","com.W.x.clim[3]",-0.122,-0.258,0.006,1.007,581
+"D","plant effect non-centred; year effects centred on precipitation","yr.int.sd",0.371,0.156,0.62,1.282,112
+"E","plant effect non-centred; year effects centred on intercept and precipitation (adopted)","ind.sd",1.505,1.389,1.656,1.012,102
+"E","plant effect non-centred; year effects centred on intercept and precipitation (adopted)","pop.int.mu",1.263,0.573,1.881,1.084,43
+"E","plant effect non-centred; year effects centred on intercept and precipitation (adopted)","pop.slope.size.mu",1.822,1.321,2.299,1.164,61
+"E","plant effect non-centred; year effects centred on intercept and precipitation (adopted)","pop.slope.clim.mu",0.131,-0.157,0.469,1.055,123
+"E","plant effect non-centred; year effects centred on intercept and precipitation (adopted)","com.size.x.clim",-0.039,-0.465,0.355,1.117,234
+"E","plant effect non-centred; year effects centred on intercept and precipitation (adopted)","com.W.x.clim[1]",-0.115,-0.246,0.023,1.007,219
+"E","plant effect non-centred; year effects centred on intercept and precipitation (adopted)","com.W.x.clim[3]",-0.129,-0.262,0.001,1.018,451
+"E","plant effect non-centred; year effects centred on intercept and precipitation (adopted)","yr.int.sd",0.39,0.183,0.658,1.028,221

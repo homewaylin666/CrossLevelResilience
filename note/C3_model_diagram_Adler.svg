@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1760 1520" width="1760" height="1520" version="1.1" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo1MDZjYjg0My01NWVmLTQ1YTItYWY0MS1hYjg1MmM3MDg1NTYAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaPLYiKUfNAue28Oaq3QkWXAAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo2ZTg5MjQzNy00MTZkLTQ2YjQtODE1Yy1hOTM2ZmMzZGY1M2VscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoZxTQhctfYADvsRyyLClrYQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggmB44O46pRKKbWTBtxZW5WlYiOeBHgn5yqNSAwCue626kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaDy69poKXVoLBN3tfaVRBVwAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCCkqo/iOjfbvKxnixSXyvJei5AEaqMiyCXMr7JpCnU5CGRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjfZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjUwNmNiODQzLTU1ZWYtNDVhMi1hZjQxLWFiODUyYzcwODU1Ni9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjg3YmRjMTA2LTUwZDEtNDYyOC05Yjc1LWNjNGE4ZDJlMDZjOHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCCYHjg7jqlEoptZMG3FlblaViI54EeCfnKo1IDAK57rbqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggLQikA/5xw+g8i0PSLcBNisf/kKqZjxEaL9Ljp63sR8SiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg6oe8flNMJGSsJpr9IggSjAy0siFYPy/LzYsiIRsuXXV0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQHtxnavS7PW0fM+uvTtAgbwjo8Hz9j2f6XAoKgenEcBQ/JXl0vTAxJyZHu1ihRAKYRvI6BqKUrUmqMkb12L/Pqc=</c2pa:manifest></metadata>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1760 2234" width="1760" height="2234" version="1.1" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo1OTQ3YWVjNS1mMGMzLTRmMzAtOWY1YS1hOTRlZDc3ZWYwZjAAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaMDmvDIXy1LqaUrmi8ivX9oAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDplMWVkZGJlYS00YTAzLTQzNjUtYjA5Zi1hNzAyZjgxZjFmOGJscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoFBppa1Zll/w7WhFkMHczygAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggocs+h1es0Vzy5QFebWWRhEgmps7DkCTFcbrspJK3qbGkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaOH25PtM3oQ1fAiqMjAqzysAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCAIl0L5PY87fHf/aXhv4/QPPK2RU2+SpqxSr8rLjnVnsmRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjfZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjU5NDdhZWM1LWYwYzMtNGYzMC05ZjVhLWE5NGVkNzdlZjBmMC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjY2NzM3OTIwLWMwYWUtNDI0Zi1iNTY5LTg4YjcwMWY5YWVkOXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCChyz6HV6zRXPLlAV5tZZGESCamzsOQJMVxuuykkrepsaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggGDM83lcxHaxe+k1FXO49cVjwh8y/xQgsJdz21iy16ViiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggVeUY/7bCklvOFSSq3B2i+P9exqeCR1hy0UW0DchfR7F0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQDBWQXGA9HBOAPobsY1DV73BDMUNo24BO3DjnkI9NbY7fXgH+9VPfRJUzsoV+KaI05gzZskX6druy0ohdh3HR6k=</c2pa:manifest></metadata>
 <defs>
 <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0,0 10,5 0,10 Z" fill="#111111"/></marker>
 <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0,0 10,5 0,10 Z" fill="#1e6b2a"/></marker>
 <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0,0 10,5 0,10 Z" fill="#1560b8"/></marker>
 <marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0,0 10,5 0,10 Z" fill="#b0641a"/></marker>
 <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0,0 10,5 0,10 Z" fill="#b03a3a"/></marker>
+<marker id="af" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0,0 10,5 0,10 Z" fill="#00695c"/></marker>
 </defs>
 <style>
  text{font-family:"Helvetica Neue",Helvetica,Arial,"Liberation Sans",sans-serif;fill:#111}
@@ -19,7 +20,7 @@
  .sm{font-size:17px;fill:#333}
  .lg{font-size:17px;fill:#333}
 </style>
-<rect x="0" y="0" width="1760" height="1520" fill="#ffffff"/>
+<rect x="0" y="0" width="1760" height="2234" fill="#ffffff"/>
 <rect x="212" y="18" width="630" height="450" rx="14" fill="#e8f1fb" stroke="#1560b8" stroke-width="2.5"/>
 <text class="ttl" x="527" y="52" text-anchor="middle" style="fill:#0d47a1">Climate context</text>
 <rect x="237" y="70" width="580" height="62" rx="9" fill="#ffffff" stroke="#1560b8" stroke-width="1.6"/>
@@ -58,17 +59,17 @@
 <text class="eq" x="1174" y="310">d1<tspan font-size="14px">X</tspan>[v] × trait[k]</text>
 <text class="eq" x="1154" y="338">+</text>
 <text class="eq" x="1174" y="338"><tspan><tspan font-style="italic">σ</tspan><tspan font-size="14px">X</tspan></tspan>[k]</text>
-<text class="eq" x="1207" y="368" text-anchor="middle"><tspan fill="#b03a3a">X ∈ { <tspan font-style="italic">γ</tspan>, <tspan><tspan font-style="italic">β</tspan><tspan font-size="14px">intra</tspan></tspan>, <tspan><tspan font-style="italic">β</tspan><tspan font-size="14px">grass</tspan></tspan>, <tspan><tspan font-style="italic">β</tspan><tspan font-size="14px">shrub</tspan></tspan>, <tspan><tspan font-style="italic">β</tspan><tspan font-size="14px">climate</tspan></tspan> }</tspan></text>
+<text class="eq" x="1207" y="368" text-anchor="middle"><tspan fill="#b03a3a">X ∈ { <tspan font-style="italic">γ</tspan>, <tspan><tspan font-style="italic">β</tspan><tspan font-size="14px">intra</tspan></tspan>, <tspan><tspan font-style="italic">β</tspan><tspan font-size="14px">grass</tspan></tspan>, <tspan><tspan font-style="italic">β</tspan><tspan font-size="14px">shrub</tspan></tspan>, <tspan><tspan font-style="italic">β</tspan><tspan font-size="14px">forb</tspan></tspan>, <tspan><tspan font-style="italic">β</tspan><tspan font-size="14px">climate</tspan></tspan> }</tspan></text>
 <text class="eq" x="1146" y="406" text-anchor="end">Y[k, v]</text>
 <text class="eq" x="1154" y="406">=</text>
 <text class="eq" x="1174" y="406">d0<tspan font-size="14px">Y</tspan>[v]  +  <tspan><tspan font-style="italic">σ</tspan><tspan font-size="14px">Y</tspan></tspan>[k]</text>
 <text class="eq" x="1207" y="438" text-anchor="middle" style="fill:#b03a3a">Y ∈ { α0, α1, α2 }</text>
-<rect x="212" y="548" width="630" height="612" rx="14" fill="#fffaf1" stroke="#b0641a" stroke-width="2.5"/>
+<rect x="212" y="548" width="630" height="666" rx="14" fill="#fffaf1" stroke="#b0641a" stroke-width="2.5"/>
 <text class="ttl" x="527" y="582" text-anchor="middle" style="fill:#8a4a10">Individual-level variation</text>
 <rect x="237" y="600" width="580" height="50" rx="9" fill="#ffffff" stroke="#b0641a" stroke-width="1.6"/>
 <text class="h" x="527" y="632" text-anchor="middle">Size [i, t] &amp; Local environment [q, t] (z &amp; E)</text>
 <path d="M 527,650 L 527,678" stroke="#b0641a" stroke-width="2.4" fill="none" marker-end="url(#ao)"/>
-<rect x="237" y="680" width="580" height="340" rx="9" fill="#ffffff" stroke="#b0641a" stroke-width="1.6"/>
+<rect x="237" y="680" width="580" height="368" rx="9" fill="#ffffff" stroke="#b0641a" stroke-width="1.6"/>
 <text class="b" x="527" y="708" text-anchor="middle" font-weight="700">Individual effects</text>
 <text class="eq" x="431" y="742" text-anchor="end"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">ind</tspan></tspan>[i, t, v]</text>
 <text class="eq" x="439" y="742">=</text>
@@ -85,18 +86,18 @@
 <text class="eq" x="459" y="882">Σ<tspan font-size="14px" dy="5">x</tspan><tspan dy="-5"> </tspan><tspan><tspan font-style="italic">ω</tspan><tspan font-size="14px">x</tspan></tspan>[v] × E[q, t] × <tspan><tspan font-style="italic">W</tspan><tspan font-size="14px">x</tspan></tspan>[i, t]</text>
 <text class="eq" x="439" y="910">+</text>
 <text class="eq" x="459" y="910"><tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">i</tspan></tspan>[v]</text>
-<rect x="237" y="1036" width="580" height="108" rx="9" fill="#ffffff" stroke="#b0641a" stroke-width="1.6" stroke-dasharray="8, 5"/>
-<text class="b" x="527" y="1064" text-anchor="middle" font-weight="700">Plot (random effect)</text>
-<text class="eq" x="431" y="1098" text-anchor="end"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">plot</tspan></tspan>[q, v]</text>
-<text class="eq" x="439" y="1098">=</text>
-<text class="eq" x="459" y="1098"><tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">g</tspan></tspan>[v] + <tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">q</tspan></tspan>[v]</text>
-<text class="sm" x="527" y="1128" text-anchor="middle">(quadrat q nested in group g)</text>
-<rect x="892" y="548" width="630" height="612" rx="14" fill="#eaf6ec" stroke="#1e6b2a" stroke-width="2.5"/>
+<rect x="237" y="1064" width="580" height="142" rx="9" fill="#ffffff" stroke="#b0641a" stroke-width="1.6" stroke-dasharray="8, 5"/>
+<text class="b" x="527" y="1094" text-anchor="middle" font-weight="700">Plot (random effect)</text>
+<text class="eq" x="431" y="1136" text-anchor="end"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">plot</tspan></tspan>[q, v]</text>
+<text class="eq" x="439" y="1136">=</text>
+<text class="eq" x="459" y="1136"><tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">g</tspan></tspan>[v] + <tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">q</tspan></tspan>[v]</text>
+<text class="sm" x="527" y="1174" text-anchor="middle">(quadrat q nested in group g)</text>
+<rect x="892" y="548" width="630" height="666" rx="14" fill="#eaf6ec" stroke="#1e6b2a" stroke-width="2.5"/>
 <text class="ttl" x="1207" y="582" text-anchor="middle" style="fill:#1b5e20">Interactions</text>
 <rect x="917" y="600" width="580" height="50" rx="9" fill="#ffffff" stroke="#1e6b2a" stroke-width="1.6"/>
-<text class="h" x="1207" y="632" text-anchor="middle">Crowding by conspecifics, grasses &amp; shrubs [i, t] (<tspan><tspan font-style="italic">W</tspan><tspan font-size="14px">x</tspan></tspan>)</text>
+<text class="h" x="1207" y="632" text-anchor="middle">Crowding by same species &amp; other species [i, t] (<tspan><tspan font-style="italic">W</tspan><tspan font-size="14px">x</tspan></tspan>)</text>
 <path d="M 1207,650 L 1207,678" stroke="#1e6b2a" stroke-width="2.4" fill="none" marker-end="url(#ag)"/>
-<rect x="917" y="680" width="580" height="340" rx="9" fill="#ffffff" stroke="#1e6b2a" stroke-width="1.6"/>
+<rect x="917" y="680" width="580" height="368" rx="9" fill="#ffffff" stroke="#1e6b2a" stroke-width="1.6"/>
 <text class="b" x="1207" y="708" text-anchor="middle" font-weight="700">Interaction effects</text>
 <text class="eq" x="1147" y="742" text-anchor="end"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">crowd</tspan></tspan>[i, t, v]</text>
 <text class="eq" x="1155" y="742">=</text>
@@ -105,51 +106,54 @@
 <text class="eq" x="1175" y="770"><tspan fill="#b03a3a"><tspan font-style="italic">β</tspan><tspan font-size="14px">grass</tspan>[k, v]</tspan> × <tspan><tspan font-style="italic">W</tspan><tspan font-size="14px">grass</tspan></tspan>[i, t]</text>
 <text class="eq" x="1155" y="798">+</text>
 <text class="eq" x="1175" y="798"><tspan fill="#b03a3a"><tspan font-style="italic">β</tspan><tspan font-size="14px">shrub</tspan>[k, v]</tspan> × <tspan><tspan font-style="italic">W</tspan><tspan font-size="14px">shrub</tspan></tspan>[i, t]</text>
-<text class="n" x="1207" y="834" text-anchor="middle" font-style="italic">Effective interaction strength <tspan font-style="normal">(summary)</tspan></text>
-<text class="eq" x="1147" y="866" text-anchor="end"><tspan><tspan font-style="italic">β</tspan><tspan font-size="14px">x,eff</tspan></tspan>[i, t, v]</text>
-<text class="eq" x="1155" y="866">=</text>
-<text class="eq" x="1175" y="866"><tspan fill="#b03a3a"><tspan font-style="italic">β</tspan><tspan font-size="14px">x</tspan>[k, v]</tspan></text>
-<text class="eq" x="1155" y="894">+</text>
-<text class="eq" x="1175" y="894"><tspan fill="#b0641a"><tspan><tspan font-style="italic">θ</tspan><tspan font-size="14px">x</tspan></tspan>[v] × z[i, t]</tspan></text>
+<text class="eq" x="1155" y="826">+</text>
+<text class="eq" x="1175" y="826"><tspan fill="#b03a3a"><tspan font-style="italic">β</tspan><tspan font-size="14px">forb</tspan>[k, v]</tspan> × <tspan><tspan font-style="italic">W</tspan><tspan font-size="14px">forb</tspan></tspan>[i, t]</text>
+<text class="n" x="1207" y="862" text-anchor="middle" font-style="italic">Effective interaction strength <tspan font-style="normal">(summary)</tspan></text>
+<text class="eq" x="1147" y="894" text-anchor="end"><tspan><tspan font-style="italic">β</tspan><tspan font-size="14px">x,eff</tspan></tspan>[i, t, v]</text>
+<text class="eq" x="1155" y="894">=</text>
+<text class="eq" x="1175" y="894"><tspan fill="#b03a3a"><tspan font-style="italic">β</tspan><tspan font-size="14px">x</tspan>[k, v]</tspan></text>
 <text class="eq" x="1155" y="922">+</text>
-<text class="eq" x="1175" y="922"><tspan fill="#b0641a"><tspan><tspan font-style="italic">ω</tspan><tspan font-size="14px">x</tspan></tspan>[v] × E[q, t]</tspan></text>
+<text class="eq" x="1175" y="922"><tspan fill="#b0641a"><tspan><tspan font-style="italic">θ</tspan><tspan font-size="14px">x</tspan></tspan>[v] × z[i, t]</tspan></text>
 <text class="eq" x="1155" y="950">+</text>
-<text class="eq" x="1175" y="950"><tspan fill="#1560b8"><tspan><tspan font-style="italic">δ</tspan><tspan font-size="14px">x</tspan></tspan>[v] × climate[t]</tspan></text>
+<text class="eq" x="1175" y="950"><tspan fill="#b0641a"><tspan><tspan font-style="italic">ω</tspan><tspan font-size="14px">x</tspan></tspan>[v] × E[q, t]</tspan></text>
 <text class="eq" x="1155" y="978">+</text>
-<text class="eq" x="1175" y="978"><tspan fill="#1560b8"><tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">t,x</tspan></tspan>[v]</tspan></text>
-<text class="eq" x="1207" y="1008" text-anchor="middle">x ∈ { intra, grass, shrub }</text>
-<rect x="917" y="1036" width="580" height="116" rx="9" fill="#ffffff" stroke="#1e6b2a" stroke-width="1.6"/>
-<text class="b" x="1207" y="1062" text-anchor="middle" font-weight="700">Crowding index (one kernel for all species)</text>
-<text class="eq" x="1207" y="1092" text-anchor="middle"><tspan><tspan font-style="italic">W</tspan><tspan font-size="14px">x</tspan></tspan>[i, t] = Σ<tspan font-size="14px" dy="5">n ∈ x</tspan><tspan dy="-5"> </tspan><tspan font-style="italic">F</tspan>(<tspan font-style="italic">d</tspan><tspan font-size="14px" dy="5">n</tspan><tspan dy="-5">) × </tspan><tspan font-style="italic">A</tspan><tspan font-size="14px" dy="5">n</tspan><tspan dy="-5"></tspan></text>
-<text class="sm" x="1207" y="1118" text-anchor="middle">intra: neighbours of the same species (its own size measure)</text>
-<text class="sm" x="1207" y="1139" text-anchor="middle">grass: other species, basal area;  shrub: other species, canopy area</text>
-<rect x="442" y="1196" width="850" height="88" rx="6" fill="#ffffff" stroke="#6a2c91" stroke-width="1.6"/>
-<text class="h" x="867" y="1224" text-anchor="middle">Linear predictor for individual i, population k, quadrat q, year t, vital rate v</text>
-<text class="eq" x="867" y="1264" text-anchor="middle"><tspan font-style="italic">η</tspan>[i, t, v] = <tspan fill="#b0641a"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">ind</tspan></tspan>[i, t, v]</tspan> + <tspan fill="#b0641a"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">plot</tspan></tspan>[q, v]</tspan> + <tspan fill="#1e6b2a"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">crowd</tspan></tspan>[i, t, v]</tspan> + <tspan fill="#1560b8"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">clim</tspan></tspan>[i, t, v]</tspan> + <tspan fill="#1560b8"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">year</tspan></tspan>[i, t, v]</tspan></text>
-<rect x="287" y="1322" width="1160" height="176" rx="10" fill="#f3ecf9" stroke="#6a2c91" stroke-width="1.8"/>
-<text class="h" x="867" y="1354" text-anchor="middle">Vital rate [i, t, v]</text>
-<text class="eq" x="500" y="1394" text-anchor="end">survival[i, t]</text>
-<text class="eq" x="508" y="1394">~</text>
-<text class="eq" x="528" y="1394">Bernoulli( logit⁻¹ <tspan font-style="italic">η</tspan>[i, t, 1] )</text>
-<text class="eq" x="500" y="1428" text-anchor="end">growth[i, t]</text>
-<text class="eq" x="508" y="1428">~</text>
-<text class="eq" x="528" y="1428">Normal( <tspan font-style="italic">η</tspan>[i, t, 2] , <tspan><tspan font-style="italic">σ</tspan><tspan font-size="14px">grow</tspan></tspan> )</text>
-<text class="eq" x="1000" y="1394" text-anchor="end">recruits[k, q, t]</text>
-<text class="eq" x="1008" y="1394">~</text>
-<text class="eq" x="1028" y="1394">NegBin( C′ × exp <tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">R</tspan></tspan>[k, q, t] , r )</text>
-<text class="eq" x="1000" y="1428" text-anchor="end">recruit size[k]</text>
-<text class="eq" x="1008" y="1428">~</text>
-<text class="eq" x="1028" y="1428">Normal( <tspan><tspan font-style="italic">μ</tspan><tspan font-size="14px">rec</tspan></tspan>[k] , <tspan><tspan font-style="italic">σ</tspan><tspan font-size="14px">rec</tspan></tspan> )</text>
-<text class="sm" x="867" y="1472" text-anchor="middle">C′ = p × quadrat cover + (1 − p) × group mean cover;  <tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">R</tspan></tspan> uses quadrat cover in place of z and W</text>
+<text class="eq" x="1175" y="978"><tspan fill="#1560b8"><tspan><tspan font-style="italic">δ</tspan><tspan font-size="14px">x</tspan></tspan>[v] × climate[t]</tspan></text>
+<text class="eq" x="1155" y="1006">+</text>
+<text class="eq" x="1175" y="1006"><tspan fill="#1560b8"><tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">t,x</tspan></tspan>[v]</tspan></text>
+<text class="eq" x="1207" y="1036" text-anchor="middle">x ∈ { intra, grass, shrub, forb }</text>
+<rect x="917" y="1064" width="580" height="142" rx="9" fill="#ffffff" stroke="#1e6b2a" stroke-width="1.6"/>
+<text class="b" x="1207" y="1090" text-anchor="middle" font-weight="700">Crowding indices (two kernels)</text>
+<text class="eq" x="1207" y="1118" text-anchor="middle"><tspan><tspan font-style="italic">W</tspan><tspan font-size="14px">x</tspan></tspan>[i, t] = Σ<tspan font-size="14px" dy="5">n ∈ x</tspan><tspan dy="-5"> </tspan><tspan font-style="italic">F</tspan><tspan font-size="14px" dy="5">main</tspan><tspan dy="-5"></tspan>(<tspan font-style="italic">d</tspan><tspan font-size="14px" dy="5">n</tspan><tspan dy="-5">)</tspan> × <tspan font-style="italic">A</tspan><tspan font-size="14px" dy="5">n</tspan><tspan dy="-5"></tspan></text>
+<text class="eq" x="1207" y="1146" text-anchor="middle"><tspan><tspan font-style="italic">W</tspan><tspan font-size="14px">forb</tspan></tspan>[i, t] = Σ<tspan font-size="14px" dy="5">n ∈ forb</tspan><tspan dy="-5"> </tspan><tspan font-style="italic">F</tspan><tspan font-size="14px" dy="5">forb</tspan><tspan dy="-5"></tspan>(<tspan font-style="italic">d</tspan><tspan font-size="14px" dy="5">n</tspan><tspan dy="-5">)</tspan></text>
+<text class="sm" x="1207" y="1172" text-anchor="middle">intra: same species (its own size measure)</text>
+<text class="sm" x="1207" y="1192" text-anchor="middle">grass, shrub: other species (basal, canopy area);  forb: counts</text>
+<rect x="442" y="1250" width="850" height="88" rx="6" fill="#ffffff" stroke="#6a2c91" stroke-width="1.6"/>
+<text class="h" x="867" y="1278" text-anchor="middle">Linear predictor for individual i, population k, quadrat q, year t, vital rate v</text>
+<text class="eq" x="867" y="1318" text-anchor="middle"><tspan font-style="italic">η</tspan>[i, t, v] = <tspan fill="#b0641a"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">ind</tspan></tspan>[i, t, v]</tspan> + <tspan fill="#b0641a"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">plot</tspan></tspan>[q, v]</tspan> + <tspan fill="#1e6b2a"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">crowd</tspan></tspan>[i, t, v]</tspan> + <tspan fill="#1560b8"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">clim</tspan></tspan>[i, t, v]</tspan> + <tspan fill="#1560b8"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">year</tspan></tspan>[i, t, v]</tspan></text>
+<rect x="287" y="1376" width="1160" height="176" rx="10" fill="#f3ecf9" stroke="#6a2c91" stroke-width="1.8"/>
+<text class="h" x="867" y="1408" text-anchor="middle">Vital rate [i, t, v]</text>
+<text class="eq" x="500" y="1448" text-anchor="end">survival[i, t]</text>
+<text class="eq" x="508" y="1448">~</text>
+<text class="eq" x="528" y="1448">Bernoulli( logit⁻¹ <tspan font-style="italic">η</tspan>[i, t, 1] )</text>
+<text class="eq" x="500" y="1482" text-anchor="end">growth[i, t]</text>
+<text class="eq" x="508" y="1482">~</text>
+<text class="eq" x="528" y="1482">Normal( <tspan font-style="italic">η</tspan>[i, t, 2] , <tspan><tspan font-style="italic">σ</tspan><tspan font-size="14px">grow</tspan></tspan>[k] )</text>
+<text class="eq" x="935" y="1448" text-anchor="end">recruits[k, q, t]</text>
+<text class="eq" x="943" y="1448">~</text>
+<text class="eq" x="963" y="1448">NegBin( C′ × exp <tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">R</tspan></tspan>[k, q, t] + exp <tspan font-style="italic">b</tspan>[k] , <tspan font-style="italic">r</tspan>[k] )</text>
+<text class="eq" x="935" y="1482" text-anchor="end">recruit size[k]</text>
+<text class="eq" x="943" y="1482">~</text>
+<text class="eq" x="963" y="1482">Normal( <tspan><tspan font-style="italic">μ</tspan><tspan font-size="14px">rec</tspan></tspan>[k] , <tspan><tspan font-style="italic">σ</tspan><tspan font-size="14px">rec</tspan></tspan>[k] )</text>
+<text class="sm" x="867" y="1526" text-anchor="middle">C′ = <tspan font-style="italic">p</tspan>[k] × quadrat cover + (1 − <tspan font-style="italic">p</tspan>[k]) × group mean cover;  <tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">R</tspan></tspan> uses √cover in place of z and W;  <tspan font-style="italic">b</tspan>[k]: background recruitment</text>
 <path d="M 844,288 L 888,288" stroke="#1560b8" stroke-width="2.4" fill="none" marker-end="url(#ab)"/>
 <path d="M 527,468 L 527,545" stroke="#1560b8" stroke-width="2.4" fill="none" marker-end="url(#ab)"/>
 <path d="M 1207,468 L 1207,545" stroke="#b03a3a" stroke-width="2.4" fill="none" marker-end="url(#ar)"/>
 <path d="M 782,468 L 952,545" stroke="#1560b8" stroke-width="2.4" fill="none" marker-end="url(#ab)"/>
 <path d="M 952,468 L 782,545" stroke="#b03a3a" stroke-width="2.4" fill="none" marker-end="url(#ar)"/>
 <path d="M 844,904 L 888,904" stroke="#b0641a" stroke-width="2.4" fill="none" marker-end="url(#ao)"/>
-<path d="M 527,1160 L 527,1194" stroke="#b0641a" stroke-width="2.4" fill="none" marker-end="url(#ao)"/>
-<path d="M 1207,1160 L 1207,1194" stroke="#1e6b2a" stroke-width="2.4" fill="none" marker-end="url(#ag)"/>
-<path d="M 867,1284 L 867,1320" stroke="#111111" stroke-width="2.4" fill="none" marker-end="url(#a)"/>
+<path d="M 527,1214 L 527,1248" stroke="#b0641a" stroke-width="2.4" fill="none" marker-end="url(#ao)"/>
+<path d="M 1207,1214 L 1207,1248" stroke="#1e6b2a" stroke-width="2.4" fill="none" marker-end="url(#ag)"/>
+<path d="M 867,1338 L 867,1374" stroke="#111111" stroke-width="2.4" fill="none" marker-end="url(#a)"/>
 <text class="mg" x="38" y="56" style="fill:#0d47a1">Level-</text>
 <text class="mg" x="38" y="88" style="fill:#0d47a1">Community</text>
 <text class="mgs" x="38" y="130">Climate shifts</text>
@@ -178,11 +182,11 @@
 <text class="mgs" x="38" y="731">quadrat (e.g.,</text>
 <text class="mgs" x="38" y="755">grazing, soil or</text>
 <text class="mgs" x="38" y="779">community type).</text>
-<text class="mgs" x="38" y="1060">Plot random</text>
-<text class="mgs" x="38" y="1084">effects capture</text>
-<text class="mgs" x="38" y="1108">what the local</text>
-<text class="mgs" x="38" y="1132">environment</text>
-<text class="mgs" x="38" y="1156">cannot explain.</text>
+<text class="mgs" x="38" y="1086">Plot random</text>
+<text class="mgs" x="38" y="1110">effects capture</text>
+<text class="mgs" x="38" y="1134">what the local</text>
+<text class="mgs" x="38" y="1158">environment</text>
+<text class="mgs" x="38" y="1182">cannot explain.</text>
 <text class="lg" x="1550" y="742">Arrows between</text>
 <text class="lg" x="1550" y="766">levels: the upper</text>
 <text class="lg" x="1550" y="790">level sets the</text>
@@ -190,15 +194,57 @@
 <text class="lg" x="1550" y="838">modulates the</text>
 <text class="lg" x="1550" y="862">effect sizes of</text>
 <text class="lg" x="1550" y="886">the lower level.</text>
-<text class="lg" x="1550" y="1040">F(d) is estimated</text>
-<text class="lg" x="1550" y="1064">from the data</text>
-<text class="lg" x="1550" y="1088">(Teller et al. 2016);</text>
-<text class="lg" x="1550" y="1112">focal plants near the</text>
-<text class="lg" x="1550" y="1136">quadrat edge serve</text>
-<text class="lg" x="1550" y="1160">only as neighbours.</text>
-<text class="mg" x="38" y="1360" style="fill:#6a2c91">Observation</text>
-<text class="mgs" x="38" y="1402">Survival and growth</text>
-<text class="mgs" x="38" y="1426">per individual;</text>
-<text class="mgs" x="38" y="1450">recruitment per</text>
-<text class="mgs" x="38" y="1474">quadrat and year.</text>
+<text class="lg" x="1550" y="1074"><tspan font-style="italic">F</tspan><tspan font-size="13px" dy="4">main</tspan><tspan dy="-4"> and </tspan><tspan font-style="italic">F</tspan><tspan font-size="13px" dy="4">forb</tspan><tspan dy="-4"> are</tspan></text>
+<text class="lg" x="1550" y="1098">estimated from the data</text>
+<text class="lg" x="1550" y="1122">(Teller et al. 2016);</text>
+<text class="lg" x="1550" y="1146">focal plants near the</text>
+<text class="lg" x="1550" y="1170">quadrat edge serve</text>
+<text class="lg" x="1550" y="1194">only as neighbours.</text>
+<text class="mg" x="38" y="1414" style="fill:#6a2c91">Observation</text>
+<text class="mgs" x="38" y="1456">Survival and growth</text>
+<text class="mgs" x="38" y="1480">per individual;</text>
+<text class="mgs" x="38" y="1504">recruitment per</text>
+<text class="mgs" x="38" y="1528">quadrat and year.</text>
+<rect x="212" y="1600" width="1310" height="300" rx="14" fill="#e8f3f1" stroke="#00695c" stroke-width="2.5"/>
+<text class="ttl" x="867" y="1634" text-anchor="middle" style="fill:#004d40">Forb submodel (point-mapped species pooled as forb; fitted separately)</text>
+<rect x="237" y="1652" width="1260" height="128" rx="9" fill="#ffffff" stroke="#00695c" stroke-width="1.6"/>
+<text class="eq" x="400" y="1684" text-anchor="end"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">f</tspan></tspan>[i, t, v]</text>
+<text class="eq" x="408" y="1684">=</text>
+<text class="eq" x="428" y="1684"><tspan><tspan font-style="italic">α</tspan><tspan font-size="14px">0,f</tspan></tspan>[v] + <tspan><tspan font-style="italic">γ</tspan><tspan font-size="14px">f</tspan></tspan>[v] × E[q, t] + Σ<tspan font-size="14px" dy="5">x</tspan><tspan dy="-5"> </tspan><tspan><tspan font-style="italic">β</tspan><tspan font-size="14px">x,f</tspan></tspan>[v] × <tspan><tspan font-style="italic">W</tspan><tspan font-size="14px">x</tspan></tspan>[i, t] + <tspan><tspan font-style="italic">β</tspan><tspan font-size="14px">climate,f</tspan></tspan>[v] × climate[t]</text>
+<text class="eq" x="408" y="1714">+</text>
+<text class="eq" x="428" y="1714">Σ<tspan font-size="14px" dy="5">x</tspan><tspan dy="-5"> </tspan><tspan><tspan font-style="italic">δ</tspan><tspan font-size="14px">x,f</tspan></tspan>[v] × climate[t] × <tspan><tspan font-style="italic">W</tspan><tspan font-size="14px">x</tspan></tspan>[i, t] + <tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">t,f</tspan></tspan>[v] + <tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">g,f</tspan></tspan>[v] + <tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">q,f</tspan></tspan>[v]</text>
+<text class="sm" x="867" y="1750" text-anchor="middle">x ∈ { forb, grass, shrub }:  <tspan font-style="italic">W</tspan><tspan font-size="12px">forb</tspan> from <tspan font-style="italic">F</tspan><tspan font-size="12px">forb</tspan>;  <tspan font-style="italic">W</tspan><tspan font-size="12px">grass</tspan> and <tspan font-style="italic">W</tspan><tspan font-size="12px">shrub</tspan> from <tspan font-style="italic">F</tspan><tspan font-size="12px">main</tspan>;  own year (t) and plot (g, q) random effects</text>
+<text class="eq" x="520" y="1820" text-anchor="end">survival<tspan font-size="14px">f</tspan>[i, t]</text>
+<text class="eq" x="528" y="1820">~</text>
+<text class="eq" x="548" y="1820">Bernoulli( logit⁻¹ <tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">f</tspan></tspan>[i, t, 1] )</text>
+<text class="eq" x="1050" y="1820" text-anchor="end">recruits<tspan font-size="14px">f</tspan>[q, t]</text>
+<text class="eq" x="1058" y="1820">~</text>
+<text class="eq" x="1078" y="1820">NegBin( N′ × exp <tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">f,R</tspan></tspan>[q, t] , <tspan font-style="italic">r</tspan><tspan font-size="14px">f</tspan> )</text>
+<text class="sm" x="867" y="1854" text-anchor="middle">N′ = p × quadrat forb count + (1 − p) × group mean count;  <tspan><tspan font-style="italic">η</tspan><tspan font-size="12px">f,R</tspan></tspan> uses quadrat forb count and grass and shrub cover in place of W</text>
+<text class="sm" x="867" y="1878" text-anchor="middle">Point records carry no size: survival and recruitment only, without size or trait terms (one pooled population)</text>
+<text class="mg" x="38" y="1630" style="fill:#004d40">Forb</text>
+<text class="mg" x="38" y="1662" style="fill:#004d40">submodel</text>
+<text class="mgs" x="38" y="1706">Point-mapped</text>
+<text class="mgs" x="38" y="1730">species pooled</text>
+<text class="mgs" x="38" y="1754">as one forb</text>
+<text class="mgs" x="38" y="1778">population; its</text>
+<text class="mgs" x="38" y="1802">dynamics feed</text>
+<text class="mgs" x="38" y="1826">Part B.</text>
+<rect x="212" y="1930" width="1310" height="272" rx="14" fill="#f4efe6" stroke="#7a5a2b" stroke-width="2.5"/>
+<text class="ttl" x="867" y="1964" text-anchor="middle" style="fill:#5a3f15">Other-shrub submodel (GUSA, ERMI, TECA, PUTR pooled; fitted separately)</text>
+<rect x="237" y="1982" width="1260" height="128" rx="9" fill="#ffffff" stroke="#7a5a2b" stroke-width="1.6"/>
+<text class="eq" x="400" y="2014" text-anchor="end"><tspan><tspan font-style="italic">η</tspan><tspan font-size="14px">s</tspan></tspan>[i, t, v]</text>
+<text class="eq" x="408" y="2014">=</text>
+<text class="eq" x="428" y="2014"><tspan><tspan font-style="italic">α</tspan><tspan font-size="14px">0,s</tspan></tspan>[v] + <tspan><tspan font-style="italic">α</tspan><tspan font-size="14px">1,s</tspan></tspan>[v] × z + <tspan><tspan font-style="italic">γ</tspan><tspan font-size="14px">s</tspan></tspan>[v] × E[q, t] + <tspan><tspan font-style="italic">β</tspan><tspan font-size="14px">climate,s</tspan></tspan>[v] × climate[t] + <tspan><tspan font-style="italic">δ</tspan><tspan font-size="14px">size,s</tspan></tspan>[v] × climate[t] × z</text>
+<text class="eq" x="408" y="2044">+</text>
+<text class="eq" x="428" y="2044">Σ<tspan font-size="14px" dy="5">x</tspan><tspan dy="-5"> </tspan>( <tspan><tspan font-style="italic">β</tspan><tspan font-size="14px">x,s</tspan></tspan>[v] + <tspan><tspan font-style="italic">δ</tspan><tspan font-size="14px">x,s</tspan></tspan>[v] × climate[t] ) × <tspan><tspan font-style="italic">W</tspan><tspan font-size="14px">x</tspan></tspan>[i, t] + <tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">t,s</tspan></tspan>[v] + <tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">g,s</tspan></tspan>[v] + <tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">q,s</tspan></tspan>[v] + <tspan><tspan font-style="italic">ε</tspan><tspan font-size="14px">i,s</tspan></tspan>[v]</text>
+<text class="sm" x="867" y="2080" text-anchor="middle">x ∈ { intra, grass, shrub, forb } (same indices as the main model);  one pooled population: no trait, θ, ω or z² (few records)</text>
+<text class="sm" x="867" y="2142" text-anchor="middle" style="font-size:18px">survival ~ Bernoulli;   growth ~ Normal( · , <tspan><tspan font-style="italic">σ</tspan><tspan font-size="12px">grow,s</tspan></tspan> );   recruits ~ NegBin( C′ × exp <tspan><tspan font-style="italic">η</tspan><tspan font-size="12px">s,R</tspan></tspan> , <tspan><tspan font-style="italic">r</tspan><tspan font-size="12px">s</tspan></tspan> );   recruit size ~ Normal( <tspan><tspan font-style="italic">μ</tspan><tspan font-size="12px">rec,s</tspan></tspan> , <tspan><tspan font-style="italic">σ</tspan><tspan font-size="12px">rec,s</tspan></tspan> )</text>
+<text class="sm" x="867" y="2170" text-anchor="middle">Recruits mapped as points (88%) enter the IPM at point size; optional in Part B (held at observed cover when switched off)</text>
+<text class="mg" x="38" y="1960" style="fill:#5a3f15">Other</text>
+<text class="mg" x="38" y="1992" style="fill:#5a3f15">shrubs</text>
+<text class="mgs" x="38" y="2036">Shrubs below the</text>
+<text class="mgs" x="38" y="2060">main-model</text>
+<text class="mgs" x="38" y="2084">threshold, pooled;</text>
+<text class="mgs" x="38" y="2108">optional in Part B.</text>
 </svg>

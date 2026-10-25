@@ -168,23 +168,31 @@ buffGenet <- data.frame(Species = clonal$Species,
   # with those of year t+1 gets the seedlings of year t+1 left out, so they become recruits.
   # trackSpp passes only its own columns to 'assign' (plus a row index 'indexStore'), so the
   # seedling flags of the data in hand sit in 'patch_env$is_seedling', in the same row order.
-assign_src <- deparse(plantTracker:::assign, width.cutoff = 500L)
-target <- grep("st_intersection(tempPreviousBuff, tempCurrentYear)", assign_src, fixed = TRUE)
-stopifnot(length(target) == 1)
-assign_src[target] <- sub("tempCurrentYear))",
-                          "tempCurrentYear[!is_seedling[tempCurrentYear$indexStore], ]))",
-                          assign_src[target], fixed = TRUE)
   # Hand genets: inside 'ifClonal' (first-year grouping), polygons with a hand-assigned
   # genet take it; the rest keep the distance rule. Lookup in 'patch_env$hand_genet'.
-target <- grep("cloneDat$genetID <- groupByGenet(cloneDat, buffGenet)", assign_src, fixed = TRUE)
-stopifnot(length(target) == 1)
-assign_src[target] <- paste0(assign_src[target], "; hg <- hand_genet[cloneDat$indexStore]; ",
-  "if (any(!is.na(hg))) cloneDat$genetID <- as.integer(factor(ifelse(is.na(hg), ",
-  "paste0(\"rule \", cloneDat$genetID), hg)))")
-assign_new <- eval(parse(text = assign_src))
-patch_env <- new.env(parent = asNamespace("plantTracker"))
-environment(assign_new) <- patch_env
-assignInNamespace("assign", assign_new, ns = "plantTracker")
+  # The patch always starts from the original 'assign' (kept in options() the first time),
+  # so it can run again in the same R session, and track_records() applies it before
+  # tracking (also when this module was skipped by run_cached and its workspace loaded).
+patch_plantTracker <- function() {
+  if (is.null(getOption("CLR_assign_original"))) options(CLR_assign_original = plantTracker:::assign)
+  assign_src <- deparse(getOption("CLR_assign_original"), width.cutoff = 500L)
+  target1 <- grep("st_intersection(tempPreviousBuff, tempCurrentYear)", assign_src, fixed = TRUE)
+  target2 <- grep("cloneDat$genetID <- groupByGenet(cloneDat, buffGenet)", assign_src, fixed = TRUE)
+  if (length(target1) != 1 || length(target2) != 1)
+    stop("plantTracker was patched by an older version of this script in this R session: restart R (Session > Restart R) and run again.")
+  assign_src[target1] <- sub("tempCurrentYear))",
+                             "tempCurrentYear[!is_seedling[tempCurrentYear$indexStore], ]))",
+                             assign_src[target1], fixed = TRUE)
+  assign_src[target2] <- paste0(assign_src[target2], "; hg <- hand_genet[cloneDat$indexStore]; ",
+    "if (any(!is.na(hg))) cloneDat$genetID <- as.integer(factor(ifelse(is.na(hg), ",
+    "paste0(\"rule \", cloneDat$genetID), hg)))")
+  assign_new <- eval(parse(text = assign_src))
+  env <- new.env(parent = asNamespace("plantTracker"))
+  environment(assign_new) <- env
+  assignInNamespace("assign", assign_new, ns = "plantTracker")
+  assign("patch_env", env, envir = globalenv())
+}
+patch_plantTracker()
 
   # plantTracker 1.2.1 leaves out the records of a species in the last census year of a
   # quadrat when that year follows a gap longer than 'dorm' (1957 -> 1973), or follows a
@@ -218,6 +226,7 @@ add_left_out <- function(d, out, q) {
   # Track a set of records quadrat by quadrat (prints progress; plantTracker loops over
   # species inside); trackIDs become unique across quadrats
 track_records <- function(recs) {
+  patch_plantTracker()
   t0 <- Sys.time()
   out <- lapply(intersect(quads, unique(recs$Quad)), function(q) {
     d <- recs[recs$Quad == q, ]
