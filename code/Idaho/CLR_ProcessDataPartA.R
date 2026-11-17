@@ -24,7 +24,8 @@ focal_edge_cm <- 5
 wy_start_month <- 7
 
 der_dir <- here("data", "data.derived", site_tag)
-tab_dir <- here("result", "tables", site_tag)
+tab_dir <- here("result", "tables", site_tag, "PartA_full")   # Part A tables (full model, model_before)
+dir.create(tab_dir, showWarnings = FALSE, recursive = TRUE)
 src <- function(f) here("data", "data.source", site_dir, f)
 
 # Read the tracked records -----------------------------------------------------

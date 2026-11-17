@@ -1,0 +1,24 @@
+term,survival,growth,recruitment
+Climate * crowding (same sp.),0.328237913,0.299209247,0.265333836
+Climate * crowding (grasses),0.317005051,0.359461589,0.328563464
+Climate * crowding (shrubs),0.801984768,0.345122634,0.805806574
+Climate * crowding (forbs),0.279786469,0.31349126,0.878404299
+Climate * size,0.268350867,0.267279685,
+Size * crowding (same sp.),0.893036769,0.999342043,
+Size * crowding (grasses),0.915922058,0.997979268,
+Size * crowding (shrubs),0.270309848,0.349249152,
+Size * crowding (forbs),0.274757974,0.233529123,
+Grazing * crowding (same sp.),0.26986766,0.635286403,0.264820945
+Grazing * crowding (grasses),0.3261009,0.290627269,0.33348268
+Grazing * crowding (shrubs),0.351013913,0.284721592,0.397631867
+Grazing * crowding (forbs),0.302360884,0.828115078,0.278770766
+Grazing * size,0.489780884,0.345588367,
+Grazing * climate,0.339072381,0.893238624,0.812406243
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,

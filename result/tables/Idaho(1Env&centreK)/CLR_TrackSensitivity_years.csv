@@ -1,0 +1,50 @@
+"Species","variant","cor_yearly_survival","cor_yearly_recruits"
+"Achnatherum hymenoides","grouping 0.5 cm",0.962029414840172,0.997966011476328
+"Artemisia tripartita","grouping 0.5 cm",0.999169884026956,0.999987695096853
+"Carex douglasii","grouping 0.5 cm",0.999508766093275,0.996273025436855
+"Chrysothamnus viscidiflorus","grouping 0.5 cm",0.994783028929311,0.997069169461754
+"Elymus albicans","grouping 0.5 cm",0.999900886890339,0.999912792815425
+"Hesperostipa comata","grouping 0.5 cm",0.995007905239736,0.999987786851553
+"Koeleria macrantha","grouping 0.5 cm",0.876879211053695,0.999943194906457
+"Poa secunda","grouping 0.5 cm",0.989383427733925,0.999846537123812
+"Pseudoroegneria spicata","grouping 0.5 cm",0.994916260205634,0.99999214190306
+"Achnatherum hymenoides","grouping 3 cm",0.897784999053177,0.987435935542387
+"Artemisia tripartita","grouping 3 cm",0.998247560993616,1
+"Carex douglasii","grouping 3 cm",0.99538157023213,0.990678728451127
+"Chrysothamnus viscidiflorus","grouping 3 cm",0.997911672621264,0.998413854331232
+"Elymus albicans","grouping 3 cm",0.999065716426565,0.996996165129327
+"Hesperostipa comata","grouping 3 cm",0.979004993782744,0.999966456512349
+"Koeleria macrantha","grouping 3 cm",0.992817234482824,0.999742655351085
+"Poa secunda","grouping 3 cm",0.94967925989137,0.997954665029768
+"Pseudoroegneria spicata","grouping 3 cm",0.972478959502643,0.999769998851769
+"Achnatherum hymenoides","no seedling rule",1,1
+"Artemisia tripartita","no seedling rule",0.971287896757063,0.992206186432938
+"Carex douglasii","no seedling rule",1,1
+"Chrysothamnus viscidiflorus","no seedling rule",0.976412206379204,0.942340657023316
+"Elymus albicans","no seedling rule",1,1
+"Hesperostipa comata","no seedling rule",0.992062126963978,0.99515586125102
+"Koeleria macrantha","no seedling rule",1,1
+"Poa secunda","no seedling rule",0.996410356283094,0.998213439708866
+"Pseudoroegneria spicata","no seedling rule",0.984864873018102,0.996866587585197
+"Achnatherum hymenoides","public seedling flags only",1,1
+"Artemisia tripartita","public seedling flags only",1,1
+"Carex douglasii","public seedling flags only",1,1
+"Chrysothamnus viscidiflorus","public seedling flags only",1,1
+"Elymus albicans","public seedling flags only",1,1
+"Hesperostipa comata","public seedling flags only",0.992062126963978,0.99515586125102
+"Koeleria macrantha","public seedling flags only",1,1
+"Poa secunda","public seedling flags only",0.996410356283094,0.998213439708866
+"Pseudoroegneria spicata","public seedling flags only",0.984864873018102,0.996866587585197
+"Achnatherum hymenoides","merged = death",0.998409653272508,1
+"Artemisia tripartita","merged = death",1,1
+"Carex douglasii","merged = death",0.996816060628977,1
+"Chrysothamnus viscidiflorus","merged = death",1,1
+"Elymus albicans","merged = death",0.999947029547089,1
+"Hesperostipa comata","merged = death",0.999447187998973,1
+"Koeleria macrantha","merged = death",0.997305467977169,1
+"Poa secunda","merged = death",0.999107308002463,1
+"Pseudoroegneria spicata","merged = death",0.9964318445785,1
+"Artemisia tripartita","Chu & Adler 2015",0.880151797656581,0.955351071880802
+"Hesperostipa comata","Chu & Adler 2015",0.907848630442461,0.942189140253165
+"Poa secunda","Chu & Adler 2015",0.846381123249502,0.904413533670866
+"Pseudoroegneria spicata","Chu & Adler 2015",0.870212644774709,0.827795158208267

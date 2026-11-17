@@ -3,6 +3,10 @@
 ## (sagebrush steppe mapped quadrats, Dubois, Idaho, 1923-1957 and 1973)
 ##
 ## Written by Hung-wei Lin Oct 2026
+##
+## Steps up to the crowding kernels are shared by every version of the pipeline and write to the
+## 'Idaho' folders; the crowding indices and the Part A input belong to the version set in
+## CLR_version_Idaho.R and write to its folders (e.g. 'Idaho(1Env&centreK)').
 
 rm(list=ls())
 
@@ -17,7 +21,7 @@ library(plantTracker)  # genet tracking (Stears et al. 2022)
   # script (or a step before it) changes
 source(here("code", "CLR_fns_cache.R"))
 
-  # Raw data folder of this site, and output sub-folders of this site
+  # Raw data folder of this site, and output sub-folders of the shared steps
 site_dir <- "Sagebrush, Dubois, Idaho, 1923-1957"
 site_tag <- "Idaho"
 cache_dir <- here("data", "data.derived", site_tag, "cache")
@@ -57,21 +61,57 @@ run_cached(here("code", "Idaho", "CLR_ProcessDataPartA.R"), cache_dir)
   # Sum the neighbours of every plant in rings around it (same species, grass, shrub, forb),
   # saved to 'data/data.derived/Idaho' (a few minutes on the first run, read back later).
   # Fit the distance kernels (Teller et al. 2016): one for same species, grass and shrub, one for
-  # forb; range R where the crowding effects stop changing, visualized in 'CLR_CrowdKernel.png'
-  # (3-4 h on the first run, read back later).
+  # forb; range R where the crowding effects stop changing, visualized in 'CLR_CrowdKernel_centre.png'
+  # (3-4 h on the first run, read back later). Check of one shared kernel against one kernel per
+  # growth form (grass, shrub; every penalty) by AIC, in 'CLR_CrowdKernel_split_centre.png'
+  # (1-2 h on the first run). Distances from the plant centre; files end in '_centre'.
 run_cached(here("code", "Idaho", "CLR_CrowdKernel.R"), cache_dir)
 
-# Build the crowding indices of the Part A model -------------------------------
+# Estimate the crowding kernel with distances from the plant outline -----------
+  # Same as the step above with distances from the outline of the plant (0 inside it), for the
+  # "edge" versions; files end in '_edge' (about 2-3 h on the first run). The two kernels compared
+  # by AIC in 'CLR_CrowdKernel_origin.csv'.
+run_cached(here("code", "Idaho", "CLR_CrowdKernelEdge.R"), cache_dir)
+
+# Build the crowding indices ---------------------------------------------------
   # Crowding of every plant by same species, grass and shrub (main kernel) and by forb (forb
-  # kernel), within the range R; quadrat totals for recruitment; recruitment table of the pooled
-  # forb, saved to 'data/data.derived/Idaho'. Correlations among the indices in 'CLR_CrowdIndex_cor.csv'.
+  # kernel), within the range R, in both versions: 'CLR_CrowdIndex_genet_centre.csv' and
+  # '_genet_edge.csv', with figures of crowding by plant size ('CLR_CrowdIndex_centre.png',
+  # '_edge.png'); quadrat totals for recruitment and the recruitment table of the pooled forb
+  # (same in both versions); correlations among the indices in 'CLR_CrowdIndex_cor_centre.csv' (and '_edge').
 run_cached(here("code", "Idaho", "CLR_CrowdIndex.R"), cache_dir)
+
+# Build the complete climate record --------------------------------------------
+  # Monthly mean temperature and precipitation of the station, 1925-2006 (data set), with missing
+  # months filled from the daily records of the same station (GHCN-Daily); seasonal variables of
+  # every climate year (July-June): pregrowing season (October-March), growing season (April-June),
+  # warmest and coldest month, in 'CLR_Climate_monthly.csv' and 'CLR_Climate_year.csv'.
+run_cached(here("code", "Idaho", "CLR_ClimateData.R"), cache_dir)
+
+# Explore the climate variables (PCA) ------------------------------------------
+  # PCA of three sets of six seasonal variables (climate year of the transition and the year
+  # before), PC1 against PC2 of each set in 'CLR_ClimatePCA.png' (temperature red, precipitation blue);
+  # loadings and variance explained in 'CLR_ClimatePCA_loadings.csv'.
+run_cached(here("code", "Idaho", "CLR_ClimatePCA.R"), cache_dir)
+
+# Load the workspace of the last shared step -----------------------------------
+finish_cached()
+
+# Version of the pipeline ------------------------------------------------------
+  # Climate predictor and origin of the crowding distances (CLR_version_Idaho.R); the next step
+  # writes to the folders of the version.
+source(here("code", "Idaho", "CLR_version_Idaho.R"))
+site_tag <- ver_tag
+for (f in c("data/data.derived", "result/tables", "result/figs")) dir.create(here(f, site_tag), showWarnings = FALSE)
+if (clim_version != "1Env") stop("The climate version '", clim_version, "' is to be written after the climate PCA.")
 
 # Build the input file of the Part A models ------------------------------------
   # Main model (species with at least 500 survival records), forb submodel and other-shrub
-  # submodel, with index tables and scaling constants, in 'CLR_PartA_input.rds';
-  # sample sizes in 'CLR_PartA_input_n.csv'.
-run_cached(here("code", "Idaho", "CLR_InputPartA.R"), cache_dir)
-
-# Load the workspace of the last step ------------------------------------------
-finish_cached()
+  # submodel, with the crowding indices of the version, index tables and scaling constants, in
+  # 'CLR_PartA_input.rds'; sample sizes in 'CLR_PartA_input_n.csv'. Skipped when the version's
+  # 'CLR_PartA_input.rds' exists (a few minutes).
+if (!file.exists(here("data", "data.derived", site_tag, "CLR_PartA_input.rds"))) {
+  genet_W <- genet_W_set[[kernel_origin]]
+  R_main <- kernel_set[[kernel_origin]]$R_main; R_forb <- kernel_set[[kernel_origin]]$R_forb
+  source(here("code", "Idaho", "CLR_InputPartA.R"))
+}

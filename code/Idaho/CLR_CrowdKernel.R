@@ -4,8 +4,12 @@
 ## Written by Hung-wei Lin Oct 2026
 ##
 ## Follows Teller et al. (2016, Methods Ecol Evol 7: 171-183; Appendix S1 and Data S1).
+## 'ring_origin' (set before this script; "centre" when unset) sets where distances start:
+##   "centre": from the centre of the focal plant (Teller et al. 2016); files and figures end in '_centre';
+##   "edge":  from the outline of the focal plant (0 inside it), so a large plant keeps the
+##            neighbours next to its outline (CLR_CrowdKernelEdge.R). Files and figures then end in '_edge'.
 ## (1) Neighbour table: for every plant with an annual transition, the neighbours in
-##     concentric annuli around its centroid (rings of Teller et al. 2016), by class:
+##     concentric annuli around its centroid or outline (rings of Teller et al. 2016), by class:
 ##     conspecific, heterospecific grass (basal area), heterospecific shrub (canopy area),
 ##     and forb (all point species pooled as one population, counted as plants).
 ##     Area inside an annulus is the part of each neighbour polygon that lies in it.
@@ -17,6 +21,11 @@
 ##     and R is the shortest reach at which every crowding coefficient (per SD of crowding) and
 ##     its interaction with water-year precipitation stay within 'R_se' standard errors of their
 ##     values at the reference reach 'R_ref'.
+## (4) Shared kernel or one kernel per growth form: the main kernel refitted separately for the
+##     grass and the shrub focal species (reach R_ref, every penalty, the best one for each form),
+##     compared by approximate AIC with the shared kernel. The Part A models use the shared kernel;
+##     the comparison checks that one kernel is enough.
+## Kernels, range and neighbour table go to 'kernel_set[[ring_origin]]' for CLR_CrowdIndex.R.
 ## Uses 'genet', 'species' and 'ramet' of CLR_ProcessDataPartA.R, and 'site_tag'.
 
 
@@ -58,8 +67,7 @@ kernel_border <- FALSE
   # TRUE: neighbour amounts divided by the share of each annulus inside the quadrat
   # (edge correction); FALSE: neighbours outside the quadrat count as absent (Teller et al. 2016)
 edge_correct <- FALSE
-  # Range R. Distances run from the centre of the focal plant (most focal plants have an
-  # equivalent radius below 1 cm). The fit keeps improving with reach (checks, Oct 2026), so
+  # Range R. The fit keeps improving with reach (checks, Oct 2026), so
   # the deviance cannot set R. R is set instead by the estimates used later: the crowding
   # coefficients (beta, per SD of crowding) and their interaction with standardised water-year
   # precipitation (delta). R = shortest candidate reach at which every beta and delta of the
@@ -77,6 +85,10 @@ R_full <- 150
   # The neighbour table takes a few minutes and the kernel fits 3-4 h.
   # Both are saved and read again on later runs while the settings above stay the same;
   # a changed setting builds them again.
+
+  # Origin of the distances (see the header); suffix of the files ('_centre' or '_edge')
+if (!exists("ring_origin")) ring_origin <- "centre"
+ko <- paste0("_", ring_origin)
 
 der_dir <- here("data", "data.derived", site_tag)
 tab_dir <- here("result", "tables", site_tag)
@@ -116,6 +128,15 @@ ring_one <- function(foc, pieces) {
   out <- matrix(0, n_f, length(classes) * K)
   if (n_p == 0) return(out)
   d <- sqrt(outer(foc$x_cm, pieces$x, "-")^2 + outer(foc$y_cm, pieces$y, "-")^2)
+    # Outline version: distance to the nearest point of the focal plant's own area (its grid
+    # points, or its centroid when it is smaller than a grid cell), less half a grid cell
+  if (ring_origin == "edge") for (i in seq_len(n_f)) {
+    own_i <- which(pieces$trackID == foc$trackID[i] & pieces$crowd_sp == foc$crowd_sp[i])
+    if (length(own_i) == 0) next
+    dmin <- d[i, ] * 0 + Inf
+    for (j in own_i) dmin <- pmin(dmin, sqrt((pieces$x - pieces$x[j])^2 + (pieces$y - pieces$y[j])^2))
+    d[i, ] <- pmax(0, dmin - grid_cm / 2 * any(pieces$grid[own_i]))
+  }
   k <- findInterval(d, ring_edges)
   cls <- matrix(match(pieces$class, classes), n_f, n_p, byrow = TRUE)
   same <- outer(foc$crowd_sp, pieces$crowd_sp, "==")
@@ -129,8 +150,9 @@ ring_one <- function(foc, pieces) {
   out
 }
 
-ring_file <- file.path(der_dir, "CLR_CrowdKernel_rings.rds")
+ring_file <- file.path(der_dir, sprintf("CLR_CrowdKernel_rings%s.rds", ko))
 ring_set <- list(ring_edges = ring_edges, grid_cm = grid_cm, sp_class = sp_class)
+if (ring_origin == "edge") ring_set$origin <- "edge"
 rings <- if (file.exists(ring_file)) readRDS(ring_file) else NULL
 if (identical(attr(rings, "settings"), ring_set)) {
   cat("Read the neighbour table saved before (same settings).\n")
@@ -147,7 +169,7 @@ if (identical(attr(rings, "settings"), ring_set)) {
   ramet_key <- split(seq_len(nrow(ramet_area)), paste(ramet_area$Quad, ramet_area$Year))
   forb_genet <- genet %>%
     filter(sp_class[Species] == "forb") %>%
-    transmute(Quad, Year, trackID, crowd_sp = "forb", class = "forb", x = x_cm, y = y_cm, w = 1)
+    transmute(Quad, Year, trackID, crowd_sp = "forb", class = "forb", x = x_cm, y = y_cm, w = 1, grid = FALSE)
   grid_xy <- expand.grid(x = seq(grid_cm / 2, 100 - grid_cm / 2, by = grid_cm),
                          y = seq(grid_cm / 2, 100 - grid_cm / 2, by = grid_cm))
   grid_geom <- st_geometry(st_as_sf(grid_xy / 100, coords = c("x", "y")))  # metres, as the ramets
@@ -176,9 +198,9 @@ if (identical(attr(rings, "settings"), ring_set)) {
                            class = sp_class[ra$Species[j]],
                            x = ifelse(is.na(g), cen[j, 1], grid_xy$x[g]),
                            y = ifelse(is.na(g), cen[j, 2], grid_xy$y[g]),
-                           w = a_cm2[j] / pmax(n_hit[j], 1))
+                           w = a_cm2[j] / pmax(n_hit[j], 1), grid = !is.na(g))
     }
-    fb <- forb_genet[forb_genet$Quad == q & forb_genet$Year == y, c("trackID", "crowd_sp", "class", "x", "y", "w")]
+    fb <- forb_genet[forb_genet$Quad == q & forb_genet$Year == y, c("trackID", "crowd_sp", "class", "x", "y", "w", "grid")]
     pieces <- rbind(pieces, fb)
     m <- ring_one(foc, pieces)
       # Share of every annulus inside the quadrat
@@ -279,8 +301,9 @@ kernel_grad <- function(p, eps = 0.01) {
   # glm.fit stop at a wrong point while reporting convergence; the fit is kept only when the
   # score (gradient of the log-likelihood) is near zero, and is redone from scratch otherwise.
 warm <- new.env()
+fit_sp <- names(fit_data)   # focal species of the fit (all; a growth form in the split check)
 fit_parts <- function(w_main, w_forb = NULL) {
-  lapply(names(fit_data), function(sp) {
+  lapply(fit_sp, function(sp) {
     lapply(c("s", "g"), function(v) {
       d <- fit_data[[sp]][[v]]
       C <- if (is.null(w_forb)) d$C[names(d$C) != "forb"] else d$C
@@ -446,7 +469,7 @@ fit_stability <- function(lambda, stage, ref, w_fixed = NULL, t0, extra = numeri
 }
 
 # Fit the kernels --------------------------------------------------------------
-kernel_file <- file.path(der_dir, "CLR_CrowdKernel_fit.rds")
+kernel_file <- file.path(der_dir, sprintf("CLR_CrowdKernel_fit%s.rds", ko))
 fit_set <- list(ring_set = ring_set, kernel_species = kernel_species, kernel_breaks = kernel_breaks,
                 kernel_lambda = kernel_lambda, kernel_starts = kernel_starts, kernel_rough = kernel_rough,
                 kernel_year = kernel_year, kernel_controls = kernel_controls, kernel_border = kernel_border,
@@ -495,6 +518,46 @@ R_edge <- max(R_main, R_forb)
 cat(sprintf("Chosen penalty 10^%g; range R = %g cm (main kernel), %g cm (forb kernel).\n",
             log10(kernel_fit$lambda[kernel_fit$best]), R_main, R_forb))
 print(as.data.frame(kernel_fit$stability %>% mutate(across(where(is.numeric), ~ round(.x, 2)))))
+
+# Shared kernel or one kernel per growth form ----------------------------------
+  # The main kernel refitted on the grass and on the shrub focal species alone (reach R_ref), with
+  # every penalty; each form keeps its penalty with the lowest AIC, which gives the split kernels their
+  # best chance. The two fits share no parameter, so their log-likelihoods, degrees of freedom and AIC
+  # add up, and the sum is compared with the shared kernel (same plants, same regressions).
+split_file <- file.path(der_dir, sprintf("CLR_CrowdKernel_split%s.rds", ko))
+split_set <- list(fit_set = fit_set, version = "every penalty")
+kernel_split <- if (file.exists(split_file)) readRDS(split_file) else NULL
+if (identical(kernel_split$settings, split_set)) {
+  cat("Read the growth-form kernel fits saved before (same settings).\n")
+} else {
+  t0 <- Sys.time()
+  set.seed(kernel_seed)
+  form_of <- species$growth_form[match(names(fit_data), species$Species)]
+  fits_form <- list(); form_tab <- NULL
+  for (fm in unique(form_of)) {
+    fit_sp <- names(fit_data)[form_of == fm]
+    fl <- lapply(kernel_lambda, function(l) fit_full(l, "main"))
+    form_tab <- rbind(form_tab, data.frame(form = fm, n_species = length(fit_sp), log10_lambda = log10(kernel_lambda),
+                                           aic = sapply(fl, `[[`, "aic"), dof = sapply(fl, `[[`, "dof")))
+    fits_form[[fm]] <- fl[[which.min(sapply(fl, `[[`, "aic"))]]
+    cat(sprintf("  main kernel, %s only (%d species): best AIC %.1f (%.0f min so far)\n", fm, length(fit_sp),
+                fits_form[[fm]]$aic, as.numeric(difftime(Sys.time(), t0, units = "mins"))))
+  }
+  fit_sp <- names(fit_data)
+  form_tab$chosen <- ave(form_tab$aic, form_tab$form, FUN = function(a) a == min(a)) == 1
+  kernel_split <- list(
+    table = data.frame(kernel = c("shared", "one per growth form"),
+                       aic = c(kernel_fit$aic[kernel_fit$best], sum(sapply(fits_form, `[[`, "aic"))),
+                       dof = c(kernel_fit$dof[kernel_fit$best], sum(sapply(fits_form, `[[`, "dof")))),
+    forms = form_tab,
+    kernels = cbind(shared = kernel_fit$kernel_main_lambda[, kernel_fit$best],
+                    sapply(fits_form, function(f) kernel_at(f$par) * (ring_mid < R_ref))),
+    settings = split_set)
+  kernel_split$table$delta_aic <- kernel_split$table$aic - min(kernel_split$table$aic)
+  saveRDS(kernel_split, split_file)
+  cat(sprintf("Growth-form kernels: %.0f min.\n", as.numeric(difftime(Sys.time(), t0, units = "mins"))))
+}
+print(kernel_split$table, digits = 5, row.names = FALSE)
   # Share of focal plants (size species) whose outline stays at least R from the border
 focal_R <- genet %>% filter(Species %in% kernel_species, !is.na(survives_tplus1))
 cat(sprintf("Plants of the focal species at least 5 cm from the border: %.0f%%; at least %g cm: %.0f%%.\n",
@@ -546,12 +609,14 @@ kernel_tab <- data.frame(ring_inner_cm = head(ring_edges, -1), ring_outer_cm = t
                          kernel_fit$kernels_main, kernel_fit$kernels_forb)
 aic_tab <- data.frame(log10_lambda = log10(kernel_fit$lambda), aic = kernel_fit$aic, dof = kernel_fit$dof,
                       chosen = seq_along(kernel_fit$lambda) == kernel_fit$best)
-write.csv(kernel_tab, file.path(tab_dir, "CLR_CrowdKernel_kernel.csv"), row.names = FALSE)
-write.csv(aic_tab, file.path(tab_dir, "CLR_CrowdKernel_aic.csv"), row.names = FALSE)
-write.csv(kernel_fit$stability, file.path(tab_dir, "CLR_CrowdKernel_range.csv"), row.names = FALSE)
+write.csv(kernel_tab, file.path(tab_dir, sprintf("CLR_CrowdKernel_kernel%s.csv", ko)), row.names = FALSE)
+write.csv(aic_tab, file.path(tab_dir, sprintf("CLR_CrowdKernel_aic%s.csv", ko)), row.names = FALSE)
+write.csv(kernel_fit$stability, file.path(tab_dir, sprintf("CLR_CrowdKernel_range%s.csv", ko)), row.names = FALSE)
 write.csv(mutate(kernel_fit$effects, code = species$code[match(Species, species$Species)]),
-          file.path(tab_dir, "CLR_CrowdKernel_effects.csv"), row.names = FALSE)
-write.csv(edge_tab, file.path(tab_dir, "CLR_CrowdKernel_edge.csv"), row.names = FALSE)
+          file.path(tab_dir, sprintf("CLR_CrowdKernel_effects%s.csv", ko)), row.names = FALSE)
+write.csv(edge_tab, file.path(tab_dir, sprintf("CLR_CrowdKernel_border%s.csv", ko)), row.names = FALSE)
+write.csv(bind_rows(mutate(kernel_split$table, form = "all", n_species = length(fit_data)), kernel_split$forms),
+          file.path(tab_dir, sprintf("CLR_CrowdKernel_split%s.csv", ko)), row.names = FALSE)
 
 lab_main <- sprintf("main (same species, grass, shrub), R = %g cm", R_main)
 lab_forb <- sprintf("forb, R = %g cm", R_forb)
@@ -563,7 +628,8 @@ plot_k <- bind_rows(
   data.frame(x = ring_mid, y = kernel_fit$kernels_forb[, paste0("forb_reach_", R_ref)], kernel = lab_forb,
              line = sprintf("reference reach %g cm", R_ref))) %>%
   filter(x <= 40) %>%
-  mutate(panel = "(a) Kernel (relative interaction strength) by distance from the plant centre (cm)")
+  mutate(panel = sprintf("(a) Kernel (relative interaction strength) by distance from the plant %s (cm)",
+                         if (ring_origin == "edge") "outline" else "centre"))
 plot_s <- kernel_fit$stability %>%
   filter(reach_cm <= R_ref) %>%
   pivot_longer(c(max_change_beta, max_change_delta), names_to = "line", values_to = "y") %>%
@@ -577,15 +643,32 @@ p_kernel <- ggplot(mapping = aes(x, y, colour = kernel)) +
   geom_point(data = plot_s, aes(shape = chosen), size = 2.5) +
   facet_wrap(~ panel, scales = "free") +
   scale_shape_manual(values = c(`FALSE` = 16, `TRUE` = 8), guide = "none") +
-  labs(x = NULL, y = NULL, colour = NULL, linetype = NULL, title = "Crowding kernels, Idaho",
+  labs(x = NULL, y = NULL, colour = NULL, linetype = NULL,
+       title = sprintf("Crowding kernels, Idaho (distances from the plant %s)", if (ring_origin == "edge") "outline" else "centre"),
        subtitle = sprintf("Star: chosen range R (shortest reach with every beta and delta within %g SE of the %g-cm reach)", R_se, R_ref)) +
   theme_bw() + theme(legend.position = "bottom", legend.box = "vertical")
-ggsave(file.path(fig_dir, "CLR_CrowdKernel.png"), p_kernel, width = 13, height = 5.5, dpi = 300)
+ggsave(file.path(fig_dir, sprintf("CLR_CrowdKernel%s.png", ko)), p_kernel, width = 13, height = 5.5, dpi = 300)
+  # Shared kernel and the kernels fitted per growth form (reach R_ref)
+p_split <- data.frame(x = ring_mid, kernel_split$kernels, check.names = FALSE) %>%
+  pivot_longer(-x, names_to = "kernel", values_to = "y") %>%
+  filter(x <= R_ref) %>%
+  ggplot(aes(x, y, colour = kernel)) + geom_step(direction = "mid") +
+  labs(x = sprintf("Distance from the plant %s (cm)", if (ring_origin == "edge") "outline" else "centre"),
+       y = "Kernel (relative interaction strength)", colour = NULL,
+       title = sprintf("Main kernel: shared or one per growth form (reach %g cm)", R_ref),
+       subtitle = paste(sprintf("%s: AIC %+.1f", kernel_split$table$kernel, kernel_split$table$delta_aic), collapse = ";  ")) +
+  theme_bw() + theme(legend.position = "bottom")
+ggsave(file.path(fig_dir, sprintf("CLR_CrowdKernel_split%s.png", ko)), p_split, width = 7, height = 5, dpi = 300)
+
+  # Kernels, range and neighbour table of this origin, for CLR_CrowdIndex.R
+if (!exists("kernel_set")) kernel_set <- list()
+kernel_set[[ring_origin]] <- list(rings = rings, w_main = w_main, w_forb = w_forb, R_main = R_main, R_forb = R_forb)
 
 cat("Saved:\n",
-    " data/data.derived/", site_tag, ": CLR_CrowdKernel_rings.rds, CLR_CrowdKernel_fit.rds\n",
-    " result/tables/", site_tag, ": CLR_CrowdKernel_kernel.csv, _aic.csv, _range.csv, _effects.csv, _edge.csv\n",
-    " result/figs/", site_tag, ": CLR_CrowdKernel.png\n", sep = "")
+    " data/data.derived/", site_tag, ": CLR_CrowdKernel_rings", ko, ".rds, _fit", ko, ".rds, _split", ko, ".rds\n",
+    " result/tables/", site_tag, ": CLR_CrowdKernel_kernel", ko, ".csv, _aic, _range, _effects, _border, _split\n",
+    " result/figs/", site_tag, ": CLR_CrowdKernel", ko, ".png, CLR_CrowdKernel_split", ko, ".png\n", sep = "")
 rm(list = intersect(c("fit_base", "fit_data", "warm", "B1", "B2", "P", "d_grid", "d_pen", "knots", "quad_total",
                       "plot_k", "plot_s", "focal_R", "pq", "t0", "crowd_coefs", "n_check", "fits", "ppt_year",
-                      "lab_main", "lab_forb", "stab_main", "stab_forb", "ref_forb"), ls()))
+                      "lab_main", "lab_forb", "stab_main", "stab_forb", "ref_forb", "p_split", "fits_form",
+                      "form_of", "fm", "form_tab", "fl", "split_set", "split_file", "ring_origin", "ko"), ls()))

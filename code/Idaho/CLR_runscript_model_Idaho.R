@@ -3,9 +3,10 @@
 ##
 ## Written by Hung-wei Lin Oct 2026
 ##
-## Needs 'CLR_PartA_input.rds' from CLR_runscript_data_Idaho.R. Each model module has 'test_run'
-## in its settings: TRUE for a short check run first. The three models share no parameters.
-## A model whose posterior samples already exist is skipped (delete its file to fit it again).
+## From the full model to model_after, for the version set in CLR_version_Idaho.R (outputs in its
+## folders, e.g. 'Idaho(1Env&centreK)'). Needs 'CLR_PartA_input.rds' from CLR_runscript_data_Idaho.R.
+## Each step is skipped when its output exists (delete the output to run the step again), so the
+## whole script can be run again after any step.
 
 rm(list=ls())
 
@@ -14,37 +15,59 @@ library(here)
 library(dplyr)
 library(coda)     # convergence checks
 library(nimble)   # MCMC of the multilevel models (de Valpine et al. 2017)
+library(glmmTMB)  # maximum-likelihood fits of the model selection (Brooks et al. 2017)
 source(here("code", "CLR_fns_nimble.R"))
+source(here("code", "CLR_fns_select.R"))
 
-site_tag <- "Idaho"
+source(here("code", "Idaho", "CLR_version_Idaho.R"))   # version: climate predictor and crowding distances
+site_tag <- ver_tag
 fit_path <- function(f) here("data", "data.derived", site_tag, f)
 
-# Load or fit the main model, stage 1 (no trait) -------------------------------
-  # Joint survival, growth and recruitment model of the main species (baseline for the IPMs
-  # that give the life-history trait); posterior samples in 'CLR_PartA_stage1.rds'.
-if (!file.exists(fit_path("CLR_PartA_stage1.rds"))) {
-  source(here("code", "Idaho", "CLR_ModelPartA.R"))
-}
+# Full model_before ------------------------------------------------------------
+  # Main effects + every interaction term, current precipitation; posterior samples in
+  # 'CLR_PartA_stage1_full.rds'.
+structure <- "full"
+if (!file.exists(fit_path("CLR_PartA_stage1_full.rds"))) source(here("code", "Idaho", "CLR_ModelPartA.R"))
 
-# Load or fit the forb submodel ------------------------------------------------
-  # Survival and recruitment of all point species pooled as one forb population;
-  # posterior samples in 'CLR_PartA_forb.rds'.
-if (!file.exists(fit_path("CLR_PartA_forb.rds"))) {
-  source(here("code", "Idaho", "CLR_ModelPartAForb.R"))
-}
+# Submodels: forbs and other shrubs --------------------------------------------
+  # Forb (point species pooled) in 'CLR_PartA_forb.rds'; other shrubs (pooled) in 'CLR_PartA_shrub.rds'.
+if (!file.exists(fit_path("CLR_PartA_forb.rds"))) source(here("code", "Idaho", "CLR_ModelPartAForb.R"))
+if (!file.exists(fit_path("CLR_PartA_shrub.rds"))) source(here("code", "Idaho", "CLR_ModelPartAShrub.R"))
 
-# Load or fit the other-shrub submodel -----------------------------------------
-  # Survival, growth and recruitment of the shrubs below the main-model threshold, pooled;
-  # posterior samples in 'CLR_PartA_shrub.rds'.
-if (!file.exists(fit_path("CLR_PartA_shrub.rds"))) {
-  source(here("code", "Idaho", "CLR_ModelPartAShrub.R"))
-}
-
-# Plot the estimates (forest plots) --------------------------------------------
-  # Main model: all effects (interaction terms in black; species as faded points) in
-  # 'CLR_PartA_main_effects.png', interaction terms alone in 'CLR_PartA_interactions.png', crowding
-  # effects per species in 'CLR_PartA_crowding_species.png', climate and grazing per species in
-  # 'CLR_PartA_climate_grazing_species.png', variance components in 'CLR_PartA_variance.png'.
-  # Submodels (forb, other shrubs) on their own in 'CLR_PartA_submodels.png'.
-  # Rhat and effective sample sizes in 'CLR_PartA_convergence.csv'.
+# Plots of the full model ------------------------------------------------------
+  # Forest plots in 'PartA_full' ('CLR_PartA_main_effects.png', '_interactions', '_crowding_species',
+  # '_climate_grazing_species', '_variance', '_submodels'); Rhat and ESS in 'CLR_PartA_convergence.csv'.
 source(here("code", "Idaho", "CLR_PlotPartA.R"))
+
+# Model selection, step 1: climate variable ------------------------------------
+  # GLMM fits of the full model with each climate variable (276 fits, about 1-2 hours), shown in
+  # 'CLR_PartA_selection_climate.png'.
+select_phase <- 1
+source(here("code", "Idaho", "CLR_SelectPartA.R"))
+if (!phase_done(1)) stop("Some fits of the climate selection failed (errors printed above).")
+source(here("code", "Idaho", "CLR_SelectPartA_collect.R"))
+
+# Model selection, step 2: interaction terms (fits on ARC) ---------------------
+  # Every subset of interaction terms (66048 fits on ARC, code/arc/CLR_select_array.sh), ranked in
+  # 'CLR_PartA_selection_AICcrank.png' and '_BICrank.png'; selected terms in 'CLR_select_selected.csv'.
+select_phase <- 2
+tasks <- make_tasks(2)
+n_missing <- sum(!file.exists(file.path(sel_dir(), tasks$file)))
+if (n_missing > 0) stop(sprintf("%d fits of step 2 are missing in 'selection': copy them back from ARC (FileZilla).", n_missing))
+rm(tasks, n_missing)
+source(here("code", "Idaho", "CLR_SelectPartA_collect.R"))
+
+# Selected model_before (Stage 1) ----------------------------------------------
+  # Posterior samples in 'CLR_PartA_stage1_selected.rds'; forest plots in 'PartA_model.selection'.
+structure <- "selected"
+if (!file.exists(fit_path("CLR_PartA_stage1_selected.rds"))) source(here("code", "Idaho", "CLR_ModelPartA.R"))
+source(here("code", "Idaho", "CLR_PlotPartA.R"))
+
+# IPMs and life-history traits (to be written) ---------------------------------
+
+# Model selection, step 3: trait terms of model_after, exploratory (to be written)
+# select_phase <- 3
+# source(here("code", "Idaho", "CLR_SelectPartA.R"))
+# source(here("code", "Idaho", "CLR_SelectPartA_collect.R"))
+
+# model_after (Stage 2; to be written) -----------------------------------------

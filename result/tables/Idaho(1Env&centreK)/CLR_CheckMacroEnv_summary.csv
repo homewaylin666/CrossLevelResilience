@@ -1,0 +1,4 @@
+"code","name","unit","first_year","last_year","n_values","n_missing_months","pct_missing","min","median","max","n_out_range","n_monthly_outlier","n_annual_filled","n_annual_mismatch"
+"TMEAN","monthly mean temperature","degF",1924,2006,995,1,0.1,3,43.9,75.7,0,2,25,0
+"PPT","monthly total precipitation","in",1924,2006,996,0,0,0,0.795,8.26,0,5,25,0
+"SNOW","monthly total snowfall","in",1922,2006,736,272,27,0,2,34.9,0,2,0,0

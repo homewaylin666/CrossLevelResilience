@@ -20,6 +20,8 @@
 ## exclosures); climate = water-year precipitation anomaly: the difference from the long-term mean of the
 ## station record, in units of its long-term SD (sign kept: below 0 = drier than the long-term mean;
 ## as the rainfall anomalies of Calleja-Solanas et al. 2025).
+## The years table also holds the previous water year's precipitation and the summer temperature
+## (July-August of year t) as anomalies, for the comparison of climate variables in the model selection.
 ## Recruitment uses quadrat cover in place of z and W (square root of cover, as Chu & Adler 2015;
 ## own cover scaled within each species, as same-species crowding).
 ## The other non-shrub species below the threshold enter only as neighbours (listed in the file).
@@ -38,7 +40,8 @@ clim_var <- "ppt_wy"
 clim_ref <- "record"
 
 der_dir <- here("data", "data.derived", site_tag)
-tab_dir <- here("result", "tables", site_tag)
+tab_dir <- here("result", "tables", site_tag, "PartA_full")   # Part A tables (full model, model_before)
+dir.create(tab_dir, showWarnings = FALSE, recursive = TRUE)
 stopifnot(exists("genet_W"), exists("recruit_W"), exists("recruit_forb"), exists("species"),
           exists("sp_class"), exists("census"), exists("quad_info"))
 W_cols <- c("W_intra", "W_grass", "W_shrub", "W_forb")
@@ -60,9 +63,11 @@ cat(sprintf("Main model: %d species (%s); other-shrub submodel: %d species (%s);
             paste(species$code[match(shrub_sp, species$Species)], collapse = ", "), length(fixed_sp)))
 
 # Index tables: years, quadrats, groups ----------------------------------------
-  # Years: every annual transition t -> t+1 (recruitment table holds all of them)
+  # Years: every annual transition t -> t+1 (recruitment table holds all of them). clim_lag:
+  # precipitation of the previous water year (July t-1 to June t), for the comparison of
+  # current and lagged precipitation in the model selection
 yr_tab <- recruit_W %>%
-  distinct(Year, clim = .data[[clim_var]]) %>%
+  distinct(Year, clim = .data[[clim_var]], clim_lag = .data[[paste0(clim_var, "_lag")]]) %>%
   arrange(Year) %>%
   mutate(t = row_number(), .before = Year)
 stopifnot(!any(duplicated(yr_tab$Year)), !anyNA(yr_tab$clim))
@@ -71,9 +76,24 @@ stopifnot(exists("water_year"), clim_ref %in% c("record", "transitions"), clim_v
 ref_values <- if (clim_ref == "record") water_year$ppt_mm[!is.na(water_year$ppt_mm)] else yr_tab$clim
 clim_scale <- c(mean = mean(ref_values), sd = sd(ref_values), n_years = length(ref_values))
 yr_tab$clim_anom <- (yr_tab$clim - clim_scale[["mean"]]) / clim_scale[["sd"]]
+yr_tab$clim_lag_anom <- (yr_tab$clim_lag - clim_scale[["mean"]]) / clim_scale[["sd"]]
 cat(sprintf("Climate anomaly: reference %s (%d water years, mean %.0f mm, SD %.0f mm); transition years range %.2f to %.2f SD, mean %.2f.\n",
             clim_ref, length(ref_values), clim_scale[["mean"]], clim_scale[["sd"]],
             min(yr_tab$clim_anom), max(yr_tab$clim_anom), mean(yr_tab$clim_anom)))
+  # Summer temperature of the transition (mean of July and August of year t, the summer inside the
+  # water-year window), as an anomaly from the station record (complete summers), for the comparison
+  # of climate variables in the model selection
+summer_t <- monthly %>%
+  filter(month %in% 7:8) %>%
+  group_by(cal_year) %>%
+  summarise(temp_sum = if (sum(!is.na(tmean_c)) == 2) mean(tmean_c) else NA_real_, .groups = "drop")
+temp_ref <- summer_t$temp_sum[!is.na(summer_t$temp_sum)]
+temp_scale <- c(mean = mean(temp_ref), sd = sd(temp_ref), n_years = length(temp_ref))
+yr_tab$temp_sum  <- summer_t$temp_sum[match(yr_tab$Year, summer_t$cal_year)]
+stopifnot(!anyNA(yr_tab$temp_sum))
+yr_tab$temp_anom <- (yr_tab$temp_sum - temp_scale[["mean"]]) / temp_scale[["sd"]]
+cat(sprintf("Summer temperature anomaly: %d summers, mean %.1f degC, SD %.2f degC; transition years range %.2f to %.2f SD.\n",
+            length(temp_ref), temp_scale[["mean"]], temp_scale[["sd"]], min(yr_tab$temp_anom), max(yr_tab$temp_anom)))
 
 grp_tab  <- distinct(recruit_W, Group) %>% arrange(Group) %>% mutate(g = row_number())
 quad_tab <- distinct(recruit_W, Quad, Group) %>% arrange(Quad) %>%
@@ -262,7 +282,7 @@ partA_input <- list(
   species_sets = list(main = main_sp, shrub = shrub_sp, forb = species$Species[sp_class[species$Species] == "forb"],
                       neighbour_only = fixed_sp),
   scaling = list(z = z_scale, W = W_scale, W_intra = W_intra_scale, W_forb_model = W_scale_forb, C = C_scale,
-                 C_intra = C_intra_scale, clim = clim_scale,
+                 C_intra = C_intra_scale, clim = clim_scale, temp = temp_scale,
                  clim_var = clim_var, clim_ref = clim_ref),
   settings = list(main_min_survival = main_min_survival, R_main = R_main, R_forb = R_forb)
 )
@@ -283,6 +303,6 @@ write.csv(input_n, file.path(tab_dir, "CLR_PartA_input_n.csv"), row.names = FALS
 print(as.data.frame(input_n))
 cat("Saved:\n",
     " data/data.derived/", site_tag, ": CLR_PartA_input.rds\n",
-    " result/tables/", site_tag, ": CLR_PartA_input_n.csv\n", sep = "")
+    " result/tables/", site_tag, "/PartA_full: CLR_PartA_input_n.csv\n", sep = "")
 rm(list = intersect(c("polygon_sp", "add_index", "next_rec", "vital_records", "scale_z", "sqrt_scale",
                       "no_parent", "recruit_size", "shrub_q", "shrub_g", "W_cols", "C_cols", "ref_values"), ls()))

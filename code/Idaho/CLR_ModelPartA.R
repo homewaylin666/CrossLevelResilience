@@ -6,11 +6,13 @@
 ## Joint model of survival, growth (focal plants) and recruitment (species x quadrat x
 ## transition) of the main species, with four blocks (Fig. C3_model_diagram_Adler):
 ## individual (size, grazing), population (life-history trait), community (water-year
-## precipitation, year effects) and interactions (crowding W by same species, grass, shrub, forb).
-## Stage 1 ('stage <- 1'): no trait, the baseline for the IPMs that give the trait.
-## Stage 2 ('stage <- 2'): trait explains gamma, beta_x and beta_climate (one run per trait draw).
-## Plant (individual) random effects in the non-centred form (setting 'plant_effects').
-## Reads 'CLR_PartA_input.rds' (CLR_InputPartA.R); uses 'site_tag' and 'run_chains' (CLR_fns_nimble.R).
+## precipitation, year effects) and interactions (crowding W by same species, grass, shrub, forb),
+## plus the interaction terms among climate, grazing, size and crowding.
+## Stage 1 ('stage <- 1'): no trait (model_before), the baseline for the IPMs that give the trait.
+## Stage 2 ('stage <- 2'): trait explains gamma, beta_x and beta_climate (model_after).
+## Uses 'structure' from the runscript: "full" = every interaction term; "selected" = the climate
+## variable and interaction terms chosen by the model selection ('CLR_select_selected.csv').
+## Reads 'CLR_PartA_input.rds'; uses 'site_tag' and 'run_chains' (CLR_fns_nimble.R).
 
 
 # Settings ---------------------------------------------------------------------
@@ -27,16 +29,13 @@ n_chains <- 4
 n_iter   <- 20000
 n_burn   <- 10000
 n_thin   <- 10
-  # Cores for the chains: 1 = one chain after another (progress bar in the console); 2-4 = chains
-  # in parallel (each core builds and compiles its own copy of the model, so memory grows with
-  # it; the progress bars go to a log file in 'data/data.derived/Idaho')
+  # Cores for the chains (1 = progress bar in the console; more = progress in the log file)
 n_cores  <- 2
   # Test run: a few species and a short chain to check the code (FALSE for the real run)
 test_run <- FALSE
 test_species <- c("PSSP", "HECO", "ARTR")
 
 der_dir <- here("data", "data.derived", site_tag)
-stopifnot(stage %in% 1:2, plant_effects %in% c("survival", "both", "none"))
 
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -54,7 +53,7 @@ model <- nimbleCode({
   # ★ clim 是降水距平：与测站长期平均的差，以长期 SD 为单位（保留正负；0 = 长期平均）
   #   研究期比长期平均偏干，所以 clim 在转换年份上的平均不是 0；截距对应长期平均的降水
   for (v in 1:2){
-    com.size.x.clim[v] ~ dnorm(0, sd = 2)          # δ_size：降水 × 自身大小
+    com.size.x.clim[v] ~ dnorm(0, sd = 2)          # δ_size：气候 × 自身大小
     yr.slope.size.sd[v] ~ dexp(2)                  # ε_t,size
   }
   for (v in 1:nVR){
@@ -74,26 +73,31 @@ model <- nimbleCode({
   #   只是抽样快得多：降水只有 22 个年份值，原写法下 β_climate、δ 与年份效应互相交换，链走得慢。
   #   yrsp.int[t,k,v] 也包含物种截距 pop.int[k,v]（线性预测子里只出现 yrsp.int）。
   # ★ Part B：某年降水改为 clim* 时，年份效应 = 平均（用 clim*）+ 该年的残差（后验值 − 原平均）
+  # ★ 交互项开关 inc*（1 = 保留，全模型全为 1；0 的项只从先验抽样）：incDW 气候×擁擠度、
+  #   incDS 气候×size、incTW size×擁擠度、incOW 放牧×擁擠度、incGS 放牧×size、incGC 放牧×气候、
+  #   incL 前一年降水（主效应）。climV[t,v]：每个生命率选定的气候距平
   for (t in 1:nYr){
     for (v in 1:nVR){
-      yr.int[t,v] ~ dnorm(pop.int.mu[v] + pop.slope.clim.mu[v] * clim[t], sd = yr.int.sd[v])
+      yr.int[t,v] ~ dnorm(pop.int.mu[v] + pop.slope.clim.mu[v] * climV[t,v] +
+                            incL[v] * com.lag[v] * climLag[t], sd = yr.int.sd[v])
       for (x in 1:nX){
-        yr.slope.W[t,v,x] ~ dnorm(com.W.x.clim[v,x] * clim[t], sd = yr.slope.W.sd[v,x])
+        yr.slope.W[t,v,x] ~ dnorm(incDW[v,x] * com.W.x.clim[v,x] * climV[t,v], sd = yr.slope.W.sd[v,x])
       }
       for (k in 1:nSp){
         yrsp.int[t,k,v] ~ dnorm(yr.int[t,v] + pop.int[k,v] - pop.int.mu[v] +
-                                  (pop.slope.clim[k,v] - pop.slope.clim.mu[v]) * clim[t], sd = yrsp.int.sd[v])
+                                  (pop.slope.clim[k,v] - pop.slope.clim.mu[v]) * climV[t,v], sd = yrsp.int.sd[v])
       }
     }
     for (v in 1:2){
-      yr.slope.size[t,v] ~ dnorm(com.size.x.clim[v] * clim[t], sd = yr.slope.size.sd[v])
+      yr.slope.size[t,v] ~ dnorm(incDS[v] * com.size.x.clim[v] * climV[t,v], sd = yr.slope.size.sd[v])
     }
   }
+  for (v in 1:nVR){ com.lag[v] ~ dnorm(0, sd = 2) }  # 前一年降水（主效应，incL = 1 时进模型）
 
   # ═══════════════════ 物种层 · 先验 ═══════════════════
   # Y = α0 / α1 / α2：只有物种随机效应，不放 trait（trait 由它们导出）
   # ★ size² (α2) 按 AIC 决定（补充方法 S3）：存活 ΔAIC −6.6、生长 −123，两个都放
-  #   （第一次正式跑的 α2：result/tables/Idaho/CLR_PartA_stage1_size2.csv）
+  #   （第一次正式跑的 α2：result/tables/Idaho/PartA_full/CLR_PartA_stage1_size2.csv）
   # X = γ / β_x / β_climate：stage 2 才放 trait
   for (v in 1:nVR){
     pop.int.mu[v] ~ dnorm(0, sd = 5)
@@ -162,6 +166,12 @@ model <- nimbleCode({
       com.W.x.graze[v,x] ~ dnorm(0, sd = 2)        # ω_x：擁擠度 × 放牧
     }
   }
+  for (v in 1:2){
+    com.size.x.graze[v] ~ dnorm(0, sd = 2)         # 放牧 × 自身大小（牛羊对大小的偏好）
+  }
+  for (v in 1:nVR){
+    com.graze.x.clim[v] ~ dnorm(0, sd = 2)         # 放牧 × 气候（干年放牧的影响是否更强）
+  }
 
   # ═══════════════════ 样方层：组 + 组内样方（随机） ═══════════════════
   for (v in 1:nVR){
@@ -204,13 +214,15 @@ model <- nimbleCode({
   # ═══════════════════ 观测层 ① 存活 ═══════════════════
   for (r in 1:nSurv){
     # （截距、β_climate、δ 都在年份效应里：yrsp.int = 物种截距 + 降水效应 + 年份残差）
-    betaS[r,1:nX] <- pop.slope.W[idSp[r],1,1:nX] + com.W.x.size[1,1:nX] * size[r] +
-      com.W.x.graze[1,1:nX] * graze[r] + yr.slope.W[idYr[r],1,1:nX]  # βeff，存活
+    betaS[r,1:nX] <- pop.slope.W[idSp[r],1,1:nX] + incTW[1,1:nX] * com.W.x.size[1,1:nX] * size[r] +
+      incOW[1,1:nX] * com.W.x.graze[1,1:nX] * graze[r] + yr.slope.W[idYr[r],1,1:nX]  # βeff，存活
     lpS[r] <- yrsp.int[idYr[r],idSp[r],1] +
       pop.slope.size[idSp[r],1]  * size[r] +
       pop.slope.size2[idSp[r],1] * size2[r] +
       pop.slope.graze[idSp[r],1] * graze[r] +
       inprod(betaS[r,1:nX], W[r,1:nX]) +
+      incGS[1] * com.size.x.graze[1] * graze[r] * size[r] +
+      incGC[1] * com.graze.x.clim[1] * graze[r] * climV[idYr[r],1] +
       yr.slope.size[idYr[r],1] * size[r] +
       grp.int[idGrp[r],1] + quad.int[idQuad[r],1] +
       ind.eff[idInd[r],1]
@@ -220,13 +232,15 @@ model <- nimbleCode({
   # ═══════════════════ 观测层 ② 生长（存活且两年都有面积） ═══════════════════
   # ★ size 与 sizeNext 用同一组 mean / sd（输入文件 scaling$z），IPM 的核才能迭代
   for (s in 1:nGrow){
-    betaG[s,1:nX] <- pop.slope.W[idSp[idGrow[s]],2,1:nX] + com.W.x.size[2,1:nX] * size[idGrow[s]] +
-      com.W.x.graze[2,1:nX] * graze[idGrow[s]] + yr.slope.W[idYr[idGrow[s]],2,1:nX]  # βeff，生长
+    betaG[s,1:nX] <- pop.slope.W[idSp[idGrow[s]],2,1:nX] + incTW[2,1:nX] * com.W.x.size[2,1:nX] * size[idGrow[s]] +
+      incOW[2,1:nX] * com.W.x.graze[2,1:nX] * graze[idGrow[s]] + yr.slope.W[idYr[idGrow[s]],2,1:nX]  # βeff，生长
     lpG[s] <- yrsp.int[idYr[idGrow[s]],idSp[idGrow[s]],2] +
       pop.slope.size[idSp[idGrow[s]],2]  * size[idGrow[s]] +
       pop.slope.size2[idSp[idGrow[s]],2] * size2[idGrow[s]] +
       pop.slope.graze[idSp[idGrow[s]],2] * graze[idGrow[s]] +
       inprod(betaG[s,1:nX], W[idGrow[s],1:nX]) +
+      incGS[2] * com.size.x.graze[2] * graze[idGrow[s]] * size[idGrow[s]] +
+      incGC[2] * com.graze.x.clim[2] * graze[idGrow[s]] * climV[idYr[idGrow[s]],2] +
       yr.slope.size[idYr[idGrow[s]],2] * size[idGrow[s]] +
       grp.int[idGrp[idGrow[s]],2] + quad.int[idQuad[idGrow[s]],2] +
       ind.eff[idInd[idGrow[s]],2]
@@ -250,11 +264,12 @@ model <- nimbleCode({
   for (j in 1:nRec){
     Ceff[j] <- p.eff[idSpR[j]] * covQ[j] + (1 - p.eff[idSpR[j]]) * covG[j]
     CRi[j]  <- (sqrt(Ceff[j]) - cIntraMean[idSpR[j]]) / cIntraSd[idSpR[j]]
-    betaR[j,1:nX] <- pop.slope.W[idSpR[j],3,1:nX] + com.W.x.graze[3,1:nX] * grazeR[j] +
+    betaR[j,1:nX] <- pop.slope.W[idSpR[j],3,1:nX] + incOW[3,1:nX] * com.W.x.graze[3,1:nX] * grazeR[j] +
       yr.slope.W[idYrR[j],3,1:nX]                                   # βeff，补充
     lpR[j] <- yrsp.int[idYrR[j],idSpR[j],3] +
       pop.slope.graze[idSpR[j],3] * grazeR[j] +
       betaR[j,1] * CRi[j] + inprod(betaR[j,2:nX], CRo[j,1:3]) +
+      incGC[3] * com.graze.x.clim[3] * grazeR[j] * climV[idYrR[j],3] +
       grp.int[idGrpR[j],3] + quad.int[idQuadR[j],3]
     lambdaR[j] <- Ceff[j] * exp(lpR[j]) + exp(rec.bg[idSpR[j]])
     recruits[j] ~ dnegbin(prob = nb.size[idSpR[j]] / (nb.size[idSpR[j]] + lambdaR[j]),
@@ -278,6 +293,18 @@ model <- nimbleCode({
 # ═══════════════════════════════════════════════════════════════════════════
 partA_input <- readRDS(file.path(der_dir, "CLR_PartA_input.rds"))
 sp_tab <- partA_input$species
+  # Interaction terms (1 = in the model; codes in CLR_fns_select.R) and climate variable per vital rate
+  # (rows: survival, growth, recruitment; recruitment has no size terms)
+term_codes <- ix_terms$code
+if (structure == "full") {
+  blk <- data.frame(vr = vrs, matrix(1L, 3, 15, dimnames = list(NULL, term_codes)), clim_use = "current")
+} else {
+  blk <- read.csv(file.path(sel_dir(), "CLR_select_selected.csv"))[, c("vr", term_codes, "clim_use")]
+}
+blk[is.na(blk)] <- 0L
+blk[3, c("CxS", "SxWi", "SxWg", "SxWs", "SxWf", "GxS")] <- 0L
+print(blk, row.names = FALSE)
+term_mat <- function(codes, rows = 1:3) unname(as.matrix(blk[rows, codes]))
 rec    <- partA_input$main$rec
 recr   <- partA_input$main$recruit
 recsz  <- filter(partA_input$main$recsize, !point)
@@ -310,7 +337,16 @@ constList <- list(
     # 存活纪录的下标（生长借用 idGrow 指回存活纪录）
   idSp = rec$k, idYr = rec$t, idQuad = rec$q, idGrp = rec$g, idInd = rec$i, idGrow = grow,
   size = rec$z, size2 = rec$z^2, graze = rec$E, W = as.matrix(rec[W_z]),
-  clim = partA_input$years$clim_anom,
+    # 气候：每个生命率用选定的变量（当年降水；前一年降水取代当年；两者都放；夏季温度取代降水）
+  climV = unname(sapply(blk$clim_use, function(u) switch(u, lag = partA_input$years$clim_lag_anom,
+                                                         temp = partA_input$years$temp_anom,
+                                                         partA_input$years$clim_anom))),
+  climLag = if ("clim_lag_anom" %in% names(partA_input$years)) partA_input$years$clim_lag_anom else rep(0, nrow(partA_input$years)),
+    # 交互项开关
+  incDW = term_mat(c("CxWi", "CxWg", "CxWs", "CxWf")), incDS = as.integer(blk$CxS[1:2]),
+  incTW = term_mat(c("SxWi", "SxWg", "SxWs", "SxWf"), 1:2),
+  incOW = term_mat(c("GxWi", "GxWg", "GxWs", "GxWf")), incGS = as.integer(blk$GxS[1:2]),
+  incGC = as.integer(blk$GxC), incL = as.integer(blk$clim_use == "both"),
     # 补充
   idSpR = recr$k, idYrR = recr$t, idQuadR = recr$q, idGrpR = recr$g, grazeR = recr$E,
   covQ = recr$cover_q, covG = recr$cover_g,
@@ -327,7 +363,7 @@ dataList <- list(surv = rec$survives_tplus1, sizeNext = rec$z_next[grow],
 with(constList, stopifnot(
   all(sort(unique(idSp)) == 1:nSp), all(idYr %in% 1:nYr), all(idQuad %in% 1:nQuad), all(idGrp %in% 1:nGrp),
   all(sort(unique(idInd)) == 1:nInd), length(idGrow) == nGrow, max(idGrow) <= nSurv,
-  all(is.finite(size)), all(is.finite(W)), all(is.finite(clim)), all(graze %in% 0:1),
+  all(is.finite(size)), all(is.finite(W)), all(is.finite(climV)), all(is.finite(climLag)), all(graze %in% 0:1),
   all(covG > 0 | covQ == 0), all(is.finite(CRo)), all(idSpRS %in% 1:nSp),
   all(is.finite(cIntraMean)), all(cIntraSd > 0)))
 stopifnot(all(dataList$surv %in% 0:1), all(is.finite(dataList$sizeNext)), all(dataList$recruits >= 0),
@@ -356,9 +392,10 @@ inits <- function() {
     pop.slope.graze = matrix(rnorm(nSp * 3, 0, 0.1), nSp, 3),
     pop.slope.clim = matrix(rnorm(nSp * 3, 0, 0.1), nSp, 3),
     pop.slope.W = array(rnorm(nSp * 12, 0, 0.1), c(nSp, 3, 4)),
-    com.size.x.clim = rnorm(2, 0, 0.1),
+    com.size.x.clim = rnorm(2, 0, 0.1), com.lag = rnorm(3, 0, 0.1),
     com.W.x.clim = matrix(rnorm(12, 0, 0.1), 3, 4), com.W.x.graze = matrix(rnorm(12, 0, 0.1), 3, 4),
     com.W.x.size = matrix(rnorm(8, 0, 0.1), 2, 4),
+    com.size.x.graze = rnorm(2, 0, 0.1), com.graze.x.clim = rnorm(3, 0, 0.1),
       # 年份层（sd 起始值给小的，免得一开始就把年份效应吃掉降水效应）
     yr.int.sd = rexp(3, 4), yrsp.int.sd = rexp(3, 4), yr.slope.size.sd = rexp(2, 4),
     yr.slope.W.sd = matrix(rexp(12, 8), 3, 4),
@@ -399,7 +436,7 @@ params <- c(
   "pop.slope.graze.mu", "pop.slope.graze.sd", "pop.slope.clim.mu", "pop.slope.clim.sd",
   "pop.slope.W.mu", "pop.slope.W.sd",
     # 交互（个体层、群落层）
-  "com.size.x.clim", "com.W.x.clim", "com.W.x.graze", "com.W.x.size",
+  "com.size.x.clim", "com.W.x.clim", "com.W.x.graze", "com.W.x.size", "com.size.x.graze", "com.graze.x.clim", "com.lag",
     # 年份层、样方层、个体层
   "yr.int.sd", "yrsp.int.sd", "yr.slope.size.sd", "yr.slope.W.sd",
   "yr.int", "yrsp.int", "yr.slope.size", "yr.slope.W",
@@ -426,19 +463,28 @@ stopifnot(is.finite(ll0))
 rm(m_partA); invisible(gc())   # the check model leaves memory; the chains build their own
   # Build, compile and run the chains ('run_chains', CLR_fns_nimble.R): one seed per chain, so a
   # rerun with the same n_cores gives the same samples
+  # ★ 截距与年份效应一起移动：pop.int.mu + c、yr.int[,v] + c 时 yrsp.int 不变，只靠物种截距的先验定位，
+  #   逐个抽样走得很慢（第一次 full model 生长 Rhat 1.25）。β_climate 的平均同理（yr.int + c·climV）。
+  #   每个生命率加两个「平移」抽样（sampler_shift，CLR_fns_nimble.R），让它们一起移动
+shifts <- unlist(lapply(1:3, function(v) list(
+  list(target = c(sprintf("pop.int.mu[%d]", v), sprintf("yr.int[%d, %d]", 1:constList$nYr, v)),
+       weights = rep(1, constList$nYr + 1)),
+  list(target = c(sprintf("pop.slope.clim.mu[%d]", v), sprintf("yr.int[%d, %d]", 1:constList$nYr, v)),
+       weights = c(1, constList$climV[, v])))), recursive = FALSE)
 samples <- run_chains(model, constList, dataList, inits, monitors = params, thin = n_thin, n_iter = n_iter,
-                      n_burn = n_burn, n_chains = n_chains, n_cores = n_cores, seed = 2026,
-                      log_file = file.path(der_dir, sprintf("CLR_PartA_stage%d_chains.log", stage)))
+                      n_burn = n_burn, n_chains = n_chains, n_cores = n_cores, seed = 2026, shifts = shifts,
+                      log_file = file.path(der_dir, sprintf("CLR_PartA_stage%d_%s_chains.log", stage, structure)))
 cat(sprintf("MCMC done (%.1f min).\n", as.numeric(difftime(Sys.time(), t0, units = "mins"))))
 
 # Save -------------------------------------------------------------------------
-  # (sensitivity runs of the plant effects get their own file: '_plantsurvival', '_plantnone')
-out_file <- file.path(der_dir, sprintf("CLR_PartA_stage%d%s%s%s.rds", stage,
+  # (e.g. 'CLR_PartA_stage1_full.rds', 'CLR_PartA_stage1_selected.rds'; sensitivity runs of the
+  # plant effects end in '_plantsurvival' or '_plantnone')
+out_file <- file.path(der_dir, sprintf("CLR_PartA_stage%d_%s%s%s%s.rds", stage, structure,
                                        if (stage == 2) sprintf("_draw%03d", trait_draw) else "",
                                        if (plant_effects != "both") paste0("_plant", plant_effects) else "",
                                        if (test_run) "_test" else ""))
 saveRDS(list(samples = samples, species = sp_tab, constants = constList[c("nSp", "nYr", "nQuad", "nGrp", "nInd")],
-             scaling = partA_input$scaling, settings = list(stage = stage, plant_effects = plant_effects, n_iter = n_iter,
+             scaling = partA_input$scaling, settings = list(stage = stage, structure = structure, blocks = blk, plant_effects = plant_effects, n_iter = n_iter,
                                                             n_burn = n_burn, n_thin = n_thin, n_chains = n_chains,
                                                             test_run = test_run)),
         out_file)

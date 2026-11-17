@@ -9,8 +9,9 @@
 ## precipitation blue, as in the model diagram (C3_model_diagram_Adler); each crowding class has
 ## its own colour (same species, other grasses, other shrubs, forbs), used for its main effect and
 ## for every interaction with it. The rows come in blocks: main effects (filled points), then the
-## interactions with precipitation (delta), log size (theta) and grazing (omega) (open points);
-## within an interaction block the colour gives the term that the block's covariate modifies.
+## interactions with precipitation (delta), log size (theta) and grazing (omega: with log size,
+## precipitation and crowding) (open points); within an interaction block the colour gives the
+## term that the block's covariate modifies.
 ## Variance components: year effects blue, group, quadrat and plant effects orange, variation
 ## among species red.
 ## Every estimate is per SD of its covariate, on the scale of each vital rate: logit (survival),
@@ -20,7 +21,8 @@
 ## focal plants, same-species crowding per SD within each species (CLR_InputPartA.R); recruitment
 ## uses the square root of quadrat cover in place of size and crowding.
 ## A convergence table (Rhat, effective sample size) comes with the figures.
-## Uses 'site_tag'.
+## Uses 'site_tag' and 'structure' ("full": figures in 'PartA_full'; "selected": 'PartA_model.selection',
+## with the interaction terms left out of the model left out of the figures).
 ################################################################################
 
 # Settings ---------------------------------------------------------------------
@@ -28,11 +30,13 @@
 plot_test <- FALSE
   # Stage of the main model to plot (1 = no trait)
 plot_stage <- 1
+out_folder <- if (structure == "full") "PartA_full" else "PartA_model.selection"
 
 der_dir <- here("data", "data.derived", site_tag)
-fig_dir <- here("result", "figs", site_tag)
-tab_dir <- here("result", "tables", site_tag)
+fig_dir <- here("result", "figs", site_tag, out_folder)
+tab_dir <- here("result", "tables", site_tag, out_folder)
 dir.create(fig_dir, showWarnings = FALSE, recursive = TRUE)
+dir.create(tab_dir, showWarnings = FALSE, recursive = TRUE)
 tag <- if (plot_test) "_test" else ""
 fit_file <- function(name) file.path(der_dir, paste0(name, tag, ".rds"))
 
@@ -92,6 +96,7 @@ draw_forest_panel <- function(dat, row_levels, row_cols, main, xlab = "", panel_
   if (is.null(xlim)) {
     xlim <- range(c(dat$lo95, dat$hi95, sp_dat$med, 0), na.rm = TRUE)
     xlim <- xlim + diff(xlim) * c(-0.08, 0.08)
+    if (diff(xlim) == 0) xlim <- xlim + c(-1, 1)   # (panel without estimates: a block left out)
   }
   plot(NA, xlim = xlim, ylim = c(-0.5, max(centre) + 1.5), xlab = xlab, ylab = "", main = main,
        yaxt = "n", font.main = 1)
@@ -163,7 +168,32 @@ panel_letters <- paste0("(", letters, ")")
 # ====================================================================================
 # Read the posterior samples
 # ====================================================================================
-fit_main <- readRDS(fit_file(sprintf("CLR_PartA_stage%d", plot_stage)))
+fit_main <- readRDS(fit_file(sprintf("CLR_PartA_stage%d_%s", plot_stage, structure)))
+  # Interaction terms of the fit (one row per vital rate, 1 = in the model)
+blk_tab <- fit_main$settings$blocks
+
+  # Leave out the interaction terms a vital rate leaves out (sampled from their prior only)
+drop_excluded <- function(dat) {
+  if (nrow(dat) == 0) return(dat)
+  stem <- sub("\\[.*", "", dat$name)
+  wx <- function(prefix) paste0(prefix, c("Wi", "Wg", "Ws", "Wf"))[dat$i2]
+  code <- ifelse(stem == "com.W.x.clim", wx("Cx"), ifelse(stem == "com.size.x.clim", "CxS",
+          ifelse(stem == "com.W.x.size", wx("Sx"), ifelse(stem == "com.W.x.graze", wx("Gx"),
+          ifelse(stem == "com.size.x.graze", "GxS", ifelse(stem == "com.graze.x.clim", "GxC", NA))))))
+  keep <- mapply(function(cd, v) is.na(cd) || isTRUE(blk_tab[blk_tab$vr == tolower(v), cd] == 1), code, dat$series)
+  dat[keep, , drop = FALSE]
+}
+  # Climate variable of each vital rate: labels say "precipitation" unless summer temperature was chosen
+clim_used <- blk_tab$clim_use
+clim_sign <- "+ wetter"
+if ("temp" %in% clim_used) {
+  clim_lab  <- "Climate anomaly"
+  clim_sign <- "+ wetter or warmer"
+  cov_note  <- paste0("Estimates per SD of each covariate. Climate anomaly: ",
+                      paste(sprintf("%s %s", tolower(vr_names), c(current = "precipitation", lag = "precipitation of the previous year",
+                                                                   both = "precipitation", temp = "summer temperature")[clim_used]),
+                            collapse = ", "), "; same-species crowding scaled within each species.")
+}
 draws    <- as.matrix(fit_main$samples)
 sp_lab   <- fit_main$species$code
 cat(sprintf("Main model: %d posterior draws, %d species.\n", nrow(draws), length(sp_lab)))
@@ -184,18 +214,19 @@ head_delta <- "\u00d7 Precip. anomaly (\u03b4)"
 head_theta <- "\u00d7 Log size (\u03b8)"
 head_omega <- "\u00d7 Grazing (\u03c9)"
 main_rows  <- c(paste0(size_lab, " (\u03b11)"), paste0(size_lab, "\u00b2 (\u03b12)"), "Grazing (\u03b3)",
-                paste0(clim_lab, ", + wetter (\u03b2 climate)"), paste0(crowd_lab, " (\u03b2)"))
+                paste0(clim_lab, ", ", clim_sign, " (\u03b2 climate)"), paste0(crowd_lab, " (\u03b2)"))
 delta_rows <- c(paste0(clim_lab, " \u00d7 log size"), paste0(clim_lab, " \u00d7 ", crowd_by))
 theta_rows <- paste0("Log size \u00d7 ", crowd_by)
-omega_rows <- paste0("Grazing \u00d7 ", crowd_by)
+omega_rows <- c("Grazing \u00d7 log size", paste0("Grazing \u00d7 ", tolower(clim_lab)), paste0("Grazing \u00d7 ", crowd_by))
 int_rows   <- c(delta_rows, theta_rows, omega_rows)
 headers    <- c(head_main, head_delta, head_theta, head_omega)
   # Colour of a row: its covariate (main effects) or the term the block's covariate modifies
 main_cols  <- setNames(c(col_ind, col_ind, col_ind, col_clim, col_W), main_rows)
-int_cols   <- setNames(c(col_ind, col_W, col_W, col_W), int_rows)
+int_cols   <- setNames(c(col_ind, col_W, col_W, col_ind, col_clim, col_W), int_rows)
 all_rows   <- c(head_main, main_rows, head_delta, delta_rows, head_theta, theta_rows, head_omega, omega_rows)
 all_cols   <- c(main_cols, int_cols)
-type_lab   <- c(paste(size_lab, "and grazing"), "Precipitation", sub("Crowding by ", "Crowding: ", crowd_lab))
+type_lab   <- c(paste(size_lab, "and grazing"), if ("temp" %in% clim_used) "Climate" else "Precipitation",
+                sub("Crowding by ", "Crowding: ", crowd_lab))
 type_col   <- c(col_ind, col_clim, col_W)
 
 d_main <- bind_rows(
@@ -207,7 +238,11 @@ d_main <- bind_rows(
   post_summary(draws, "com.size.x.clim")    %>% mutate(row = delta_rows[1], series = vr_names[i1]),
   post_summary(draws, "com.W.x.clim")       %>% mutate(row = delta_rows[1 + i2], series = vr_names[i1]),
   post_summary(draws, "com.W.x.size")       %>% mutate(row = theta_rows[i2], series = vr_names[i1]),
-  post_summary(draws, "com.W.x.graze")      %>% mutate(row = omega_rows[i2], series = vr_names[i1]))
+  post_summary(draws, "com.W.x.graze")      %>% mutate(row = omega_rows[2 + i2], series = vr_names[i1]),
+  if ("com.size.x.graze[1]" %in% colnames(draws))
+    post_summary(draws, "com.size.x.graze") %>% mutate(row = omega_rows[1], series = vr_names[i1], i2 = NA_integer_),
+  if ("com.graze.x.clim[1]" %in% colnames(draws))
+    post_summary(draws, "com.graze.x.clim") %>% mutate(row = omega_rows[2], series = vr_names[i1], i2 = NA_integer_))
   # Species medians of the population-level coefficients (one point per species and row)
 d_main_sp <- bind_rows(
   post_summary(draws, "pop.slope.size")  %>% mutate(row = main_rows[1], series = vr_names[i2]),
@@ -215,7 +250,9 @@ d_main_sp <- bind_rows(
   post_summary(draws, "pop.slope.graze") %>% mutate(row = main_rows[3], series = vr_names[i2]),
   post_summary(draws, "pop.slope.clim")  %>% mutate(row = main_rows[4], series = vr_names[i2]),
   post_summary(draws, "pop.slope.W")     %>% mutate(row = main_rows[4 + i3], series = vr_names[i2])) %>%
-  arrange(i1)
+  arrange(i1) %>%
+  drop_excluded()
+d_main <- drop_excluded(d_main)
 
 png(file.path(fig_dir, sprintf("CLR_PartA_main_effects%s.png", tag)), width = 15.5, height = 11, units = "in", res = 300)
 layout(matrix(1:3, 1, 3), widths = c(1.65, 1, 1))
@@ -237,7 +274,7 @@ png(file.path(fig_dir, sprintf("CLR_PartA_interactions%s.png", tag)), width = 15
 layout(matrix(1:3, 1, 3), widths = c(1.65, 1, 1))
 par(oma = c(6.5, 0, 0, 0))
 draw_vr_panels(d_main[d_main$row %in% int_rows, ], int_all_rows, int_cols, headers = headers, open_rows = int_rows)
-add_type_legend(c(size_lab, type_lab[3:6]), c(col_ind, col_W), open = rep(TRUE, 5), note = cov_note)
+add_type_legend(c(size_lab, type_lab[2:6]), c(col_ind, col_clim, col_W), open = rep(TRUE, 6), note = cov_note)
 dev.off()
 cat("Fig 1b saved: CLR_PartA_interactions.png\n")
 
@@ -249,7 +286,8 @@ cat("Fig 1b saved: CLR_PartA_interactions.png\n")
 sp_rows <- c(sp_lab, "Mean")
 d_beta <- bind_rows(
   post_summary(draws, "pop.slope.W")    %>% mutate(row = sp_lab[i1], series = vr_names[i2], class = crowd_lab[i3]),
-  post_summary(draws, "pop.slope.W.mu") %>% mutate(row = "Mean", series = vr_names[i1], class = crowd_lab[i2]))
+  post_summary(draws, "pop.slope.W.mu") %>% mutate(row = "Mean", series = vr_names[i1], class = crowd_lab[i2])) %>%
+  drop_excluded()
 
 png(file.path(fig_dir, sprintf("CLR_PartA_crowding_species%s.png", tag)), width = 14, height = 11, units = "in", res = 300)
 par(mfrow = c(3, 4), mar = c(4, 5, 2.5, 1), mgp = c(2.0, 0.8, 0), cex.lab = 1.1, cex.axis = 0.95)
@@ -272,15 +310,17 @@ cat("Fig 2 saved: CLR_PartA_crowding_species.png\n")
 # File saved: CLR_PartA_climate_grazing_species.png
 # ====================================================================================
 d_bclim <- bind_rows(post_summary(draws, "pop.slope.clim") %>% mutate(row = sp_lab[i1], series = vr_names[i2]),
-                     post_summary(draws, "pop.slope.clim.mu") %>% mutate(row = "Mean", series = vr_names[i1]))
+                     post_summary(draws, "pop.slope.clim.mu") %>% mutate(row = "Mean", series = vr_names[i1])) %>%
+  drop_excluded()
 d_graze <- bind_rows(post_summary(draws, "pop.slope.graze") %>% mutate(row = sp_lab[i1], series = vr_names[i2]),
-                     post_summary(draws, "pop.slope.graze.mu") %>% mutate(row = "Mean", series = vr_names[i1]))
+                     post_summary(draws, "pop.slope.graze.mu") %>% mutate(row = "Mean", series = vr_names[i1])) %>%
+  drop_excluded()
 
 png(file.path(fig_dir, sprintf("CLR_PartA_climate_grazing_species%s.png", tag)), width = 13, height = 9, units = "in", res = 300)
 par(mfrow = c(2, 3), mar = c(4, 5, 2.5, 1), mgp = c(2.0, 0.8, 0), cex.lab = 1.1, cex.axis = 0.95)
 for (v in seq_along(vr_names)) {
   draw_forest_panel(d_bclim[d_bclim$series == vr_names[v], ], sp_rows, setNames(rep(col_clim, length(sp_rows)), sp_rows),
-                    main = paste0(vr_names[v], ": precip. anomaly, + wetter (\u03b2 climate)"), panel_label = panel_letters[v])
+                    main = paste0(vr_names[v], ": ", tolower(clim_lab), ", ", clim_sign, " (\u03b2 climate)"), panel_label = panel_letters[v])
 }
 for (v in seq_along(vr_names)) {
   draw_forest_panel(d_graze[d_graze$series == vr_names[v], ], sp_rows, setNames(rep(col_ind, length(sp_rows)), sp_rows),
@@ -318,7 +358,8 @@ d_var <- bind_rows(
   post_summary(draws, "pop.slope.size2.sd") %>% mutate(row = sig_rows[3], series = vr_names[i1]),
   post_summary(draws, "pop.slope.graze.sd") %>% mutate(row = sig_rows[4], series = vr_names[i1]),
   post_summary(draws, "pop.slope.clim.sd")  %>% mutate(row = sig_rows[5], series = vr_names[i1]),
-  post_summary(draws, "pop.slope.W.sd")     %>% mutate(row = sig_rows[5 + i2], series = vr_names[i1]))
+  post_summary(draws, "pop.slope.W.sd")     %>% mutate(row = sig_rows[5 + i2], series = vr_names[i1])) %>%
+  drop_excluded()
 
 png(file.path(fig_dir, sprintf("CLR_PartA_variance%s.png", tag)), width = 15, height = 8.5, units = "in", res = 300)
 layout(matrix(1:3, 1, 3), widths = c(1.55, 1, 1))
@@ -396,13 +437,13 @@ conv_summary <- conv %>% group_by(model) %>%
 print(as.data.frame(conv_summary))
 
 cat("Saved:\n",
-    " result/figs/", site_tag, ": CLR_PartA_main_effects, _interactions, _crowding_species, _climate_grazing_species, _variance",
+    " result/figs/", site_tag, "/", out_folder, ": CLR_PartA_main_effects, _interactions, _crowding_species, _climate_grazing_species, _variance",
     if (all(file.exists(sub_files))) ", _submodels" else "", " (", tag, ".png)\n",
-    " result/tables/", site_tag, ": CLR_PartA_convergence", tag, ".csv\n", sep = "")
+    " result/tables/", site_tag, "/", out_folder, ": CLR_PartA_convergence", tag, ".csv\n", sep = "")
 rm(list = intersect(c("draws", "d_main", "d_main_sp", "d_beta", "d_bclim", "d_graze", "d_var", "d_forb", "d_shrub",
                       "draws_forb", "draws_shrub", "vr_forb", "rows_forb_main", "rows_forb_int", "rows_shrub_main",
                       "rows_shrub_int", "main_rows", "delta_rows", "theta_rows", "omega_rows", "int_rows",
                       "main_cols", "int_cols", "sub_cols", "all_rows", "all_cols", "int_all_rows", "headers",
                       "head_main", "head_delta", "head_theta", "head_omega", "type_lab", "type_col", "has_plant",
-                      "forb_lab", "sp_rows", "yr_rows", "plot_rows", "sig_rows", "var_rows",
+                      "forb_lab", "sp_rows", "clim_used", "clim_sign", "yr_rows", "plot_rows", "sig_rows", "var_rows",
                       "var_cols", "p", "v", "cl", "conv_summary"), ls()))

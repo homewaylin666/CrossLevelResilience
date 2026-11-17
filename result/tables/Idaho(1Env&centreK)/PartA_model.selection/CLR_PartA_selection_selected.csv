@@ -1,0 +1,4 @@
+"vr","model","terms","clim_use","AICc","CxWi","CxWg","CxWs","CxWf","CxS","SxWi","SxWg","SxWs","SxWf","GxWi","GxWg","GxWs","GxWf","GxS","GxC"
+"survival","surv_00100","CxWs+SxWi+SxWg","current",17766.9665914378,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0
+"growth","grow_21088","SxWi+SxWg+GxWi+GxWf+GxC","current",18677.3721461346,0,0,0,0,0,1,1,0,0,1,0,0,1,0,1
+"recruitment","recr_00268","CxWs+CxWf+GxC","current",11991.180051538,0,0,1,1,NA,NA,NA,NA,NA,0,0,0,0,NA,1
